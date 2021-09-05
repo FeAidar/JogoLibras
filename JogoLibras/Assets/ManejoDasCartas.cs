@@ -9,6 +9,10 @@ public class ManejoDasCartas : MonoBehaviour
     private int _Carta,type, dupla;
     private Vector3 _away = new Vector3(1000f, 1000f, 0f);
     private bool a;
+
+    private void Start(){
+        SetCarts();
+    }
     private void Update(){
         int types = _Sprites.Length;
         int length = _Cartas.Length;
@@ -16,7 +20,7 @@ public class ManejoDasCartas : MonoBehaviour
             if(type <= types){
                 if(type<=types){
                     if(dupla < 2){
-                        GameObject verso = _Cartas[_Carta].transform.GetChild(2).gameObject;
+                        GameObject verso = _Cartas[_Carta].transform.GetChild(1).gameObject;
                         verso.GetComponent<SpriteRenderer>().sprite = _Sprites[type];
                         _Carta +=1;
                         dupla +=1;

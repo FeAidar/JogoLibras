@@ -7,7 +7,7 @@ public class TestingInputSystem : MonoBehaviour
 {
     private Rigidbody Shepre;
     private PlayerInput PlayerInput;
-    private  PlayerInputs playerInputActions;
+    private PlayerInputs playerInputActions;
     private void Awake(){
         Shepre = GetComponent<Rigidbody>();
         PlayerInput = GetComponent<PlayerInput>();
