@@ -9,8 +9,11 @@ public class ManejoDasCartas : MonoBehaviour
     private int _Carta,type, dupla;
     private Vector3 _away = new Vector3(1000f, 1000f, 0f);
     private bool a;
-
+    private GameObject Definer;
+    private int _Dificudade;
     private void Start(){
+        Definer = GameObject.FindGameObjectWithTag("GameController");
+        _Dificudade = Definer.GetComponent<GameDefiner>().Dificuldade;
         SetCarts();
     }
     private void Update(){
