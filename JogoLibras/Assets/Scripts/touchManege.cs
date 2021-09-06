@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class touchManege : MonoBehaviour
 {
-    Vector3 touchPosWorld;
-    NewControls inpu;
+    private Vector3 touchPosWorld;
+    private NewControls inpu;
     private Camera cameramain;
     void Awake()
     {
@@ -17,7 +17,6 @@ public class touchManege : MonoBehaviour
     }
 
     public void TouchCart(InputAction.CallbackContext ctx){
-
         if(ctx.performed){
             touchPosWorld = inpu.Inputs.TouchPosition.ReadValue<Vector2>();
             Vector3 touchPosWorld2D = new Vector3(touchPosWorld.x, touchPosWorld.y, cameramain.nearClipPlane);
