@@ -36,6 +36,9 @@ public class ManejoDasCartas : MonoBehaviour
                 if(type<=types){
                     if(dupla < 2){
                         GameObject verso = _Cartas[_Carta].transform.GetChild(1).gameObject;
+                        if(_Cartas[_Carta].GetComponent<testandoClick>() != null){
+                            _Cartas[_Carta].GetComponent<testandoClick>().Type = type;
+                        }
                         verso.GetComponent<SpriteRenderer>().sprite = _Sprites[type];
                         _Carta +=1;
                         dupla +=1;
