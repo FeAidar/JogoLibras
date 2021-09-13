@@ -44,7 +44,8 @@ public class ItemSelector : MonoBehaviour
 
             Objetos[i].transform.position = objetosInitialPosition[i];
             Objetos[i].GetComponent<Collider2D>().enabled = true;
-            Objetos[i].GetComponent<arrastavel>().acertou = false;
+            recomeca[i].GetComponent<arrastavel>().acertou = false;
+            recomeca[i].GetComponent<arrastavel>().check = false;
 
 
         }

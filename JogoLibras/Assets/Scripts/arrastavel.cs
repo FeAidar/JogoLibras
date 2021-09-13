@@ -18,7 +18,7 @@ public class arrastavel : MonoBehaviour
     private ItemSelector _Objetos;
     public bool acertou;
     private string firstobject;
-    private bool check;
+    public bool check;
     public GameObject Timer;
     
 
