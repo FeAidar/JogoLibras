@@ -7,42 +7,91 @@ public class arrastavel : MonoBehaviour
 
     public bool IsDragging;
     public Vector3 LastPosition;
+    
 
     private Collider2D _collider;
 
-    private DragController _dragController;
+    public DragController _dragController;
 
     private float _movementTime = 15f;
     private System.Nullable<Vector3> _movementDestination;
+    private ItemSelector _Objetos;
+    public bool acertou;
+    private string firstobject;
+    private bool check;
+    public GameObject Timer;
+    
+
 
     private void Start()
     {
-        _collider = GetComponent<Collider2D>();
-        _dragController = FindObjectOfType<DragController>();
+              _collider = GetComponent<Collider2D>();
+       // _dragController = FindObjectOfType<DragController>();
+        _Objetos = FindObjectOfType<ItemSelector>();
+        
+
+
     }
 
+    private void Update()
+    {
+        //Debug.Log(_collider);
+    }
     private void FixedUpdate()
     {
-        if (_movementDestination.HasValue)
+        if(!acertou)
         {
-            if (IsDragging)
+
+            if (_movementDestination.HasValue)
             {
-                _movementDestination = null;
-                return;
-            }
-        if (transform.position==_movementDestination)
-            {
-                gameObject.layer = Layer.Default;
-                _movementDestination = null;
-                
+                if (IsDragging)
+                {
+                    _movementDestination = null;
+                    return;
+                }
+                if (transform.position == _movementDestination)
+                {
+                    gameObject.layer = Layer.Default;
+                    _movementDestination = null;
+                    if(check)
+                    { 
+                    if (!IsDragging)
+                        if (name == firstobject)
+                        {
+                           // Debug.Log("testando");
+                            Acertou();
+
+
+                        }
+                    }
+
+                }
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
+                }
 
             }
-            else
-            {
-                transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
-            }
-        
         }
+
+        if (_Objetos.GetComponent<ItemSelector>().Objetos.Count != 0)
+            firstobject = _Objetos.GetComponent<ItemSelector>().Objetos[0].gameObject.name;
+
+        else
+            firstobject = "Parabéns";
+       // Debug.Log(firstobject);
+
+    }
+
+    void Acertou()
+    {
+        if(!acertou)
+        {
+            acertou = true;
+            _Objetos.GetComponent<ItemSelector>().remove += 1;
+           this.GetComponent<Collider2D>().enabled=false;
+        }
+        
     }
     void OnTriggerStay2D(Collider2D other)
 
@@ -54,18 +103,71 @@ public class arrastavel : MonoBehaviour
             ColliderDistance2D colliderDistance2D = other.Distance(_collider);
             Vector3 diff = new Vector3(colliderDistance2D.normal.x, colliderDistance2D.normal.y) * colliderDistance2D.distance;
             transform.position -= diff;
-            Debug.Log("teste");
+            
         }
 
-        if(other.CompareTag("Area Valida"))
-        {
-            _movementDestination = other.transform.position;
+      
+            if (name == firstobject)
+            {
+            if (other.CompareTag("Area Valida"))
+            {
+                if (!IsDragging)
+                {
+                    check = true;
+                    _movementDestination = other.transform.position;
+                   // Debug.Log(check);
 
-        }
-        else if (other.CompareTag("AreaInvalida"))
-        {
-            _movementDestination = LastPosition;
-        }
+
+
+
+                }
+            }
+            else if (other.CompareTag("AreaInvalida"))
+
+                if (!IsDragging && !check)
+                {
+                   // check = false;
+                    _movementDestination = LastPosition;
+                    
+                }
+                
+            
+            }
+            else
+            {
+            if (other.CompareTag("Area Valida"))
+            {
+                if (!IsDragging && !check)
+                {
+                   // check = false;
+                    _movementDestination = LastPosition;
+                   
+                                                        }
+
+            }
+            else if (other.CompareTag("AreaInvalida"))
+            {
+                if (!IsDragging && !check)
+                {
+                  //  check = false;
+                    _movementDestination = LastPosition;
+                    
+
+                }
+            }
+
+            }
+
+      
+       
+
+                    
+       
+    }
+
+    void movendo()
+    {
+        check = false;
     }
 
 }

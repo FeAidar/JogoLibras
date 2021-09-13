@@ -7,6 +7,7 @@ TagManager:
   - Cartas
   - AreaInvalida
   - Area Valida
+<<<<<<< Updated upstream
   - g2
   - g1
   - g3
@@ -14,6 +15,9 @@ TagManager:
   - CenterD
   - CenterE
   - canvas
+=======
+  - Objetos
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -23,7 +27,7 @@ TagManager:
   - UI
   - 
   - 
-  - Draggable
+  - Dragging
   - 
   - 
   - 

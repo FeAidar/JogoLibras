@@ -9,15 +9,12 @@ public class DragController : MonoBehaviour
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private arrastavel _lastDragged;
-    [SerializeField] protected Transform[] parts;
+    protected int pontos;
+    
 
-    private void Awake()
+    private void Start()
     {
-        DragController[] controllers = FindObjectsOfType<DragController>();
-        if(controllers.Length>1)
-        {
-            Destroy(gameObject);
-        }
+
     }
 
     void Update()
@@ -65,7 +62,7 @@ public class DragController : MonoBehaviour
     {
         _lastDragged.LastPosition = _lastDragged.transform.position;
         UpdateDragStatus(true);
-        Debug.Log(_lastDragged.LastPosition);
+        //Debug.Log(_lastDragged.LastPosition);
     
     }
 
