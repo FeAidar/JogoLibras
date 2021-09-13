@@ -967,6 +967,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   _dragController: {fileID: 443299459}
   acertou: 0
+  check: 0
   Timer: {fileID: 443299458}
 --- !u!50 &806441360
 Rigidbody2D:
@@ -1617,6 +1618,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   _dragController: {fileID: 443299459}
   acertou: 0
+  check: 0
   Timer: {fileID: 443299458}
 --- !u!50 &1264948634
 Rigidbody2D:
@@ -2572,6 +2574,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   _dragController: {fileID: 443299459}
   acertou: 0
+  check: 0
   Timer: {fileID: 443299458}
 --- !u!50 &1580633194
 Rigidbody2D:
@@ -3675,6 +3678,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   _dragController: {fileID: 443299459}
   acertou: 0
+  check: 0
   Timer: {fileID: 443299458}
 --- !u!58 &1967529826
 CircleCollider2D:
@@ -3848,6 +3852,7 @@ MonoBehaviour:
   LastPosition: {x: 0, y: 0, z: 0}
   _dragController: {fileID: 443299459}
   acertou: 0
+  check: 0
   Timer: {fileID: 443299458}
 --- !u!50 &2000376012
 Rigidbody2D:

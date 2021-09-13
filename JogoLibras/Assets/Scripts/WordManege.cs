@@ -20,8 +20,10 @@ public class WordManege : MonoBehaviour
     private List<GameObject> SinaisSimplesParaATela = new List<GameObject>();
     private List<GameObject> SinaisCompostoConfirmado = new List<GameObject>();
     private List<GameObject> SinaisSimplesComfirmado = new List<GameObject>();
+    private List<GameObject> simboloSelecionado = new List<GameObject>();
     private GameObject Definer;
     private int _Dificudade, _Pack;
+    public bool vitoria;
     
     void Start()
     {
@@ -37,7 +39,7 @@ public class WordManege : MonoBehaviour
         seleciona();
         Garantia();
         OutrosSinais();
-        SelecionaPosicao();
+        RandomPosicao();
         Organiza();
     }
 
@@ -101,21 +103,7 @@ public class WordManege : MonoBehaviour
         }
     }
 
-    public void SelecionaPosicao(){
-        switch(_Dificudade){
-            case 0:
-                RandomPosicao();
-            break;
-            case 1:
-                RandomPosicao();
-            break;
-            case 2:
-                RandomPosicao();
-            break;
-        }
-    }
-
-    private void RandomPosicao(){
+    public void RandomPosicao(){
         for (int i = 0; i < SinaisSimplesParaATela.Count; i++) {
             GameObject temp = SinaisSimplesParaATela[i];
             int randomIndex = Random.Range(i, SinaisSimplesParaATela.Count);
@@ -139,5 +127,12 @@ public class WordManege : MonoBehaviour
             }
             b++;
         }
+    }
+
+    public void SelecionaSimbulo(){
+
+    }
+    public void DesSelecionaSimbulo(){
+
     }
 }
