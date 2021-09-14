@@ -52,6 +52,7 @@ public class ItemSelector : MonoBehaviour
         victory = false;
         teste = false;
 
+
     }
 
     // Update is called once per frame

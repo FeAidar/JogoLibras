@@ -19,17 +19,21 @@ public class MochilaGameStarter : MonoBehaviour
     [HideInInspector] public bool ingame;
     private bool Ganhou;
     private bool Perdeu;
-    private int nivel = 0;
-    private int niveiscompletos;
-    public ItemSelector controlador;
+    private int nivel;
+    private ItemSelector controlador;
+    [HideInInspector] public int jogandolevel;
+
 
 
 
 
     void Start()
     {
-        niveiscompletos = PlayerPrefs.GetInt("nivelmochila");
-        
+        nivel = PlayerPrefs.GetInt("nivelmochila1");
+        controlador = FindObjectOfType<ItemSelector>();
+        jogandolevel = 0;
+
+
     }
 
     void Update()
@@ -63,11 +67,7 @@ public class MochilaGameStarter : MonoBehaviour
 
         if (ingame && controlador.victory == true) 
         {
-            if (nivel < 1)
-            {
-                nivel = 1;
-                PlayerPrefs.SetInt("nivelmochila", 1);
-            }
+
             ganhou();
         }
 
@@ -87,7 +87,7 @@ public class MochilaGameStarter : MonoBehaviour
 
     }
 
-    void niveis()
+    public void niveis()
     {
 
 
@@ -100,7 +100,11 @@ public class MochilaGameStarter : MonoBehaviour
             Level.SetActive(true);
             this.GetComponent<Timer>().enabled = true;
             this.GetComponent<Timer>().timerIsRunning = true;
+            jogandolevel = 1;
             ingame = true;
+            Perdeu = false;
+            Ganhou = false;
+
 
         }
 
@@ -113,7 +117,10 @@ public class MochilaGameStarter : MonoBehaviour
             Level.SetActive(true);
             this.GetComponent<Timer>().enabled = true;
             this.GetComponent<Timer>().timerIsRunning = true;
+            jogandolevel = 2;
             ingame = true;
+            Perdeu = false;
+            Ganhou = false;
 
         }
 
@@ -127,6 +134,9 @@ public class MochilaGameStarter : MonoBehaviour
             this.GetComponent<Timer>().enabled = true;
             this.GetComponent<Timer>().timerIsRunning = true;
             ingame = true;
+            jogandolevel = 3;
+            Perdeu = false;
+            Ganhou = false;
 
         }
 
@@ -137,7 +147,7 @@ public class MochilaGameStarter : MonoBehaviour
         telatimeup.SetActive(true);
         telaescolha.SetActive(false);
         Level.SetActive(false);
-        dificuldade = 0;
+      //  dificuldade = 0;
 
 
 
@@ -145,13 +155,69 @@ public class MochilaGameStarter : MonoBehaviour
 
     void ganhou()
     {
+        if (!Ganhou)
+        {
+            if (jogandolevel == 1)
+            {
+                PlayerPrefs.SetInt("nivelmochila1", 1);
+                
+            }
 
+
+            if (jogandolevel == 2)
+            {
+                
+                PlayerPrefs.SetInt("nivelmochila1", 2);
+                Ganhou = true;
+            }
+
+
+            if (jogandolevel == 3)
+            {
+                
+                PlayerPrefs.SetInt("nivelmochila1", 3);
+                Ganhou = true;
+            }
+        }
         Ganhou = true;
         telatimeup.SetActive(false);
         telaescolha.SetActive(false);
         telaganhou.SetActive(true);
         Level.SetActive(false);
-        dificuldade = 0;
+        this.GetComponent<Timer>().timerIsRunning = false;
+
+        //  dificuldade = 0;
 
     }
+
+    public void comeca1()
+    {
+        dificuldade = 1;
+   
+    }
+
+    public void comeca2()
+    {
+        dificuldade = 2;
+
+    }
+    public void comeca3()
+    {
+        dificuldade = 3;
+
+    }
+
+    public void teladeescolha()
+    {
+        Ganhou = false;
+        dificuldade = 0;
+        ingame = false;
+        Level.SetActive(false);
+        telaescolha.SetActive(true);
+        telaganhou.SetActive(false);
+        controlador.Restart();
+
+
+    }
+
 }
