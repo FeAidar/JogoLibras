@@ -14,6 +14,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private GameObject[] PackDeSinaisCompostos;
     [SerializeField]private GameObject[] PackDeSinaisSimples;
     [SerializeField]private List<GameObject> grupos = new List<GameObject>();
+    [SerializeField]private List<GameObject> View = new List<GameObject>();
     [SerializeField]private int[] Quantia;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
@@ -22,9 +23,10 @@ public class WordManege : MonoBehaviour
     private List<GameObject> SinaisSimplesComfirmado = new List<GameObject>();
     private List<GameObject> simboloSelecionado = new List<GameObject>();
     private GameObject Definer;
-    private int _Dificudade, _Pack;
+    private int _Dificudade, _Pack,_quantia;
     public bool vitoria;
-    
+    private int selecionados;
+    int abacate;
     void Start()
     {
         //acha o game controller
@@ -34,7 +36,21 @@ public class WordManege : MonoBehaviour
             if(Definer.GetComponent<GameDefiner>() != null){
                 _Dificudade = Definer.GetComponent<GameDefiner>().Dificuldade;
                 _Pack = Definer.GetComponent<GameDefiner>().pack;
+                _quantia = Definer.GetComponent<GameDefiner>().Quantia;
             }
+        }
+        if(_quantia == 0){
+            View[0].SetActive(true);
+            View[1].SetActive(false);
+            View[2].SetActive(false);
+        }else if(_quantia == 1){
+            View[1].SetActive(true);
+            View[0].SetActive(false);
+            View[2].SetActive(false);
+        }else if(_quantia == 2){
+            View[2].SetActive(true);
+            View[0].SetActive(false);
+            View[1].SetActive(false);
         }
         seleciona();
         Garantia();
@@ -44,15 +60,17 @@ public class WordManege : MonoBehaviour
     }
 
     private void seleciona(){
-        int a = PackDeSinaisCompostos[_Pack].transform.childCount;
+        GameObject PackCompostoSelecionado = Instantiate(PackDeSinaisCompostos[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
+        int a = PackCompostoSelecionado.transform.childCount;
         for (int i = 0; i < a; i++)
         {
-            SinaisCompostosSelecionados.Add(PackDeSinaisCompostos[_Pack].transform.GetChild(i).gameObject);
+            SinaisCompostosSelecionados.Add(PackCompostoSelecionado.transform.GetChild(i).gameObject);
         }
-        int b = PackDeSinaisSimples[_Pack].transform.childCount;
+        GameObject PackSimplesSelecionado = Instantiate(PackDeSinaisSimples[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
+        int b = PackSimplesSelecionado.transform.childCount;
         for (int i = 0; i < b; i++)
         {
-            SinaisSimplesSelecionados.Add(PackDeSinaisSimples[_Pack].transform.GetChild(i).gameObject);
+            SinaisSimplesSelecionados.Add(PackSimplesSelecionado.transform.GetChild(i).gameObject);
         }
         int c = Random.Range(0, SinaisCompostosSelecionados.Count);
         SinaisCompostoConfirmado.Add(SinaisCompostosSelecionados[c]);
@@ -78,7 +96,7 @@ public class WordManege : MonoBehaviour
     }
 
     private void OutrosSinais(){
-        switch(_Dificudade){
+        switch(_quantia){
             case 0:
                 int a = Quantia[0] - SinaisSimplesParaATela.Count;
                 SelecionaOutros(a);
@@ -113,26 +131,45 @@ public class WordManege : MonoBehaviour
     }
 
     private void Organiza(){
-        int b = 0;
         foreach (GameObject a in SinaisSimplesParaATela)
         {
-            if(b >= 0 && b<4){
+            if(_quantia == 0){
                 a.transform.SetParent(grupos[0].transform);
-            }else if(b>= 4 && b< 8){
+            }else if(_quantia == 1){
                 a.transform.SetParent(grupos[1].transform);
-            }else if(b>= 8 && b< 12){
+            }else if(_quantia == 2){
                 a.transform.SetParent(grupos[2].transform);
-            }else if(b>= 12 && b<= 15){
-                a.transform.SetParent(grupos[3].transform);
             }
-            b++;
         }
     }
 
-    public void SelecionaSimbulo(){
-
+    public void SelecionaSimbulo(GameObject esse){
+        if(selecionados < 2){
+            simboloSelecionado.Add(esse);
+            selecionados ++;
+            if(selecionados >= 2){
+                foreach (GameObject item in simboloSelecionado)
+                {
+                    foreach (GameObject opa in SinaisSimplesComfirmado)
+                    {
+                        if(opa.name == item.name){
+                            abacate++;
+                        }
+                    }
+                }
+                if(abacate >= simboloSelecionado.Count){
+                    vitoria = true;
+                }
+            }else{
+                abacate = 0;
+            }
+        }
     }
-    public void DesSelecionaSimbulo(){
-
+    public void DesSelecionaSimbulo(GameObject esse){
+        if(selecionados > 0){
+            simboloSelecionado.Remove(esse);
+            selecionados --;
+            abacate = 0;
+        }
     }
 }
