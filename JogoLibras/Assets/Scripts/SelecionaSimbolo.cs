@@ -5,17 +5,25 @@ using UnityEngine;
 public class SelecionaSimbolo : MonoBehaviour
 {
     private GameObject maneger;
-    private bool selecionado;
+    [SerializeField]private GameObject borda;
+    public bool selecionado;
     private void Start(){
         maneger = GameObject.FindGameObjectWithTag("canvas");
+    }
+    private void Update(){
+        if(selecionado == true){
+            borda.SetActive(true);
+        }else{
+            borda.SetActive(false);
+        }
     }
     public void seleciona(){
         if(selecionado == false){
             maneger.GetComponent<WordManege>().SelecionaSimbulo(this.gameObject);
-            selecionado = true;
+            
         }else{
             maneger.GetComponent<WordManege>().DesSelecionaSimbulo(this.gameObject);
-            selecionado = false;
+            
         }
     }
 }

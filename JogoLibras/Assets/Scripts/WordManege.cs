@@ -16,6 +16,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private List<GameObject> grupos = new List<GameObject>();
     [SerializeField]private List<GameObject> View = new List<GameObject>();
     [SerializeField]private int[] Quantia;
+    [SerializeField]private GameObject CompostaPosi;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesParaATela = new List<GameObject>();
@@ -141,11 +142,13 @@ public class WordManege : MonoBehaviour
                 a.transform.SetParent(grupos[2].transform);
             }
         }
+        SinaisCompostoConfirmado[0].transform.SetParent(CompostaPosi.transform);
     }
 
     public void SelecionaSimbulo(GameObject esse){
         if(selecionados < 2){
             simboloSelecionado.Add(esse);
+            esse.transform.GetComponent<SelecionaSimbolo>().selecionado = true;
             selecionados ++;
             if(selecionados >= 2){
                 foreach (GameObject item in simboloSelecionado)
@@ -168,8 +171,22 @@ public class WordManege : MonoBehaviour
     public void DesSelecionaSimbulo(GameObject esse){
         if(selecionados > 0){
             simboloSelecionado.Remove(esse);
+            esse.transform.GetComponent<SelecionaSimbolo>().selecionado = false;
             selecionados --;
             abacate = 0;
         }
+    }
+    public void LimpaSelecionados(){
+        int b = simboloSelecionado.Count;
+        int i = 0;
+        if(b>0){
+            while (i <b){
+                simboloSelecionado[0].GetComponent<SelecionaSimbolo>().selecionado = false;
+                selecionados --;
+                abacate = 0;
+                simboloSelecionado.Remove(simboloSelecionado[0]);
+                i ++;
+            }
+        } 
     }
 }
