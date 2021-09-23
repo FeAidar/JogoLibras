@@ -17,6 +17,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private List<GameObject> View = new List<GameObject>();
     [SerializeField]private int[] Quantia;
     [SerializeField]private GameObject CompostaPosi;
+    [SerializeField]private float[] tempos;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesParaATela = new List<GameObject>();
@@ -58,6 +59,11 @@ public class WordManege : MonoBehaviour
         OutrosSinais();
         RandomPosicao();
         Organiza();
+        Comecatempo();
+    }
+    private void Comecatempo(){
+        this.GetComponent<Timer>().timeRemaining = tempos[_Dificudade];
+        this.GetComponent<Timer>().timerIsRunning= true;
     }
 
     private void seleciona(){
@@ -83,10 +89,13 @@ public class WordManege : MonoBehaviour
         {
             for (int i = 0; i < a; i++)
             {
-                if(b.name == SinaisCompostoConfirmado[0].GetComponent<ComposteWord>().Composicao[i].name){
+                if(b.transform.GetChild(1).name== SinaisCompostoConfirmado[0].GetComponent<ComposteWord>().Composicao[i].name){
                     SinaisSimplesParaATela.Add(b);
                     SinaisSimplesComfirmado.Add(b);
+                    Debug.Log("ue");
                     
+                }else{
+                    Debug.Log("hmm");
                 }
             }
         }
@@ -155,7 +164,7 @@ public class WordManege : MonoBehaviour
                 {
                     foreach (GameObject opa in SinaisSimplesComfirmado)
                     {
-                        if(opa.name == item.name){
+                        if(opa.transform.GetChild(1).name == item.name){
                             abacate++;
                         }
                     }

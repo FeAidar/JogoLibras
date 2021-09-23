@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class AlfabetoManejo : MonoBehaviour
 {
     /*
@@ -17,13 +17,17 @@ public class AlfabetoManejo : MonoBehaviour
     [SerializeField]private List<GameObject> letras = new List<GameObject>();
     [SerializeField]private List<GameObject> PackDePalavras = new List<GameObject>();
     [SerializeField]private GameObject espaço, espaços;
+    [SerializeField]private GameObject posipalavra;
+    [SerializeField]private float[] tempos;
     private List<GameObject> PackSelecionado = new List<GameObject>();
     private GameObject palavraConfirma;
     private List<char> LetrasCertas = new List<char>();
     private List<GameObject> LetrasSelecionadas = new List<GameObject>();
+    private List<GameObject> espacosCertos = new List<GameObject>();
     private GameObject Definer;
     private int _Dificudade, _Pack, _quantia;
     private string palavraSelecionada;
+    private int quantidadeLetras;
 
     private void Start(){
         //acha o game controller
@@ -37,6 +41,14 @@ public class AlfabetoManejo : MonoBehaviour
             }
         }
         SelecionaPalavra();
+        EspacosAdd();
+        quantidadeLetras = LetrasCertas.Count;
+        Comecatempo();
+    }
+
+    private void Comecatempo(){
+        this.GetComponent<Timer>().timeRemaining = tempos[_Dificudade];
+        this.GetComponent<Timer>().timerIsRunning= true;
     }
     private void SelecionaPalavra(){
         GameObject Packconfima = Instantiate(PackDePalavras[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
@@ -47,6 +59,7 @@ public class AlfabetoManejo : MonoBehaviour
         }
         int b = Random.Range(0, PackSelecionado.Count);
         palavraConfirma = PackSelecionado[b];
+        palavraConfirma.transform.position = posipalavra.transform.position;
         palavraSelecionada = palavraConfirma.GetComponent<palavra>().Palavra;
         foreach (char s in palavraSelecionada)
         {
@@ -59,13 +72,16 @@ public class AlfabetoManejo : MonoBehaviour
         for (int i = 0; i < a; i++)
         {
             GameObject espaco = Instantiate(espaço, transform.position, Quaternion.identity);
+            espacosCertos.Add(espaco);
             espaco.transform.SetParent(espaços.transform);
         }
     }
 
     public void BTM_add(int numero){
-        LetrasSelecionadas.Add(Instantiate(letras[numero], transform.position, Quaternion.identity));
-        LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.SetParent(espaços.transform);
+        if(LetrasSelecionadas.Count < quantidadeLetras){
+            LetrasSelecionadas.Add(Instantiate(letras[numero],espacosCertos[LetrasSelecionadas.Count].transform.position, Quaternion.identity));
+            LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.SetParent(espacosCertos[LetrasSelecionadas.Count -1 ].transform);
+        }
     }
 
     public void BTM_REMOVE(){
