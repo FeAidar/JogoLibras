@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CartaManege : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CartaManege : MonoBehaviour
     [SerializeField]private List<GameObject> PackDePalavras = new List<GameObject>();
     [SerializeField]private List<GameObject> Grids = new List<GameObject>();
     [SerializeField]private int[] QuantiaJogadas;
+    [SerializeField]private float[] tempos;
+    [SerializeField]private Text Jogadas;
     private List<GameObject> CartasSelecionadasDoPack = new List<GameObject>();
     private List<GameObject> CartasSelecionadas = new List<GameObject>();
     private List<GameObject> CartasClicadas = new List<GameObject>();
@@ -43,7 +46,16 @@ public class CartaManege : MonoBehaviour
 
         EscolhePack();
         ColocaNoGrid();
+        Comecatempo();
     }
+    private void Update(){
+        Jogadas.text = ""+JogadasRestantes;
+    }
+    private void Comecatempo(){
+        this.GetComponent<Timer>().timeRemaining = tempos[_dificuldade];
+        this.GetComponent<Timer>().timerIsRunning= true;
+    }
+
 
     private void EscolhePack(){
         int a = Random.Range(0, PackDePalavras.Count);

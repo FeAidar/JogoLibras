@@ -14,8 +14,6 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         timeRemaining = tempo;
-            // Starts the timer automatically
-        
     }
 
     void Update()

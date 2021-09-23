@@ -17,9 +17,9 @@ public class Carta : MonoBehaviour
     }
 
     public void clica(){
-        if(virado){
+        if(virado == true && par == false){
             canvas.GetComponent<CartaManege>().CartaDesselecionada(this.gameObject);
-        }else{
+        }else if(par == false){
             canvas.GetComponent<CartaManege>().CartaSelecionada(this.gameObject);
         }
     }
