@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1280169557550800089
-    second: Place-holders---Mochila_0
+    second: Caneta
   - first:
       213: 8296616479008393880
-    second: Place-holders---Mochila_1
+    second: Borracha
   - first:
       213: 6678032764396022194
-    second: Place-holders---Mochila_2
+    second: Celular
   - first:
       213: 6842555034999001082
-    second: Place-holders---Mochila_3
+    second: Apontador
   - first:
       213: 8773210835792367214
-    second: Place-holders---Mochila_4
+    second: Agenda
   - first:
       213: 7529485086297374037
-    second: Place-holders---Mochila_5
+    second: Lapis
   - first:
       213: -8672042376458585039
-    second: Place-holders---Mochila_6
+    second: Livro
   - first:
       213: 2498562946383723312
-    second: Place-holders---Mochila_7
+    second: Caderno
   - first:
       213: 4692836134275682378
-    second: Place-holders---Mochila_8
+    second: Apostila
   - first:
       213: 8645927067134248556
-    second: Place-holders---Mochila_9
+    second: Pasta
   - first:
       213: 8086757288569159030
-    second: Place-holders---Mochila_10
+    second: Lapiseira
   - first:
       213: -4511215262656991114
-    second: Place-holders---Mochila_11
+    second: lapis de cor
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -187,7 +187,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Place-holders---Mochila_0
+      name: Caneta
       rect:
         serializedVersion: 2
         x: 41
@@ -195,7 +195,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,7 +208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_1
+      name: Borracha
       rect:
         serializedVersion: 2
         x: 361
@@ -229,7 +229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_2
+      name: Celular
       rect:
         serializedVersion: 2
         x: 686
@@ -237,7 +237,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_3
+      name: Apontador
       rect:
         serializedVersion: 2
         x: 1019
@@ -271,7 +271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_4
+      name: Agenda
       rect:
         serializedVersion: 2
         x: 1360
@@ -279,7 +279,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,7 +292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_5
+      name: Lapis
       rect:
         serializedVersion: 2
         x: 1663
@@ -300,7 +300,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_6
+      name: Livro
       rect:
         serializedVersion: 2
         x: 54
@@ -321,7 +321,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,7 +334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_7
+      name: Caderno
       rect:
         serializedVersion: 2
         x: 379
@@ -342,7 +342,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -355,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_8
+      name: Apostila
       rect:
         serializedVersion: 2
         x: 710
@@ -363,7 +363,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_9
+      name: Pasta
       rect:
         serializedVersion: 2
         x: 1034
@@ -384,7 +384,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -397,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_10
+      name: Lapiseira
       rect:
         serializedVersion: 2
         x: 1349
@@ -405,7 +405,7 @@ TextureImporter:
         width: 256
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Place-holders---Mochila_11
+      name: lapis de cor
       rect:
         serializedVersion: 2
         x: 1641
