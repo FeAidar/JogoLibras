@@ -53,6 +53,7 @@ public class CartaManege : MonoBehaviour
     }
     private void Comecatempo(){
         this.GetComponent<Timer>().timeRemaining = tempos[_dificuldade];
+        this.GetComponent<Timer>().tempo = tempos[_dificuldade];
         this.GetComponent<Timer>().timerIsRunning= true;
     }
 
@@ -113,6 +114,7 @@ public class CartaManege : MonoBehaviour
         }
         foreach(GameObject a in CartasSelecionadas){
             a.transform.SetParent(b.transform);
+            a.transform.localScale = new Vector3(1.25f,1.5f,1.25f);
         }
     }
 

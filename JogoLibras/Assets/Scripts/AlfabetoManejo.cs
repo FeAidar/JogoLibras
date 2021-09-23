@@ -48,7 +48,9 @@ public class AlfabetoManejo : MonoBehaviour
 
     private void Comecatempo(){
         this.GetComponent<Timer>().timeRemaining = tempos[_Dificudade];
+        this.GetComponent<Timer>().tempo = tempos[_Dificudade];
         this.GetComponent<Timer>().timerIsRunning= true;
+        Debug.Log(this.GetComponent<Timer>().timeRemaining);
     }
     private void SelecionaPalavra(){
         GameObject Packconfima = Instantiate(PackDePalavras[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
@@ -74,6 +76,7 @@ public class AlfabetoManejo : MonoBehaviour
             GameObject espaco = Instantiate(espaço, transform.position, Quaternion.identity);
             espacosCertos.Add(espaco);
             espaco.transform.SetParent(espaços.transform);
+            espaco.transform.localScale = new Vector3(1.5f,1.5f,1f);
         }
     }
 
@@ -81,6 +84,7 @@ public class AlfabetoManejo : MonoBehaviour
         if(LetrasSelecionadas.Count < quantidadeLetras){
             LetrasSelecionadas.Add(Instantiate(letras[numero],espacosCertos[LetrasSelecionadas.Count].transform.position, Quaternion.identity));
             LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.SetParent(espacosCertos[LetrasSelecionadas.Count -1 ].transform);
+            LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 

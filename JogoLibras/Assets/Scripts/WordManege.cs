@@ -63,6 +63,7 @@ public class WordManege : MonoBehaviour
     }
     private void Comecatempo(){
         this.GetComponent<Timer>().timeRemaining = tempos[_Dificudade];
+        this.GetComponent<Timer>().tempo = tempos[_Dificudade];
         this.GetComponent<Timer>().timerIsRunning= true;
     }
 
