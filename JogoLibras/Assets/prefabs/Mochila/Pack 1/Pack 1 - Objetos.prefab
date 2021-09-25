@@ -133,10 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113054043147989
 Rigidbody2D:
   serializedVersion: 4
@@ -168,8 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1118113054151135643}
   m_Layer: 0
-  m_Name: Objetos
-  m_TagString: Untagged
+  m_Name: Pack 1 - Objetos
+  m_TagString: Pack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,10 +648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113054576933672
 Rigidbody2D:
   serializedVersion: 4
@@ -1143,10 +1139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113054948533970
 Rigidbody2D:
   serializedVersion: 4
@@ -1464,10 +1458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113055297519394
 Rigidbody2D:
   serializedVersion: 4
@@ -1605,10 +1597,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113055597639131
 Rigidbody2D:
   serializedVersion: 4
@@ -1763,10 +1753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &1118113055635602036
 Rigidbody2D:
   serializedVersion: 4

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1152447806764197879}
   - component: {fileID: 1152447806764197833}
   - component: {fileID: 1152447806764197878}
+  - component: {fileID: 2187904814646420459}
   m_Layer: 5
   m_Name: Caderno
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,6 +76,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2187904814646420459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447806764197876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 2498562946383723312, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: 7221524835743039719, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447807027981523
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,9 +102,10 @@ GameObject:
   - component: {fileID: 1152447807027981522}
   - component: {fileID: 1152447807027981524}
   - component: {fileID: 1152447807027981525}
+  - component: {fileID: 3797527026293203329}
   m_Layer: 5
   m_Name: Caneta
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +167,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3797527026293203329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447807027981523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 1280169557550800089, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: 1483894875982564095, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447807172459084
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,9 +193,10 @@ GameObject:
   - component: {fileID: 1152447807172459087}
   - component: {fileID: 1152447807172459073}
   - component: {fileID: 1152447807172459086}
+  - component: {fileID: 5343579165968583021}
   m_Layer: 5
   m_Name: Borracha
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +258,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5343579165968583021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447807172459084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 8296616479008393880, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: -2279030638917805862, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447807693532589
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,9 +284,10 @@ GameObject:
   - component: {fileID: 1152447807693532588}
   - component: {fileID: 1152447807693532590}
   - component: {fileID: 1152447807693532591}
+  - component: {fileID: 1165222294476191689}
   m_Layer: 5
   m_Name: Celular
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,6 +349,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1165222294476191689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447807693532589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 6678032764396022194, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: -1627911561400366940, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447808043759417
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,9 +375,10 @@ GameObject:
   - component: {fileID: 1152447808043759416}
   - component: {fileID: 1152447808043759418}
   - component: {fileID: 1152447808043759419}
+  - component: {fileID: 4326648691079224241}
   m_Layer: 5
   m_Name: Lapis
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +440,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4326648691079224241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447808043759417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 7529485086297374037, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: 9013806015600781721, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447808196587915
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,9 +466,10 @@ GameObject:
   - component: {fileID: 1152447808196587914}
   - component: {fileID: 1152447808196587916}
   - component: {fileID: 1152447808196587917}
+  - component: {fileID: 901967371351827227}
   m_Layer: 5
   m_Name: Apontador
-  m_TagString: Untagged
+  m_TagString: Gesto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,6 +531,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &901967371351827227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447808196587915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6138d85779ddb43a6f806a9215f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dificuldade:
+  - {fileID: 6842555034999001082, guid: 07d2c68232b58714181adaeb35579626, type: 3}
+  - {fileID: -3499077704147172194, guid: 4e3fc81dbddf8ce46918abc7aea79dcd, type: 3}
 --- !u!1 &1152447808210534767
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,12 +559,12 @@ GameObject:
   - component: {fileID: 1152447808210534753}
   - component: {fileID: 1152447808210534766}
   m_Layer: 5
-  m_Name: Gestos
+  m_Name: Pack 1 - Gestos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1152447808210534755
 RectTransform:
   m_ObjectHideFlags: 0

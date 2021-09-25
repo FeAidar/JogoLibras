@@ -8,9 +8,34 @@ public class GameDefiner : MonoBehaviour
     public int pack;
     public int Quantia;
     public int QuantiaEstrela;
+    
+   
+    private static Dictionary<string, GameObject> _instancias = new Dictionary<string, GameObject>();
+    public string ID = "1";
+
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        if (_instancias.ContainsKey(ID))
+        {
+            var existing = _instancias[ID];
+
+
+            if (existing != null)
+            {
+                if (ReferenceEquals(gameObject, existing))
+                    return;
+
+                Destroy(gameObject);
+
+                return;
+            }
+        }
+
+
+        _instancias[ID] = gameObject;
+
+        DontDestroyOnLoad(gameObject);
     }
-    
 }
+  
+

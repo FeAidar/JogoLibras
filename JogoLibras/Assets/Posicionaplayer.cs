@@ -1,22 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Posicionaplayer : MonoBehaviour
 {
-    private GameObject Player;
-    [SerializeField] public List<GameObject> Fases = new List<GameObject>();
+    
     public bool apertou;
-    private Vector3[] PosicaoFases { get; set; }
+    public Vector3 Fase;
     [HideInInspector] public int fase;
     void Start()
     {
-        Player = GameObject.Find("Player");
-        PosicaoFases = new Vector3[Fases.Count];
-        for (int i = 0; i < Fases.Count; i++)
-        {
-            PosicaoFases[i] = Fases[i].transform.position;
-        }
+
 
     }
 
@@ -24,25 +19,21 @@ public class Posicionaplayer : MonoBehaviour
     void Update()
     {
 
-        PosicaoFases = new Vector3[Fases.Count];
-        for (int i = 0; i < Fases.Count; i++)
-        {
-            PosicaoFases[i] = Fases[i].transform.position;
-        }
 
         if(apertou)
             {
-            if (Player.transform.position == PosicaoFases[fase] + (Vector3.down))
+            if (transform.position == Fase + (Vector3.down))
+            {
+                GetComponentInParent<ScrollRect>().enabled = true;
                 apertou = false;
-            else
-              Player.transform.position = Vector3.MoveTowards(Player.transform.position, PosicaoFases[fase] + (Vector3.down), 500f * Time.deltaTime);
             }
-        else
-        { Player.transform.position = PosicaoFases[fase] + (Vector3.down); }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, Fase + (Vector3.down), 500f * Time.deltaTime);
+                GetComponentInParent<ScrollRect>().enabled = false;
+            }
+            }
+
        
-
-     //   transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
-
-        //, _movementTime * Time.fixedDeltaTime);
     }
 }

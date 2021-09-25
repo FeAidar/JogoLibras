@@ -11,7 +11,7 @@ public class arrastavel : MonoBehaviour
 
     private Collider2D _collider;
 
-    public DragController _dragController;
+    private DragController _dragController;
 
     private float _movementTime = 15f;
     private System.Nullable<Vector3> _movementDestination;
@@ -19,15 +19,17 @@ public class arrastavel : MonoBehaviour
     public bool acertou;
     private string firstobject;
     public bool check;
-    public GameObject Timer;
+
+
     
 
 
     private void Start()
     {
               _collider = GetComponent<Collider2D>();
-       // _dragController = FindObjectOfType<DragController>();
+       _dragController = FindObjectOfType<DragController>();
         _Objetos = FindObjectOfType<ItemSelector>();
+       
         
 
 

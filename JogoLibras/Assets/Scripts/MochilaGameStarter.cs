@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MochilaGameStarter : MonoBehaviour
 {
-    public GameObject Level;
-    [Header("Níveis de Dificuldade")]
+    [SerializeField] public List<GameObject> packs;
+    [Header("Níveis de Dificuldade do Minigame")]
     public int dificuldade;
     public int tempo_facil;
     public int tempo_medio;
     public int tempo_dificil;
+    private GameObject Level;
 
     [Header("Telas")]
     public GameObject telaescolha;
@@ -22,17 +24,29 @@ public class MochilaGameStarter : MonoBehaviour
     private int nivel;
     private ItemSelector controlador;
     [HideInInspector] public int jogandolevel;
-
+    private GameDefiner _definer;
+    
 
 
 
 
     void Start()
     {
-        nivel = PlayerPrefs.GetInt("nivelmochila1");
+       
         controlador = FindObjectOfType<ItemSelector>();
         jogandolevel = 0;
+        _definer = FindObjectOfType<GameDefiner>();
 
+        if (_definer.pack == 0)
+            return;
+        else
+           Level = Instantiate(packs[_definer.pack - 1]);
+
+        nivel = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade);
+        Debug.Log(nivel);
+
+        controlador.Comeca();
+      
 
     }
 
@@ -104,6 +118,7 @@ public class MochilaGameStarter : MonoBehaviour
             ingame = true;
             Perdeu = false;
             Ganhou = false;
+            controlador.Comecajogo();
 
 
         }
@@ -121,6 +136,7 @@ public class MochilaGameStarter : MonoBehaviour
             ingame = true;
             Perdeu = false;
             Ganhou = false;
+            controlador.Comecajogo();
 
         }
 
@@ -137,6 +153,7 @@ public class MochilaGameStarter : MonoBehaviour
             jogandolevel = 3;
             Perdeu = false;
             Ganhou = false;
+            controlador.Comecajogo();
 
         }
 
@@ -159,23 +176,25 @@ public class MochilaGameStarter : MonoBehaviour
         {
             if (jogandolevel == 1)
             {
-                PlayerPrefs.SetInt("nivelmochila1", 1);
+                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade); 
+                PlayerPrefs.SetInt(premio, 1);
                 
             }
 
 
             if (jogandolevel == 2)
             {
-                
-                PlayerPrefs.SetInt("nivelmochila1", 2);
+                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade);
+                PlayerPrefs.SetInt(premio, 2);
                 Ganhou = true;
             }
 
 
             if (jogandolevel == 3)
             {
-                
-                PlayerPrefs.SetInt("nivelmochila1", 3);
+
+                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade);
+                PlayerPrefs.SetInt(premio, 3);
                 Ganhou = true;
             }
         }

@@ -2,26 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ItemSelector : MonoBehaviour
 {
     [SerializeField] public List<GameObject>Objetos = new List<GameObject>();
+
     private List<GameObject> recomeca= new List<GameObject>();
+    private List<GameObject> Gestos = new List<GameObject>();
     private Vector3[] objetosInitialPosition { get; set; }
     protected int Totaldeobjetos;
     public int remove;
     private int pontos;
-    public Text Objeto;
     [HideInInspector]    public bool victory;
     public bool teste;
-    void Start()
+
+
+    private GameObject _gesto;
+    private string _nome;
+   public void Comeca()
     {
+
+        foreach (GameObject objetos in GameObject.FindGameObjectsWithTag("Objetos"))
+        {
+            Objetos.Add(objetos);
+
+        }
+
+        foreach (GameObject objetos in GameObject.FindGameObjectsWithTag("Gesto"))
+        {
+            Gestos.Add(objetos);
+            objetos.SetActive(false);
+
+
+        }
 
         recomeca = new List<GameObject> (Objetos);
         Objetos.Shuffle(Objetos.Count);
-       // Debug.Log(Objetos.Count);
+        // Debug.Log(Objetos.Count);
+
+        _nome = Objetos[0].gameObject.name;
+        _gesto = Gestos.Where(obj => obj.name == _nome).SingleOrDefault();
+    
         Totaldeobjetos = Objetos.Count;
-        Objeto.text = Objetos[0].gameObject.name;
+        _gesto.SetActive(true);
+
+        
         objetosInitialPosition = new Vector3[Objetos.Count];
         for (int i = 0; i < Objetos.Count; i++)
         {
@@ -38,7 +64,8 @@ public class ItemSelector : MonoBehaviour
         Objetos.Shuffle(Objetos.Count);
         // Debug.Log(Objetos.Count);
         Totaldeobjetos = Objetos.Count;
-        Objeto.text = Objetos[0].gameObject.name;
+        _nome = Objetos[0].gameObject.name;
+        _gesto = Gestos.Where(obj => obj.name == _nome).SingleOrDefault();
         for (int i = 0; i < Objetos.Count; i++)
         {
 
@@ -49,8 +76,18 @@ public class ItemSelector : MonoBehaviour
 
 
         }
+
+        for (int i = 0; i < Gestos.Count; i++)
+        {
+
+            Gestos[i].GetComponent<MVerificaDificuldade>().Operator();
+
+
+        }
         victory = false;
         teste = false;
+        _gesto.SetActive(true);
+
 
 
     }
@@ -58,16 +95,16 @@ public class ItemSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (pontos <Totaldeobjetos)
             if (remove == 1)
-            Remove();
+           StartCoroutine ("Remove");
         else
                 remove = 0;
 
         if (Objetos.Count == 0)
         {
-            Objeto.text = " ";
-            victory = true;
+                       victory = true;
         }
 
         if (teste)
@@ -76,24 +113,48 @@ public class ItemSelector : MonoBehaviour
         //Debug.Log(i);
     }
 
-    void Remove()
+    IEnumerator Remove()
     {
-        if(pontos <Totaldeobjetos && Objetos.Count != 0)
+        remove = 0;
+        if (pontos <Totaldeobjetos && Objetos.Count != 0)
             Objetos.RemoveAt(0);
+        _gesto.SetActive(false);
+
         pontos += 1;
-       // Debug.Log(i);
+        // Debug.Log(i);
+        yield return new WaitForSeconds(0.2f *Time.deltaTime);
 
         if (Objetos.Count != 0)
         {
+
+            _nome = Objetos[0].gameObject.name;
+            _gesto = Gestos.Where(obj => obj.name == _nome).SingleOrDefault();
+            _gesto.SetActive(true);
             
-            Objeto.text = Objetos[0].gameObject.name;
-            
-          
+            yield return new WaitForSeconds(0.1f * Time.deltaTime);
+            Comecajogo();
+
+
+
+
         }
 
 
-        remove = 0;
+        
 
         
     }
-}
+
+    public void Comecajogo()
+    {
+        foreach (GameObject objetos in GameObject.FindGameObjectsWithTag("Gesto"))
+        {
+            Image image;
+            image = objetos.GetComponent<Image>();
+            var tempColor = image.color;
+            tempColor.a = 1f;
+            image.color = tempColor;
+
+        }
+    }
+        }
