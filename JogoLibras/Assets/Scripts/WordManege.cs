@@ -17,6 +17,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private List<GameObject> View = new List<GameObject>();
     [SerializeField]private int[] Quantia;
     [SerializeField]private GameObject CompostaPosi;
+    [SerializeField]private GameObject[] SelecionadasPosi;
     [SerializeField]private float[] tempos;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
@@ -24,6 +25,7 @@ public class WordManege : MonoBehaviour
     private List<GameObject> SinaisCompostoConfirmado = new List<GameObject>();
     private List<GameObject> SinaisSimplesComfirmado = new List<GameObject>();
     private List<GameObject> simboloSelecionado = new List<GameObject>();
+    private List<GameObject> simboloPosicionado = new List<GameObject>();
     private GameObject Definer;
     private int _Dificudade, _Pack,_quantia;
     public bool vitoria;
@@ -159,6 +161,10 @@ public class WordManege : MonoBehaviour
         if(selecionados < 2){
             simboloSelecionado.Add(esse);
             esse.transform.GetComponent<SelecionaSimbolo>().selecionado = true;
+            simboloPosicionado.Add(Instantiate(esse, transform.position, Quaternion.identity));
+            simboloPosicionado[selecionados].transform.position = SelecionadasPosi[selecionados].transform.position;
+            simboloPosicionado[selecionados].transform.SetParent(SelecionadasPosi[selecionados].transform);
+            simboloPosicionado[selecionados].GetComponentInChildren<SelecionaSimbolo>().pode = false;
             selecionados ++;
             if(selecionados >= 2){
                 foreach (GameObject item in simboloSelecionado)
@@ -182,6 +188,8 @@ public class WordManege : MonoBehaviour
         if(selecionados > 0){
             simboloSelecionado.Remove(esse);
             esse.transform.GetComponent<SelecionaSimbolo>().selecionado = false;
+            Destroy(simboloPosicionado[selecionados-1]);
+            simboloPosicionado.Remove(simboloPosicionado[selecionados-1]);
             selecionados --;
             abacate = 0;
         }
@@ -192,6 +200,8 @@ public class WordManege : MonoBehaviour
         if(b>0){
             while (i <b){
                 simboloSelecionado[0].GetComponent<SelecionaSimbolo>().selecionado = false;
+                Destroy(simboloPosicionado[selecionados-1]);
+                simboloPosicionado.Remove(simboloPosicionado[selecionados-1]);
                 selecionados --;
                 abacate = 0;
                 simboloSelecionado.Remove(simboloSelecionado[0]);

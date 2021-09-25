@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -151,6 +151,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3811291414117161677, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811291414117161677, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811291414117161677, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -202,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta6
       objectReference: {fileID: 0}
+    - target: {fileID: 4599189294100223338, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
 --- !u!224 &1431337075390636440 stripped
@@ -251,6 +263,14 @@ PrefabInstance:
     - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -304,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta4
       objectReference: {fileID: 0}
+    - target: {fileID: 3661035221115738238, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
 --- !u!224 &3318255240752890141 stripped
@@ -353,6 +377,14 @@ PrefabInstance:
     - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -406,6 +438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta1
       objectReference: {fileID: 0}
+    - target: {fileID: 6346928731062362685, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
 --- !u!224 &2150532773203472833 stripped
@@ -455,6 +491,14 @@ PrefabInstance:
     - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -508,6 +552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta3
       objectReference: {fileID: 0}
+    - target: {fileID: 8445773764754005130, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
 --- !u!224 &6959452326419075394 stripped
@@ -557,6 +605,14 @@ PrefabInstance:
     - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,6 +666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta8
       objectReference: {fileID: 0}
+    - target: {fileID: 2173278550464332149, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
 --- !u!224 &8260146573583509609 stripped
@@ -659,6 +719,14 @@ PrefabInstance:
     - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,6 +780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta5
       objectReference: {fileID: 0}
+    - target: {fileID: 8696644860713967954, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
 --- !u!224 &1812534632106729192 stripped
@@ -761,6 +833,14 @@ PrefabInstance:
     - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_LocalPosition.x
@@ -814,6 +894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: palavra composta2
       objectReference: {fileID: 0}
+    - target: {fileID: 1916809071401448192, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
 --- !u!224 &8471263287043275831 stripped
@@ -831,6 +915,10 @@ PrefabInstance:
     - target: {fileID: 4031045392552786815, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_Name
       value: palavra composta7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031045392552786815, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4379418034829915352, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_Pivot.x
@@ -867,6 +955,14 @@ PrefabInstance:
     - target: {fileID: 4379418034829915352, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379418034829915352, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379418034829915352, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4379418034829915352, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_LocalPosition.x

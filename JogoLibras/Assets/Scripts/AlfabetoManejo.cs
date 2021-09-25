@@ -28,6 +28,7 @@ public class AlfabetoManejo : MonoBehaviour
     private int _Dificudade, _Pack, _quantia;
     private string palavraSelecionada;
     private int quantidadeLetras;
+    public bool ganhou;
 
     private void Start(){
         //acha o game controller
@@ -86,6 +87,7 @@ public class AlfabetoManejo : MonoBehaviour
             LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.SetParent(espacosCertos[LetrasSelecionadas.Count -1 ].transform);
             LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.localScale = new Vector3(1f, 1f, 1f);
         }
+        
     }
 
     public void BTM_REMOVE(){

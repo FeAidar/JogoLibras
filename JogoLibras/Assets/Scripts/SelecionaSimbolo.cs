@@ -7,6 +7,7 @@ public class SelecionaSimbolo : MonoBehaviour
     private GameObject maneger;
     [SerializeField]private GameObject borda;
     public bool selecionado;
+    public bool pode = true;
     private void Start(){
         maneger = GameObject.FindGameObjectWithTag("canvas");
     }
@@ -18,12 +19,14 @@ public class SelecionaSimbolo : MonoBehaviour
         }
     }
     public void seleciona(){
-        if(selecionado == false){
-            maneger.GetComponent<WordManege>().SelecionaSimbulo(this.gameObject);
-            
-        }else{
-            maneger.GetComponent<WordManege>().DesSelecionaSimbulo(this.gameObject);
-            
+        if(pode == true){
+            if(selecionado == false){
+                maneger.GetComponent<WordManege>().SelecionaSimbulo(this.gameObject);
+                
+            }else{
+                maneger.GetComponent<WordManege>().DesSelecionaSimbulo(this.gameObject);
+                
+            }
         }
     }
 }
