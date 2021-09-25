@@ -26,6 +26,7 @@ public class Posicionaplayer : MonoBehaviour
             {
                 GetComponentInParent<ScrollRect>().enabled = true;
                 apertou = false;
+             
             }
             else
             {
@@ -33,7 +34,9 @@ public class Posicionaplayer : MonoBehaviour
                 GetComponentInParent<ScrollRect>().enabled = false;
             }
             }
+        else
+            GetComponentInParent<ScrollRect>().enabled = true;
 
-       
+
     }
 }

@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 301172896}
   - component: {fileID: 301172897}
   - component: {fileID: 301172898}
+  - component: {fileID: 301172899}
   m_Layer: 0
   m_Name: DifficultySelector
   m_TagString: Untagged
@@ -302,6 +303,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde01f4425732b447a832fa0ae79baab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &301172899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301172893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c8ee9f89148c74ebb2c98103ae0442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &302791455
@@ -448,14 +461,12 @@ MonoBehaviour:
     m_MinSize: 8
     m_MaxSize: 80
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dificil
-
-'
+  m_Text: Terceira Estrela
 --- !u!222 &502369882
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -792,7 +803,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 80
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 8
     m_MaxSize: 80
     m_Alignment: 4
@@ -801,7 +812,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "F\xE1cil"
+  m_Text: Primeira Estrela
 --- !u!222 &646910790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3218,12 +3229,12 @@ MonoBehaviour:
     m_MinSize: 8
     m_MaxSize: 80
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xE9dio"
+  m_Text: Segunda Estrela
 --- !u!222 &1972601322
 CanvasRenderer:
   m_ObjectHideFlags: 0

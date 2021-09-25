@@ -52,6 +52,8 @@ public class MochilaGameStarter : MonoBehaviour
 
     void Update()
     {
+        _definer.QuantiaEstrela = jogandolevel;
+
         if (!ingame)
         {
             if (!Perdeu)
@@ -174,29 +176,7 @@ public class MochilaGameStarter : MonoBehaviour
     {
         if (!Ganhou)
         {
-            if (jogandolevel == 1)
-            {
-                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade); 
-                PlayerPrefs.SetInt(premio, 1);
-                
-            }
-
-
-            if (jogandolevel == 2)
-            {
-                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade);
-                PlayerPrefs.SetInt(premio, 2);
-                Ganhou = true;
-            }
-
-
-            if (jogandolevel == 3)
-            {
-
-                string premio = (SceneManager.GetActiveScene().name + _definer.Dificuldade);
-                PlayerPrefs.SetInt(premio, 3);
-                Ganhou = true;
-            }
+            _definer.ganhou();
         }
         Ganhou = true;
         telatimeup.SetActive(false);
