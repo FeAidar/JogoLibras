@@ -18,6 +18,7 @@ public class CartaManege : MonoBehaviour
     [SerializeField]private int[] QuantiaJogadas;
     [SerializeField]private float[] tempos;
     [SerializeField]private Text Jogadas;
+    [SerializeField] private GameObject telaVitoria;
     private List<GameObject> CartasSelecionadasDoPack = new List<GameObject>();
     private List<GameObject> CartasSelecionadas = new List<GameObject>();
     private List<GameObject> CartasClicadas = new List<GameObject>();
@@ -26,7 +27,7 @@ public class CartaManege : MonoBehaviour
     private int _pack, _dificuldade, _quantia;
     private int JogadasRestantes;
     public bool ganhou;
-    void Start()
+    public void comeca()
     {
         _Definer = GameObject.FindGameObjectWithTag("GameController");
         if(GameObject.FindGameObjectWithTag("GameController") != null){
@@ -128,6 +129,11 @@ public class CartaManege : MonoBehaviour
                 if(CartasClicadas[0].GetComponent<Carta>().Significado == CartasClicadas[1].GetComponent<Carta>().Significado){
                     CartasClicadas[0].GetComponent<Carta>().par = true;
                     CartasClicadas[1].GetComponent<Carta>().par = true;
+                    CartasPareadas.Add(CartasClicadas[0]);
+                    CartasPareadas.Add(CartasClicadas[1]);
+                    if(CartasPareadas.Count == CartasSelecionadas.Count){
+                        telaVitoria.SetActive(true);
+                    }
                     CartasClicadas.Clear();
                 }
             }

@@ -4171,6 +4171,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: simples3
       objectReference: {fileID: 0}
+    - target: {fileID: 7667405891764530912, guid: a9be8246fbeaf3f4092b710f709ba184, type: 3}
+      propertyPath: m_Text
+      value: '3
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9be8246fbeaf3f4092b710f709ba184, type: 3}
 --- !u!224 &5316373872716608245 stripped

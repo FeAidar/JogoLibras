@@ -19,6 +19,7 @@ public class AlfabetoManejo : MonoBehaviour
     [SerializeField]private GameObject espaço, espaços;
     [SerializeField]private GameObject posipalavra;
     [SerializeField]private float[] tempos;
+    [SerializeField]private GameObject telavitoria;
     private List<GameObject> PackSelecionado = new List<GameObject>();
     private GameObject palavraConfirma;
     private List<char> LetrasCertas = new List<char>();
@@ -29,8 +30,9 @@ public class AlfabetoManejo : MonoBehaviour
     private string palavraSelecionada;
     private int quantidadeLetras;
     public bool ganhou;
+    int quantas;
 
-    private void Start(){
+    public void comeca(){
         //acha o game controller
         Definer = GameObject.FindGameObjectWithTag("GameController");
         //pega a variavel do game controller
@@ -86,8 +88,18 @@ public class AlfabetoManejo : MonoBehaviour
             LetrasSelecionadas.Add(Instantiate(letras[numero],espacosCertos[LetrasSelecionadas.Count].transform.position, Quaternion.identity));
             LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.SetParent(espacosCertos[LetrasSelecionadas.Count -1 ].transform);
             LetrasSelecionadas[LetrasSelecionadas.Count -1].transform.localScale = new Vector3(1f, 1f, 1f);
+            if(LetrasSelecionadas.Count == quantidadeLetras){
+                for (int i = 0; i < quantidadeLetras; i++)
+                {
+                    if(LetrasSelecionadas[i].GetComponent<BotaoLetra>().letra == LetrasCertas[i]){
+                        quantas++;
+                    }
+                }
+            }
         }
-        
+        if(quantas == quantidadeLetras){
+            telavitoria.SetActive(true);
+        }
     }
 
     public void BTM_REMOVE(){

@@ -19,6 +19,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private GameObject CompostaPosi;
     [SerializeField]private GameObject[] SelecionadasPosi;
     [SerializeField]private float[] tempos;
+    [SerializeField]private GameObject telavitoria;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesParaATela = new List<GameObject>();
@@ -31,7 +32,7 @@ public class WordManege : MonoBehaviour
     public bool vitoria;
     private int selecionados;
     int abacate;
-    void Start()
+    public void comeca()
     {
         //acha o game controller
         Definer = GameObject.FindGameObjectWithTag("GameController");
@@ -178,6 +179,7 @@ public class WordManege : MonoBehaviour
                 }
                 if(abacate >= simboloSelecionado.Count){
                     vitoria = true;
+                    telavitoria.SetActive(true);
                 }
             }else{
                 abacate = 0;
