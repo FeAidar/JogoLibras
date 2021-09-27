@@ -8,24 +8,35 @@ public class teleport : MonoBehaviour
 {
     [Header("Level para carregar")]
     [SerializeField] public string level;
+    private AudioSource Som;
 
 
     void Start()
     {
-   
+        Som = GetComponent<AudioSource>();   
     }
-
 
     public void Carregalevel()
     {
+        StartCoroutine("Carrega");
+    }
+    IEnumerator Carrega()
+    {
 
+        if (Som != null)
+        Som.Play();
 
         Handheld.Vibrate();
+
+        yield return new WaitForSecondsRealtime(1f);
+        
+
         SceneManager.LoadScene(level);
-    
+
 
 
     }
+
     // Update is called once per frame
     void Update()
     {

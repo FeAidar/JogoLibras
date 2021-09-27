@@ -71,6 +71,8 @@ public class arrastavel : MonoBehaviour
                 else
                 {
                     transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
+                    Debug.Log("Som erro");
+                    
                 }
 
             }
@@ -105,6 +107,7 @@ public class arrastavel : MonoBehaviour
             ColliderDistance2D colliderDistance2D = other.Distance(_collider);
             Vector3 diff = new Vector3(colliderDistance2D.normal.x, colliderDistance2D.normal.y) * colliderDistance2D.distance;
             transform.position -= diff;
+            
             
         }
 

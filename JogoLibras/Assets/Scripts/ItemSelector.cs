@@ -16,7 +16,7 @@ public class ItemSelector : MonoBehaviour
     private int pontos;
     [HideInInspector]    public bool victory;
     public bool teste;
-
+    public AudioSource AcertouItem;
 
     private GameObject _gesto;
     private string _nome;
@@ -118,7 +118,10 @@ public class ItemSelector : MonoBehaviour
         remove = 0;
         if (pontos <Totaldeobjetos && Objetos.Count != 0)
             Objetos.RemoveAt(0);
+        if (AcertouItem != null)
+            AcertouItem.Play();
         _gesto.SetActive(false);
+
 
         pontos += 1;
         // Debug.Log(i);
