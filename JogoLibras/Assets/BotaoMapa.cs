@@ -9,10 +9,14 @@ public class BotaoMapa : MonoBehaviour
     [Header("Descrição do Minigame e nome do mapa")]
     [SerializeField] public string Texto;
     [SerializeField] public string Mapa;
+
     [Header("Configurações do Minigame")]
     public int Dificuldade;
     public int Pack;
     public int Quantia;
+
+    [Header("Se o minigame se repete no pack, troque o número da versão")]
+    public int VersaoDoMinigame;
     private GameDefiner _definer;
     private GameObject _botao;
     private GameObject _descricao;
@@ -58,8 +62,10 @@ public class BotaoMapa : MonoBehaviour
         _botao.SetActive(true);
         textodescricao.text = Texto;
         _botao.GetComponent<teleport>().level =Mapa;
+        _definer.Dificuldade_do_Minigame = VersaoDoMinigame;
 
-        if (PlayerPrefs.GetInt(Mapa + Dificuldade) == 1)
+
+    if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame+Pack) == 1)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -83,7 +89,7 @@ public class BotaoMapa : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(Mapa + Dificuldade) == 2)
+        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) == 2)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -105,7 +111,7 @@ public class BotaoMapa : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(Mapa + Dificuldade) >= 3)
+        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) >= 3)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -126,7 +132,7 @@ public class BotaoMapa : MonoBehaviour
             image3.color = tempColor3;
         }
 
-        if (PlayerPrefs.GetInt(Mapa + Dificuldade) == 0)
+        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) == 0)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();

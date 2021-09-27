@@ -133,6 +133,8 @@ public class CartaManege : MonoBehaviour
                     CartasPareadas.Add(CartasClicadas[1]);
                     if(CartasPareadas.Count == CartasSelecionadas.Count){
                         telaVitoria.SetActive(true);
+                        //Coloquei aqui a chamada de pontuação do Definer
+                        _Definer.GetComponent<GameDefiner>().ganhou();
                     }
                     CartasClicadas.Clear();
                 }

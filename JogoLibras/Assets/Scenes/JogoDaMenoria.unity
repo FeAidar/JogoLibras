@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Segunda Estrela
 --- !u!222 &29254573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameDefiner
       objectReference: {fileID: 0}
+    - target: {fileID: 8417375300846078517, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8448929693456395903, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1811,7 +1815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Primeira estrela
 --- !u!222 &1011541795
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1971,7 +1975,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 'Voltar
+
+'
 --- !u!222 &1337032729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2673,7 +2679,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Jogar De Novo
 --- !u!222 &1913392692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2752,7 +2758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Terceira Estrela
 --- !u!222 &1914605343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2813,8 +2819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb548cbe5b527f4fb920e6e1d6bab2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  essacena: 0
-  hud: 0
+  essacena: 4
+  hud: 2
 --- !u!1 &2048540101
 GameObject:
   m_ObjectHideFlags: 0

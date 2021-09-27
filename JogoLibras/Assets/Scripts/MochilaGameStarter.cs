@@ -42,7 +42,7 @@ public class MochilaGameStarter : MonoBehaviour
         else
            Level = Instantiate(packs[_definer.pack - 1]);
 
-        nivel = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade);
+        nivel = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade_do_Minigame + _definer.pack);
         Debug.Log(nivel);
 
         controlador.Comeca();
