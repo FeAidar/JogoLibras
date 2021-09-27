@@ -28,6 +28,7 @@ public class CartaManege : MonoBehaviour
     private int JogadasRestantes;
     public bool ganhou;
     public AudioSource Acertou2;
+    public AudioSource Errou2;
     public void comeca()
     {
         _Definer = GameObject.FindGameObjectWithTag("GameController");
@@ -149,6 +150,7 @@ public class CartaManege : MonoBehaviour
             }
         }else{
             DesselecionaTodas();
+            Errou2.Play();
         }
         JogadasRestantes --;
         if(JogadasRestantes == 0){
