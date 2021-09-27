@@ -509,7 +509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Jogar de novo
 --- !u!222 &254542612
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -707,8 +707,8 @@ Camera:
   m_GameObject: {fileID: 428551067}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.8349056, b: 0.98881745, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1382,6 +1382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameDefiner
       objectReference: {fileID: 0}
+    - target: {fileID: 8417375300846078517, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8448929693456395903, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1498,7 +1502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Terceira Estrela
 --- !u!222 &687433821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1577,7 +1581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Segunda Estrela
 --- !u!222 &770446053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1675,6 +1679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872334940}
   - component: {fileID: 872334941}
+  - component: {fileID: 872334942}
   m_Layer: 5
   m_Name: "tela de sele\xE7\xE3o"
   m_TagString: Untagged
@@ -1722,6 +1727,21 @@ MonoBehaviour:
   dificuldade: 020000000100000000000000
   pack: 000000000000000000000000
   Quantia: 000000000100000002000000
+--- !u!114 &872334942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872334939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ee07fc513f597478b5984e0bf7bbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Facil: {fileID: 1261902753}
+  Medio: {fileID: 1421924576}
+  Dificil: {fileID: 1970458438}
 --- !u!1 &877310813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +2005,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 292777871}
   m_HandleRect: {fileID: 292777870}
   m_Direction: 0
-  m_Value: 0.00000010217082
+  m_Value: -0.00000010217082
   m_Size: 0.57249856
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2304,7 +2324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Voltar
 --- !u!222 &1140586541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2383,7 +2403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Limpar
 --- !u!222 &1192428161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3734,7 +3754,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 475392940}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.3174603
+  m_Size: 0.31746036
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4006,6 +4026,22 @@ PrefabInstance:
     - target: {fileID: 326979335765302504, guid: fa161581a328afa408fe89ee216865e6, type: 3}
       propertyPath: m_Name
       value: Fundo
+      objectReference: {fileID: 0}
+    - target: {fileID: 326979335765302505, guid: fa161581a328afa408fe89ee216865e6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 326979335765302505, guid: fa161581a328afa408fe89ee216865e6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 326979335765302505, guid: fa161581a328afa408fe89ee216865e6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 326979335765302505, guid: fa161581a328afa408fe89ee216865e6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.97958356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa161581a328afa408fe89ee216865e6, type: 3}
@@ -4345,7 +4381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Primeira Estrela
 --- !u!222 &2003494464
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4406,8 +4442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb548cbe5b527f4fb920e6e1d6bab2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  essacena: 0
-  hud: 0
+  essacena: 6
+  hud: 2
 --- !u!1 &2053475676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,8 +4605,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801727713}
   m_HandleRect: {fileID: 1801727712}
   m_Direction: 0
-  m_Value: 0.000000052166794
-  m_Size: 0.40609133
+  m_Value: 0
+  m_Size: 0.40609136
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

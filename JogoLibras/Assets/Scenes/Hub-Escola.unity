@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mem\xF3ria"
+  m_text: Palavras
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
   m_sharedMaterial: {fileID: -1152584203684083190, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.75
+  m_fontSize: 13.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2651,7 +2651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230.36787, y: 49}
+  m_AnchoredPosition: {x: 230.3679, y: 49}
   m_SizeDelta: {x: 525.2643, y: 315.9621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215683083
@@ -3404,12 +3404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Texto: "Voc\xEA consegue colocar os objetos na ordem certa antes do tempo acabar?"
-  Mapa: Mochila
-  Dificuldade: 2
-  Pack: 1
-  Quantia: 0
-  VersaoDoMinigame: 1
+  Texto: "Voc\xEA consegue formar palavras novas juntando outras palavras?"
+  Mapa: SinalComposto
+  Dificuldade: 0
+  Pack: 0
+  Quantia: 2
+  VersaoDoMinigame: 0
 --- !u!114 &1694928722
 MonoBehaviour:
   m_ObjectHideFlags: 0

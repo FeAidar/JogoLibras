@@ -180,6 +180,8 @@ public class WordManege : MonoBehaviour
                 if(abacate >= simboloSelecionado.Count){
                     vitoria = true;
                     telavitoria.SetActive(true);
+                    //Coloquei aqui a chamada de pontuação do Definer
+                    Definer.GetComponent<GameDefiner>().ganhou();
                 }
             }else{
                 abacate = 0;

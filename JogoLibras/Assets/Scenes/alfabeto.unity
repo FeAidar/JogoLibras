@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63096611}
   - component: {fileID: 63096612}
+  - component: {fileID: 63096613}
   m_Layer: 5
   m_Name: "tela de sele\xE7\xE3o"
   m_TagString: Untagged
@@ -185,6 +186,21 @@ MonoBehaviour:
   dificuldade: 020000000100000000000000
   pack: 000000000000000000000000
   Quantia: 000000000100000002000000
+--- !u!114 &63096613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63096610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ee07fc513f597478b5984e0bf7bbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Facil: {fileID: 1004693387}
+  Medio: {fileID: 720638548}
+  Dificil: {fileID: 1541969502}
 --- !u!224 &81867753 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3222703679659041526, guid: e4d7e37db5f62594cb3aabbbda9c4cb3, type: 3}
