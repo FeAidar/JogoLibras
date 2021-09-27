@@ -19,9 +19,11 @@ public class teleport : MonoBehaviour
     public void Carregalevel()
     {
 
-                 
-                
+
+        Handheld.Vibrate();
         SceneManager.LoadScene(level);
+    
+
 
     }
     // Update is called once per frame
