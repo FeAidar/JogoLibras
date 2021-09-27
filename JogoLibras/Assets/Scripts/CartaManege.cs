@@ -27,6 +27,7 @@ public class CartaManege : MonoBehaviour
     private int _pack, _dificuldade, _quantia;
     private int JogadasRestantes;
     public bool ganhou;
+    public AudioSource Acertou2;
     public void comeca()
     {
         _Definer = GameObject.FindGameObjectWithTag("GameController");
@@ -134,7 +135,7 @@ public class CartaManege : MonoBehaviour
                     CartasClicadas[1].GetComponent<Carta>().par = true;
                     CartasPareadas.Add(CartasClicadas[0]);
                     CartasPareadas.Add(CartasClicadas[1]);
-                    //SOM
+                    Acertou2.Play();
 
                     if(CartasPareadas.Count == CartasSelecionadas.Count){
                         telaVitoria.SetActive(true);
