@@ -9,7 +9,7 @@ public class teleport : MonoBehaviour
     [Header("Level para carregar")]
     [SerializeField] public string level;
     private AudioSource Som;
-
+    public bool InterrompeMusica;
 
     void Start()
     {
@@ -30,7 +30,14 @@ public class teleport : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
         
-
+        if (InterrompeMusica)
+        { GameObject som= GameObject.FindWithTag("Musica");
+            if (som !=null)
+            {
+                Object.Destroy(som);
+            }
+        
+        }
         SceneManager.LoadScene(level);
 
 
