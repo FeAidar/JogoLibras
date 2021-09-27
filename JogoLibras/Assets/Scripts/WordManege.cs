@@ -20,6 +20,7 @@ public class WordManege : MonoBehaviour
     [SerializeField]private GameObject[] SelecionadasPosi;
     [SerializeField]private float[] tempos;
     [SerializeField]private GameObject telavitoria;
+    [SerializeField]private GameObject telaDerrota;
     private List<GameObject> SinaisCompostosSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesSelecionados = new List<GameObject>();
     private List<GameObject> SinaisSimplesParaATela = new List<GameObject>();
@@ -32,6 +33,12 @@ public class WordManege : MonoBehaviour
     public bool vitoria;
     private int selecionados;
     int abacate;
+
+    private void Update(){
+        if( this.GetComponent<Timer>().perdeu == true){
+            telaDerrota.SetActive(true);
+        }
+    }
     public void comeca()
     {
         //acha o game controller
