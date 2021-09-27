@@ -18,7 +18,7 @@ public class CartaManege : MonoBehaviour
     [SerializeField]private int[] QuantiaJogadas;
     [SerializeField]private float[] tempos;
     [SerializeField]private Text Jogadas;
-    [SerializeField] private GameObject telaVitoria;
+    [SerializeField] private GameObject telaVitoria, teladerrota;
     private List<GameObject> CartasSelecionadasDoPack = new List<GameObject>();
     private List<GameObject> CartasSelecionadas = new List<GameObject>();
     private List<GameObject> CartasClicadas = new List<GameObject>();
@@ -51,6 +51,9 @@ public class CartaManege : MonoBehaviour
     }
     private void Update(){
         Jogadas.text = ""+JogadasRestantes;
+        if( this.GetComponent<Timer>().perdeu == true){
+            teladerrota.SetActive(true);
+        }
     }
     private void Comecatempo(){
         this.GetComponent<Timer>().timeRemaining = tempos[_dificuldade];
@@ -143,12 +146,18 @@ public class CartaManege : MonoBehaviour
             DesselecionaTodas();
         }
         JogadasRestantes --;
+        if(JogadasRestantes == 0){
+            teladerrota.SetActive(true);
+        }
     }
 
     public void CartaDesselecionada(GameObject esse){
         esse.GetComponent<Carta>().verso();
         CartasClicadas.Remove(esse);
         JogadasRestantes --;
+        if(JogadasRestantes == 0){
+            teladerrota.SetActive(true);
+        }
     }
 
     private void DesselecionaTodas(){
