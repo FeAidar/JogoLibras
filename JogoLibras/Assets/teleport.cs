@@ -34,11 +34,21 @@ public class teleport : MonoBehaviour
         { GameObject som= GameObject.FindWithTag("Musica");
             if (som !=null)
             {
-                Object.Destroy(som);
+                som.GetComponent<AudioSource>().Stop();
             }
         
         }
+        else
+        {
+            GameObject som = GameObject.FindWithTag("Musica");
+            if (som != null)
+            {
+               if(som.GetComponent<AudioSource>().isPlaying == false)
+                    som.GetComponent<AudioSource>().Play();
+            }
+        }
         SceneManager.LoadScene(level);
+
 
 
 
