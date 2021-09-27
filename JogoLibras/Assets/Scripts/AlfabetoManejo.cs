@@ -99,6 +99,8 @@ public class AlfabetoManejo : MonoBehaviour
         }
         if(quantas == quantidadeLetras){
             telavitoria.SetActive(true);
+            //Coloquei aqui a chamada de pontuação do Definer
+            Definer.GetComponent<GameDefiner>().ganhou();
         }
     }
 
