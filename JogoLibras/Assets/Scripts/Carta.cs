@@ -9,6 +9,7 @@ public class Carta : MonoBehaviour
     private bool virado;
     [SerializeField] private GameObject[] lado;
     private GameObject canvas;
+    private AudioSource CartaVirou;
 
     private void Start(){
         canvas = GameObject.FindGameObjectWithTag("canvas");
@@ -17,6 +18,7 @@ public class Carta : MonoBehaviour
     }
 
     public void clica(){
+        if (CartaVirou != null) CartaVirou.Play();
         if(virado == true && par == false){
             canvas.GetComponent<CartaManege>().CartaDesselecionada(this.gameObject);
         }else if(par == false){
