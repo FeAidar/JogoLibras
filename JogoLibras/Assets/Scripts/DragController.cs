@@ -54,6 +54,7 @@ public class DragController : MonoBehaviour
                 {
                     _lastDragged = draggable;
                     InitDrag();
+                    
                 }
             }
 

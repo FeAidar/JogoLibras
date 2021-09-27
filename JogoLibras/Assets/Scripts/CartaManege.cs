@@ -134,10 +134,14 @@ public class CartaManege : MonoBehaviour
                     CartasClicadas[1].GetComponent<Carta>().par = true;
                     CartasPareadas.Add(CartasClicadas[0]);
                     CartasPareadas.Add(CartasClicadas[1]);
+                    //SOM
+
                     if(CartasPareadas.Count == CartasSelecionadas.Count){
                         telaVitoria.SetActive(true);
                         //Coloquei aqui a chamada de pontuação do Definer
                         _Definer.GetComponent<GameDefiner>().ganhou();
+                        //SOM DE GANHOU TODAS
+
                     }
                     CartasClicadas.Clear();
                 }

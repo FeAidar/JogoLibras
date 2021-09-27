@@ -179,6 +179,8 @@ public class MochilaGameStarter : MonoBehaviour
             _definer.ganhou();
         }
         Ganhou = true;
+
+        // --- SOM VITORIA
         telatimeup.SetActive(false);
         telaescolha.SetActive(false);
         telaganhou.SetActive(true);
