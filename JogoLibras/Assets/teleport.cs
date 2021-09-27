@@ -33,7 +33,8 @@ public class teleport : MonoBehaviour
             {
                 GetComponent<Button>().enabled = false;
                 GetComponent<Image>().enabled = false;
-                GetComponentInChildren<Text>().enabled = false;
+                if (GetComponentInChildren<Text>() != null)
+                    GetComponentInChildren<Text>().enabled = false;
             }
         }
 
@@ -43,6 +44,7 @@ public class teleport : MonoBehaviour
             {
                 GetComponent<Button>().enabled = true;
                 GetComponent<Image>().enabled = true;
+                if(GetComponentInChildren<Text>() != null)
                 GetComponentInChildren<Text>().enabled = true;
             }
         }

@@ -22,21 +22,21 @@ public class Liberadificuldade : MonoBehaviour
     void Update()
     {
         
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade)==1)
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) ==1)
             {
             Medio.SetActive(true);
             Dificil.SetActive(false);
    
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade) >= 2)
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) >= 2)
         {
             Dificil.SetActive(true);
             Medio.SetActive(true);
 
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade) ==0)
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 0)
         {
             Medio.SetActive(false);
             Dificil.SetActive(false);
@@ -49,7 +49,7 @@ public class Liberadificuldade : MonoBehaviour
 
     public void Restartprefs()
     {
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + controller.Dificuldade, 0);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack, 0);
     }
 
 }

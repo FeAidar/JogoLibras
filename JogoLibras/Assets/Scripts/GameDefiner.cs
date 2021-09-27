@@ -9,10 +9,11 @@ public class GameDefiner : MonoBehaviour
     public int pack;
     public int Quantia;
     [HideInInspector]    public int QuantiaEstrela;
-    
-   
+    [HideInInspector] public string ID = "1";
+    [HideInInspector] public int Dificuldade_do_Minigame;
+
     private static Dictionary<string, GameObject> _instancias = new Dictionary<string, GameObject>();
-    public string ID = "1";
+   
 
     void Awake()
     {
@@ -42,7 +43,7 @@ public class GameDefiner : MonoBehaviour
     {
         if (QuantiaEstrela == 1)
         {
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade);
+            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
             PlayerPrefs.SetInt(premio, 1);
 
         }
@@ -50,7 +51,7 @@ public class GameDefiner : MonoBehaviour
 
         if (QuantiaEstrela == 2)
         {
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade);
+            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
             PlayerPrefs.SetInt(premio, 2);
 
         }
@@ -59,10 +60,15 @@ public class GameDefiner : MonoBehaviour
         if (QuantiaEstrela == 3)
         {
 
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade);
+            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
             PlayerPrefs.SetInt(premio, 3);
 
         }
+    }
+
+    public void Apagatudo()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
   

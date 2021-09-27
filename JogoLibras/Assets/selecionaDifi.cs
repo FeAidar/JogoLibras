@@ -34,7 +34,9 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[0];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[0];
         definer.GetComponent<GameDefiner>().pack = pack[0];
-        switch(Minigame)
+        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
+               switch (Minigame)
         {
             case 0:
                 memoria.comeca();
@@ -52,7 +54,9 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[1];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[1];
         definer.GetComponent<GameDefiner>().pack = pack[1];
-        switch(Minigame)
+        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
+        switch (Minigame)
         {
             case 0:
                 memoria.comeca();
@@ -70,7 +74,9 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[2];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[2];
         definer.GetComponent<GameDefiner>().pack = pack[2];
-        switch(Minigame)
+        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        definer.GetComponent<GameDefiner>().QuantiaEstrela = 3;
+        switch (Minigame)
         {
             case 0:
                 memoria.comeca();
