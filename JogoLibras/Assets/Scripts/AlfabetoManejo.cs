@@ -20,6 +20,7 @@ public class AlfabetoManejo : MonoBehaviour
     [SerializeField]private GameObject posipalavra;
     [SerializeField]private float[] tempos;
     [SerializeField]private GameObject telavitoria;
+    [SerializeField]private GameObject telaDerrota;
     private List<GameObject> PackSelecionado = new List<GameObject>();
     private GameObject palavraConfirma;
     private List<char> LetrasCertas = new List<char>();
@@ -31,7 +32,11 @@ public class AlfabetoManejo : MonoBehaviour
     private int quantidadeLetras;
     public bool ganhou;
     int quantas;
-
+    private void Update(){
+        if( this.GetComponent<Timer>().perdeu == true){
+            telaDerrota.SetActive(true);
+        }
+    }
     public void comeca(){
         //acha o game controller
         Definer = GameObject.FindGameObjectWithTag("GameController");
