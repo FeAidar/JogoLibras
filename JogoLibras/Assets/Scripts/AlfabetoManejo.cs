@@ -110,12 +110,16 @@ public class AlfabetoManejo : MonoBehaviour
     }
 
     public void BTM_REMOVE(){
+        if(LetrasSelecionadas[LetrasSelecionadas.Count -1].GetComponent<BotaoLetra>().letra == LetrasCertas[LetrasSelecionadas.Count -1]){
+            quantas--;
+        }
         Destroy(LetrasSelecionadas[LetrasSelecionadas.Count -1]);
         LetrasSelecionadas.Remove(LetrasSelecionadas[LetrasSelecionadas.Count -1]);
     }
 
     public void BTM_clear(){
         int a = LetrasSelecionadas.Count;
+        quantas=0;
         foreach (GameObject b in LetrasSelecionadas)
         {
             Destroy(b);
