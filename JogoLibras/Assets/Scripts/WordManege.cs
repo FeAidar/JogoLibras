@@ -173,7 +173,7 @@ public class WordManege : MonoBehaviour
             simboloPosicionado[selecionados].transform.position = SelecionadasPosi[selecionados].transform.position;
             simboloPosicionado[selecionados].transform.SetParent(SelecionadasPosi[selecionados].transform);
             simboloPosicionado[selecionados].GetComponentInChildren<SelecionaSimbolo>().pode = false;
-            simboloPosicionado[selecionados].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+            simboloPosicionado[selecionados].transform.localScale = new Vector3(1.5f, 2f, 1f);
             selecionados ++;
             if(selecionados >= 2){
                 foreach (GameObject item in simboloSelecionado)

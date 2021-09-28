@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3811291414117161677, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -436
       objectReference: {fileID: 0}
     - target: {fileID: 3811291414117161677, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -206,9 +206,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3854772653860215618, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_Text
+      value: tinta
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854772653860215618, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854772653860215618, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4599189294100223338, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
       propertyPath: m_Name
-      value: palavra composta6
+      value: tinta
       objectReference: {fileID: 0}
     - target: {fileID: 4599189294100223338, guid: 6ea732a4b9ca28e48bd4a78818a8f471, type: 3}
       propertyPath: m_IsActive
@@ -302,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -1469
       objectReference: {fileID: 0}
     - target: {fileID: 2056419223412712256, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -322,11 +334,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3661035221115738238, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_Name
-      value: palavra composta4
+      value: escola
       objectReference: {fileID: 0}
     - target: {fileID: 3661035221115738238, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658612753419636151, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_Text
+      value: escola
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658612753419636151, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658612753419636151, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10b7f02a34449be4c89bd48e1a585b96, type: 3}
@@ -416,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -688
       objectReference: {fileID: 0}
     - target: {fileID: 6346928731062362684, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -436,11 +460,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346928731062362685, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_Name
-      value: palavra composta1
+      value: lousa
       objectReference: {fileID: 0}
     - target: {fileID: 6346928731062362685, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346928731062362687, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+    - target: {fileID: 7472050275092252937, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_Text
+      value: lousa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472050275092252937, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472050275092252937, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bed54c53c94bbe479638e50919606a4, type: 3}
@@ -530,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -342
       objectReference: {fileID: 0}
     - target: {fileID: 4566422593264271134, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -548,9 +588,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5396977455435652612, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_Text
+      value: menino
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396977455435652612, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396977455435652612, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8445773764754005130, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_Name
-      value: palavra composta3
+      value: menino
       objectReference: {fileID: 0}
     - target: {fileID: 8445773764754005130, guid: 9f698d099f1aeb141a8c57924a2f645e, type: 3}
       propertyPath: m_IsActive
@@ -644,11 +696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -1015
       objectReference: {fileID: 0}
     - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 1521933279325556434, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -664,11 +716,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2173278550464332149, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_Name
-      value: palavra composta8
+      value: "m\xE3e"
       objectReference: {fileID: 0}
     - target: {fileID: 2173278550464332149, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5697364090842717159, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_Text
+      value: "m\xE3e"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5697364090842717159, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5697364090842717159, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3083edfdeda0c4b83424c869435bfc, type: 3}
@@ -684,6 +748,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4612555040100527693}
     m_Modifications:
+    - target: {fileID: 7824550190401908110, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_Text
+      value: sala de aula
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824550190401908110, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824550190401908110, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -758,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1054
+      value: -624
       objectReference: {fileID: 0}
     - target: {fileID: 8324701043597881077, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -778,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8696644860713967954, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_Name
-      value: palavra composta5
+      value: sala de aula
       objectReference: {fileID: 0}
     - target: {fileID: 8696644860713967954, guid: 7b74b6090d77f4a49b3d42b363e394a6, type: 3}
       propertyPath: m_IsActive
@@ -876,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -399
       objectReference: {fileID: 0}
     - target: {fileID: 378695316639131220, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -892,11 +968,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1916809071401448192, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_Name
-      value: palavra composta2
+      value: menina
       objectReference: {fileID: 0}
     - target: {fileID: 1916809071401448192, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340683451627398591, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_Text
+      value: menina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340683451627398591, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340683451627398591, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18621cadf00e28741b1b3c876c543489, type: 3}
@@ -912,9 +1000,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4612555040100527693}
     m_Modifications:
+    - target: {fileID: 2456602209557252044, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_Text
+      value: pai
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456602209557252044, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456602209557252044, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4031045392552786815, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_Name
-      value: palavra composta7
+      value: pai
       objectReference: {fileID: 0}
     - target: {fileID: 4031045392552786815, guid: 1a9459676a80b6a4e8eb3f1d23999be4, type: 3}
       propertyPath: m_IsActive
