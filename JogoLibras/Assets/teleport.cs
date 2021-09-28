@@ -10,6 +10,7 @@ public class teleport : MonoBehaviour
     [SerializeField] public string level;
     private AudioSource Som;
     public bool InterrompeMusica;
+   
 
     void Start()
     {
