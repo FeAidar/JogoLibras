@@ -10,11 +10,13 @@ public class teleport : MonoBehaviour
     [SerializeField] public string level;
     private AudioSource Som;
     public bool InterrompeMusica;
+    private transicao _transicao;
    
 
     void Start()
     {
-        Som = GetComponent<AudioSource>();   
+        Som = GetComponent<AudioSource>();
+        _transicao = FindObjectOfType<transicao>();
     }
 
     public void Carregalevel()
@@ -28,6 +30,8 @@ public class teleport : MonoBehaviour
         Som.Play();
 
         Handheld.Vibrate();
+        if(_transicao != null)
+        _transicao.inicia();
 
         yield return new WaitForSecondsRealtime(1f);
         
