@@ -8,6 +8,7 @@ public class GameDefiner : MonoBehaviour
     public int Dificuldade;
     public int pack;
     public int Quantia;
+    public int Etapa;
     [HideInInspector]    public int QuantiaEstrela;
     [HideInInspector] public string ID = "1";
     [HideInInspector] public int Dificuldade_do_Minigame;

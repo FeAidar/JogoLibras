@@ -24,7 +24,7 @@ public class CartaManege : MonoBehaviour
     private List<GameObject> CartasClicadas = new List<GameObject>();
     private List<GameObject> CartasPareadas = new List<GameObject>();
     private GameObject _Definer;
-    private int _pack, _dificuldade, _quantia;
+    private int _pack, _dificuldade, _quantia, _Etapa;
     private int JogadasRestantes;
     public bool ganhou;
     public AudioSource Acertou2;
@@ -37,6 +37,7 @@ public class CartaManege : MonoBehaviour
                 _dificuldade = _Definer.GetComponent<GameDefiner>().Dificuldade;
                 _pack = _Definer.GetComponent<GameDefiner>().pack;
                 _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
+                _Etapa =_Definer.GetComponent<GameDefiner>().Etapa;
             }
         }
 
@@ -109,6 +110,12 @@ public class CartaManege : MonoBehaviour
             GameObject b = Instantiate(CartasSelecionadasDoPack[i],transform.position, Quaternion.identity);
             CartasSelecionadas.Add(CartasSelecionadasDoPack[i]);
             CartasSelecionadas.Add(b);
+            if(_Etapa == 1){
+                b.GetComponent<Carta>().essa = true;
+            }else if(_Etapa == 2){
+                b.GetComponent<Carta>().essa = true;
+                CartasSelecionadasDoPack[i].GetComponent<Carta>().EtapaSemPalavra = true;
+            }
         }
     }
     private void reorganizaCartasCertas(GameObject b){
