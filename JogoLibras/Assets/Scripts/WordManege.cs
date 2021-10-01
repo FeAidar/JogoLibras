@@ -29,7 +29,7 @@ public class WordManege : MonoBehaviour
     private List<GameObject> simboloSelecionado = new List<GameObject>();
     private List<GameObject> simboloPosicionado = new List<GameObject>();
     private GameObject Definer;
-    private int _Dificudade, _Pack,_quantia;
+    private int _Dificudade, _Pack,_quantia,_etapa;
     public bool vitoria;
     private int selecionados;
     int abacate;
@@ -49,6 +49,7 @@ public class WordManege : MonoBehaviour
                 _Dificudade = Definer.GetComponent<GameDefiner>().Dificuldade;
                 _Pack = Definer.GetComponent<GameDefiner>().pack;
                 _quantia = Definer.GetComponent<GameDefiner>().Quantia;
+                _etapa = Definer.GetComponent<GameDefiner>().Etapa;
             }
         }
         if(_quantia == 0){
@@ -91,6 +92,9 @@ public class WordManege : MonoBehaviour
             SinaisSimplesSelecionados.Add(PackSimplesSelecionado.transform.GetChild(i).gameObject);
         }
         int c = Random.Range(0, SinaisCompostosSelecionados.Count);
+        if(_etapa >= 1){
+            SinaisCompostosSelecionados[c].GetComponent<ComposteWord>().imagem = true;
+        }
         SinaisCompostoConfirmado.Add(SinaisCompostosSelecionados[c]);
     }
 
