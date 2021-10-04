@@ -24,7 +24,7 @@ public class EndTime : MonoBehaviour
     void restart ()
     {
 
-            _controller.niveis();
+            _controller.ComecaJogo();
         _itemselector.Restart();
         _timer.perdeu = false;
         Debug.Log("apertei");

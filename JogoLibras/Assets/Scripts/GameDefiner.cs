@@ -45,7 +45,9 @@ public class GameDefiner : MonoBehaviour
         if (QuantiaEstrela == 1)
         {
             string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
-            PlayerPrefs.SetInt(premio, 1);
+            if (PlayerPrefs.GetInt(premio) == 0)
+                PlayerPrefs.SetInt(premio, 1);
+            else return;
 
         }
 
@@ -53,7 +55,10 @@ public class GameDefiner : MonoBehaviour
         if (QuantiaEstrela == 2)
         {
             string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
-            PlayerPrefs.SetInt(premio, 2);
+            if (PlayerPrefs.GetInt(premio) > QuantiaEstrela)
+                return;
+            else
+                PlayerPrefs.SetInt(premio, 2);
 
         }
 
@@ -62,7 +67,10 @@ public class GameDefiner : MonoBehaviour
         {
 
             string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
-            PlayerPrefs.SetInt(premio, 3);
+            if (PlayerPrefs.GetInt(premio) > QuantiaEstrela)
+                return;
+            else
+                PlayerPrefs.SetInt(premio, 3);
 
         }
     }

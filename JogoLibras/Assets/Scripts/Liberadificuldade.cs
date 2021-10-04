@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Liberadificuldade : MonoBehaviour
 {
-    public GameObject Facil;
-    public GameObject Medio;
-    public GameObject Dificil;
+    public GameObject Estrela1;
+    public GameObject Estrela2;
+    public GameObject Estrela3;
     private GameDefiner controller;
 
 
     void Start()
-    {
-        Medio.SetActive(false);
-        Dificil.SetActive(false);
+    { 
+        Estrela1.SetActive(false);
+        Estrela2.SetActive(false);
+        Estrela3.SetActive(false);
         controller = FindObjectOfType<GameDefiner>();
     }
 
@@ -24,22 +25,33 @@ public class Liberadificuldade : MonoBehaviour
         
         if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) ==1)
             {
-            Medio.SetActive(true);
-            Dificil.SetActive(false);
-   
+            Estrela1.SetActive(true);
+            Estrela2.SetActive(false);
+            Estrela3.SetActive(false);
+
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) >= 2)
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 2)
         {
-            Dificil.SetActive(true);
-            Medio.SetActive(true);
+            Estrela1.SetActive(true);
+            Estrela2.SetActive(true);
+            Estrela3.SetActive(false);
+
+        }
+
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 3)
+        {
+            Estrela1.SetActive(true);
+            Estrela2.SetActive(true);
+            Estrela3.SetActive(true);
 
         }
 
         if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 0)
         {
-            Medio.SetActive(false);
-            Dificil.SetActive(false);
+            Estrela1.SetActive(false);
+            Estrela2.SetActive(false);
+            Estrela3.SetActive(false);
         }
           
            // Debug.Log(PlayerPrefs.GetInt("nivelmochila1"));

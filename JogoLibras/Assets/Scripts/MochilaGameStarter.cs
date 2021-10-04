@@ -7,23 +7,28 @@ using UnityEngine.SceneManagement;
 public class MochilaGameStarter : MonoBehaviour
 {
     [SerializeField] public List<GameObject> packs;
-    [Header("Níveis de Dificuldade do Minigame")]
-    public int dificuldade;
-    public int tempo_facil;
-    public int tempo_medio;
-    public int tempo_dificil;
+    [Header("Tempo Total de Jogo")]
+    public int Tempo;
+    [Header("Tempo para Perder Estrela")]
+    // public int dificuldade;
+    public int TempoPerdeuUmaEstrela;
+    public int TempoPerdeuDuasEstrelas;
     private GameObject Level;
 
     [Header("Telas")]
     public GameObject telaescolha;
     public GameObject telatimeup;
     public GameObject telaganhou;
+    public Text Estrelas;
+
     [HideInInspector] public bool ingame;
     private bool Ganhou;
     private bool Perdeu;
     private int nivel;
     private ItemSelector controlador;
-    [HideInInspector] public int jogandolevel;
+
+
+  private bool _start;
     private GameDefiner _definer;
     
 
@@ -32,9 +37,9 @@ public class MochilaGameStarter : MonoBehaviour
 
     void Start()
     {
-       
+        Estrelas.text = string.Format ("3 Estrelas");
         controlador = FindObjectOfType<ItemSelector>();
-        jogandolevel = 0;
+
         _definer = FindObjectOfType<GameDefiner>();
 
         if (_definer.pack == 0)
@@ -52,14 +57,14 @@ public class MochilaGameStarter : MonoBehaviour
 
     void Update()
     {
-        _definer.QuantiaEstrela = jogandolevel;
-
+        
         if (!ingame)
         {
+            this.GetComponent<Timer>().timerIsRunning = false;
             if (!Perdeu)
             {
                 telaescolha.SetActive(true);
-                niveis();
+                ComecaJogo();
             }
 
             if (Ganhou)
@@ -70,7 +75,7 @@ public class MochilaGameStarter : MonoBehaviour
                 if (!Perdeu)
             {
                 telaescolha.SetActive(true);
-                niveis();
+                ComecaJogo();
             }
 
             
@@ -79,7 +84,38 @@ public class MochilaGameStarter : MonoBehaviour
 
         }
         else
-        this.GetComponent<Timer>().timerIsRunning = true;
+        {
+            this.GetComponent<Timer>().timerIsRunning = true;
+            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade_do_Minigame + _definer.pack) == 3)
+            { _definer.QuantiaEstrela = 3; }
+            else
+            {
+
+                if (GetComponent<Timer>().timeRemaining > TempoPerdeuUmaEstrela)
+                {
+                    _definer.QuantiaEstrela = 3;
+                    Estrelas.text = string.Format("3 Estrelas");
+                }
+
+                if (GetComponent<Timer>().timeRemaining > TempoPerdeuDuasEstrelas && GetComponent<Timer>().timeRemaining < TempoPerdeuUmaEstrela)
+                {
+                    Estrelas.text = string.Format("2 Estrelas");
+                    _definer.QuantiaEstrela = 2;
+                }
+
+                if (GetComponent<Timer>().timeRemaining < TempoPerdeuDuasEstrelas && GetComponent<Timer>().timeRemaining != 0)
+                {
+                    Estrelas.text = string.Format("1 Estrela");
+                    _definer.QuantiaEstrela = 1;
+                }
+                if (GetComponent<Timer>().timeRemaining < 0.05f)
+                {
+                    Estrelas.text = string.Format("0 Estrelas");
+                    _definer.QuantiaEstrela = 0;
+                }
+            }
+        }
+    
 
         if (ingame && controlador.victory == true) 
         {
@@ -88,14 +124,6 @@ public class MochilaGameStarter : MonoBehaviour
         }
 
 
-
-
-
-        if (dificuldade == 0)
-        { ingame = false;
-            this.GetComponent<Timer>().timerIsRunning = false;
-        }
-
         if (ingame && GetComponent<Timer>().perdeu == true)
         {
             perdeu();
@@ -103,61 +131,25 @@ public class MochilaGameStarter : MonoBehaviour
 
     }
 
-    public void niveis()
+    public void ComecaJogo()
     {
-
-
-        if (dificuldade == 1)
+        if (_start)
         {
-           this.GetComponent<Timer>().timeRemaining= tempo_facil;
+            this.GetComponent<Timer>().timeRemaining = Tempo;
             telaganhou.SetActive(false);
             telatimeup.SetActive(false);
             telaescolha.SetActive(false);
             Level.SetActive(true);
             this.GetComponent<Timer>().enabled = true;
             this.GetComponent<Timer>().timerIsRunning = true;
-            jogandolevel = 1;
+            
             ingame = true;
             Perdeu = false;
             Ganhou = false;
             controlador.Comecajogo();
-
-
         }
 
-        if (dificuldade == 2)
-        {
-           this.GetComponent<Timer>().timeRemaining = tempo_medio;
-            telaganhou.SetActive(false);
-            telatimeup.SetActive(false);
-            telaescolha.SetActive(false);
-            Level.SetActive(true);
-            this.GetComponent<Timer>().enabled = true;
-            this.GetComponent<Timer>().timerIsRunning = true;
-            jogandolevel = 2;
-            ingame = true;
-            Perdeu = false;
-            Ganhou = false;
-            controlador.Comecajogo();
 
-        }
-
-        if (dificuldade == 3)
-        {
-            this.GetComponent<Timer>().timeRemaining = tempo_dificil;
-            telaganhou.SetActive(false);
-            telatimeup.SetActive(false);
-            telaescolha.SetActive(false);
-            Level.SetActive(true);
-            this.GetComponent<Timer>().enabled = true;
-            this.GetComponent<Timer>().timerIsRunning = true;
-            ingame = true;
-            jogandolevel = 3;
-            Perdeu = false;
-            Ganhou = false;
-            controlador.Comecajogo();
-
-        }
 
     }
     void perdeu()
@@ -191,27 +183,11 @@ public class MochilaGameStarter : MonoBehaviour
 
     }
 
-    public void comeca1()
-    {
-        dificuldade = 1;
-   
-    }
-
-    public void comeca2()
-    {
-        dificuldade = 2;
-
-    }
-    public void comeca3()
-    {
-        dificuldade = 3;
-
-    }
 
     public void teladeescolha()
     {
         Ganhou = false;
-        dificuldade = 0;
+        _start = false;
         ingame = false;
         Level.SetActive(false);
         telaescolha.SetActive(true);
@@ -220,5 +196,11 @@ public class MochilaGameStarter : MonoBehaviour
 
 
     }
+
+    public void inicia()
+    {
+        _start = true;
+    }
+
 
 }
