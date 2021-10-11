@@ -30,7 +30,7 @@ public class Posicionaplayer : MonoBehaviour
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, Fase + (Vector3.down), 500f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, Fase + (Vector3.down), 5f * Time.deltaTime);
                 GetComponentInParent<ScrollRect>().enabled = false;
                 Invoke("garantia", 1f * Time.deltaTime);
            
