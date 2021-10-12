@@ -916,9 +916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ee07fc513f597478b5984e0bf7bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Facil: {fileID: 997100729}
-  Medio: {fileID: 979410158}
-  Dificil: {fileID: 578606094}
+  Estrela1: {fileID: 0}
+  Estrela2: {fileID: 0}
+  Estrela3: {fileID: 0}
 --- !u!1 &561788202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1259376660229937425, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea65d9bf87f62e6459d7e6def1c03de1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
 --- !u!1 &1660281086
