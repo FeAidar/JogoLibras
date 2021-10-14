@@ -43,6 +43,6 @@ public class Posicionaplayer : MonoBehaviour
     }
     void garantia()
     { GetComponentInParent<ScrollRect>().enabled = true;
-        Debug.Log("invocoume");
+       // Debug.Log("invocoume");
     }
 }

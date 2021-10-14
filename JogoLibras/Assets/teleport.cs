@@ -29,7 +29,8 @@ public class teleport : MonoBehaviour
         if (Som != null)
         Som.Play();
 
-        Handheld.Vibrate();
+        Vibracao.vibra();
+
         if(_transicao != null)
         _transicao.inicia();
 
