@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/menuInicial.unity
-    guid: fd92409ace98ff64f950766fca0501ec
+    path: Assets/Scenes/Logo.unity
+    guid: 7b3c1fb0fd97fb14399977fa9c0c6b2d
   - enabled: 1
     path: Assets/Scenes/Hub-Fases.unity
     guid: c9e388b5876113c499fd707aadd326e9
@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Customiza\xE7\xE3o.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/menuInicial.unity
+    guid: fd92409ace98ff64f950766fca0501ec
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 958a5cb466602114bb649ee25b13e02b, type: 2}
