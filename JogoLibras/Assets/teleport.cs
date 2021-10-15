@@ -16,7 +16,7 @@ public class teleport : MonoBehaviour
     void Start()
     {
         Som = GetComponent<AudioSource>();
-        _transicao = FindObjectOfType<transicao>();
+        _transicao = GameObject.FindWithTag("Transicao").GetComponent<transicao>();
     }
 
     public void Carregalevel()
@@ -26,16 +26,18 @@ public class teleport : MonoBehaviour
     IEnumerator Carrega()
     {
 
-        if (Som != null)
-        Som.Play();
-
         Vibracao.vibra();
 
         if(_transicao != null)
         _transicao.inicia();
 
-        yield return new WaitForSecondsRealtime(1f);
-        
+        if (Som != null)
+        {
+            Som.Play();
+            yield return new WaitForSeconds(Som.clip.length);
+        }
+        else yield return new WaitForSecondsRealtime (1f);
+
         if (InterrompeMusica)
         { GameObject som= GameObject.FindWithTag("Musica");
             if (som !=null)

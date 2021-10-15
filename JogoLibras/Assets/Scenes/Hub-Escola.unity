@@ -237,8 +237,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 329, y: -126.17001}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -901,8 +901,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 68, y: -231.79001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1778,8 +1778,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 189, y: -85}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2382,8 +2382,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -55, y: -157.98001}
   m_SizeDelta: {x: 249.7924, y: 249.7924}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2470,7 +2470,6 @@ GameObject:
   - component: {fileID: 1108066050}
   - component: {fileID: 1108066049}
   - component: {fileID: 1108066048}
-  - component: {fileID: 1108066047}
   m_Layer: 5
   m_Name: Content Scroll Snap Horizontal
   m_TagString: Untagged
@@ -2498,42 +2497,6 @@ RectTransform:
   m_AnchoredPosition: {x: -38, y: 35.355}
   m_SizeDelta: {x: 64.5286, y: 529.29}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1108066047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108066045}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5e39a5eb1058947a287d21183b661c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreInactiveItems: 1
-  startInfo:
-    indexType: 1
-    index: 0
-    jump: 1
-    duration: 0
-  prevButton: {fileID: 0}
-  nextButton: {fileID: 0}
-  pagination: {fileID: 0}
-  snappingVelocityThreshold: 50
-  jumpToItem: 0
-  lerpTime: 0.3
-  m_StartMovementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CurrentItemChangeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FoundItemToSnapToEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SnappedToItemEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1108066048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3083,8 +3046,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 97, y: -190.69998}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3629,8 +3592,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 493, y: -103}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4498,8 +4461,8 @@ RectTransform:
   m_Father: {fileID: 1215683082}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 420.8, y: -244.4}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}

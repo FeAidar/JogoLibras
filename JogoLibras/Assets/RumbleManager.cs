@@ -9,39 +9,30 @@ public class RumbleManager : MonoBehaviour
     GameObject ImagemLigado;
     [SerializeField]
     GameObject ImagemDesligado;
-    private bool muted = false;
+    private int muted;
     void Start()
-    {
-        muted = PlayerPrefs.GetInt("Vibra") == 1;
-        if (muted == false)
-        {
-            this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
-            
 
-        }
-        else
-        {
-            this.GetComponent<Image>().sprite = ImagemDesligado.GetComponent<Image>().sprite;
-        }
+    {
+
         if (PlayerPrefs.HasKey("Vibra"))
         {
-            Load();
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Vibra", 1);
-            Save();
-        }
+            if (PlayerPrefs.GetInt("Vibra") == 1)
 
-        AudioListener.pause = muted;
+            {
+                muted = 1;
+                Debug.Log("Sem vibra");
+                
+            }
+
+        }
+        Load();
     }
 
     private void UpdateButtonIcon()
     {
-        if (muted == false)
+        if (muted == 0)
         {
             this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
-
         }
         else
         {
@@ -51,15 +42,15 @@ public class RumbleManager : MonoBehaviour
 
     public void OnButtonPress()
     {
-        if (muted == false)
+        if (muted == 0)
         {
-            muted = true;
-            Vibracao.vibra();
+            muted = 1;
+            AudioListener.pause = true;
         }
         else
         {
-            muted = false;
-            Vibracao.vibra();
+            muted = 0;
+            AudioListener.pause = false;
         }
         UpdateButtonIcon();
         Save();
@@ -67,11 +58,25 @@ public class RumbleManager : MonoBehaviour
 
     private void Load()
     {
-        muted = PlayerPrefs.GetInt("Vibra") == 1;
+        muted = PlayerPrefs.GetInt("Vibra");
+        if (muted == 0)
+        {
+            this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
+
+        }
+        else
+        {
+            this.GetComponent<Image>().sprite = ImagemDesligado.GetComponent<Image>().sprite;
+        }
+
+
+
     }
 
     private void Save()
     {
-        PlayerPrefs.SetInt("Vibra", muted ? 1 : 0);
+        PlayerPrefs.SetInt("Vibra", muted);
+
+
     }
 }

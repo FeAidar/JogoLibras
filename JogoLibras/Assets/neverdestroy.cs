@@ -31,5 +31,11 @@ public class neverdestroy : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+
+
+    public void Destruir ()
+    {
+        Destroy(gameObject);
+    }
 }
 

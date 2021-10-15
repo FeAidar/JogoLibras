@@ -26,7 +26,13 @@ public class ApagaDados : MonoBehaviour
     IEnumerator Carrega()
     {
 
-        PlayerPrefs.DeleteAll();
+        neverdestroy[] Kills = GameObject.FindObjectsOfType<neverdestroy>();
+        foreach(neverdestroy Kill in Kills)
+        {
+            Kill.GetComponent<neverdestroy>().Destruir();
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("GameController"));
 
         if (Som != null)
             Som.Play();
@@ -35,28 +41,13 @@ public class ApagaDados : MonoBehaviour
 
         if (_transicao != null)
             _transicao.inicia();
+        PlayerPrefs.DeleteAll();
 
         yield return new WaitForSecondsRealtime(1f);
+       
+        Time.timeScale = 1;
 
-        if (InterrompeMusica)
-        {
-            GameObject som = GameObject.FindWithTag("Musica");
-            if (som != null)
-            {
-                som.GetComponent<AudioSource>().Stop();
-            }
-
-        }
-        else
-        {
-            GameObject som = GameObject.FindWithTag("Musica");
-            if (som != null)
-            {
-                if (som.GetComponent<AudioSource>().isPlaying == false)
-                    som.GetComponent<AudioSource>().Play();
-            }
-        }
-        SceneManager.LoadScene(level);
+   SceneManager.LoadScene(level);
 
 
 

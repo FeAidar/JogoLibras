@@ -9,35 +9,28 @@ public class soundmanager : MonoBehaviour
         GameObject ImagemLigado;
         [SerializeField]
         GameObject ImagemDesligado;
-        private bool muted = false;
-        void Start()
+        private int muted;
+    void Start()
+
+    {
+
+        if (PlayerPrefs.HasKey("muted"))
         {
-            muted = PlayerPrefs.GetInt("muted") == 1;
-            if (muted == false)
-            {
-            this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
+            if (PlayerPrefs.GetInt("muted") == 1)
 
-            }
-            else
             {
-            this.GetComponent<Image>().sprite = ImagemDesligado.GetComponent<Image>().sprite;
+                muted = 1;
+                Debug.Log("Mutadas");
+                AudioListener.pause = true;
+            }
+
         }
-            if (PlayerPrefs.HasKey("muted"))
-            {
-                Load();
-            }
-            else
-            {
-                PlayerPrefs.SetInt("muted", 1);
-                Save();
-            }
+        Load();
+    }
 
-            AudioListener.pause = muted;
-        }
-
-        private void UpdateButtonIcon()
+     private void UpdateButtonIcon()
         {
-            if (muted == false)
+            if (muted == 0)
             {
             this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
         }
@@ -49,14 +42,14 @@ public class soundmanager : MonoBehaviour
 
         public void OnButtonPress()
         {
-            if (muted == false)
+            if (muted == 0)
             {
-                muted = true;
+                muted = 1;
                 AudioListener.pause = true;
             }
             else
             {
-                muted = false;
+                muted = 0;
                 AudioListener.pause = false;
             }
             UpdateButtonIcon();
@@ -65,12 +58,26 @@ public class soundmanager : MonoBehaviour
 
         private void Load()
         {
-            muted = PlayerPrefs.GetInt("muted") == 1;
+            muted = PlayerPrefs.GetInt("muted");
+        if (muted == 0)
+        {
+            this.GetComponent<Image>().sprite = ImagemLigado.GetComponent<Image>().sprite;
+
+        }
+        else
+        {
+            this.GetComponent<Image>().sprite = ImagemDesligado.GetComponent<Image>().sprite;
         }
 
-        private void Save()
+
+
+    }
+
+    private void Save()
         {
-            PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+            PlayerPrefs.SetInt("muted", muted);
+
+
         }
 
 
