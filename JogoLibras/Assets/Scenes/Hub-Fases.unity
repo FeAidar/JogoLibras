@@ -1172,15 +1172,15 @@ RectTransform:
   m_GameObject: {fileID: 1112732041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7499999, y: 0.7499999, z: 0.7499999}
   m_Children: []
   m_Father: {fileID: 453665992}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: 241}
-  m_SizeDelta: {x: 54.21, y: 49.17}
+  m_AnchoredPosition: {x: 111.7, y: 252.52502}
+  m_SizeDelta: {x: 51.46, y: 47.002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1112732043
 AudioSource:
@@ -1894,30 +1894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 889750366685071705, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889750367419183052, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889750367419183052, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889750367419183055, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: weight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889750367419183055, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: priority
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889750367487585465, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 889750367535923395, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_Name
       value: Telas
@@ -1925,10 +1901,6 @@ PrefabInstance:
     - target: {fileID: 3382916997062344776, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3382916997062344776, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}

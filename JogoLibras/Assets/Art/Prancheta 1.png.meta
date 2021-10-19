@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: a13be9b670062ae4eaa4879680af3e55
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8907350871511382103
+    second: Prancheta 1_0
+  - first:
+      213: 5316594832770754760
+    second: Prancheta 1_1
+  - first:
+      213: 6450005796919116881
+    second: Prancheta 1_2
+  - first:
+      213: 8827438912671679545
+    second: Prancheta 1_3
+  - first:
+      213: 7958696166725112835
+    second: Prancheta 1_4
+  - first:
+      213: -6732918984554973925
+    second: Prancheta 1_5
+  - first:
+      213: -5720122862451355962
+    second: Prancheta 1_6
+  - first:
+      213: -1417508009898754694
+    second: Prancheta 1_7
+  - first:
+      213: -2170456084147408038
+    second: Prancheta 1_8
+  - first:
+      213: -6694527122524379214
+    second: Prancheta 1_9
+  - first:
+      213: 4936585097603642151
+    second: Prancheta 1_10
+  - first:
+      213: -2305223351466397587
+    second: Prancheta 1_11
+  - first:
+      213: 807023157259000569
+    second: Prancheta 1_12
+  - first:
+      213: 8650915473745697748
+    second: Prancheta 1_13
+  - first:
+      213: 2010502274039170067
+    second: Prancheta 1_14
+  - first:
+      213: -495007462102363880
+    second: Prancheta 1_15
+  - first:
+      213: -1216665501806236962
+    second: Prancheta 1_16
+  - first:
+      213: -2249110864423580551
+    second: Prancheta 1_17
+  - first:
+      213: 2159144564369405457
+    second: Prancheta 1_18
+  - first:
+      213: -2010210458887505086
+    second: Prancheta 1_19
+  - first:
+      213: 5371652098136190783
+    second: Prancheta 1_20
+  - first:
+      213: 6291242909366611849
+    second: Prancheta 1_21
+  - first:
+      213: -1826780231242064834
+    second: Prancheta 1_22
+  - first:
+      213: -7072494855977793477
+    second: Prancheta 1_23
+  - first:
+      213: -4218350048643550427
+    second: Prancheta 1_24
+  - first:
+      213: -6387965132096049706
+    second: Prancheta 1_25
+  - first:
+      213: 5953011211094063848
+    second: Prancheta 1_26
+  - first:
+      213: -8781280284357011009
+    second: Prancheta 1_27
+  - first:
+      213: -2727639693228575993
+    second: Prancheta 1_28
+  - first:
+      213: 7617933988941859640
+    second: Prancheta 1_29
+  - first:
+      213: -1499626016626776008
+    second: Prancheta 1_30
+  - first:
+      213: 2463677897283977024
+    second: Prancheta 1_31
+  - first:
+      213: 1614545704357308560
+    second: Prancheta 1_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 1
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Prancheta 1_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 583
+        width: 314
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a74cc5539bb26480800000000000000
+      internalID: -8907350871511382103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 652
+        width: 296
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c86af5f4d658c940800000000000000
+      internalID: 5316594832770754760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 841
+        width: 236
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15403944916038950800000000000000
+      internalID: 6450005796919116881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_3
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 875
+        width: 90
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934814adbec518a70800000000000000
+      internalID: 8827438912671679545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_4
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 687
+        width: 243
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304d9e42ff7f27e60800000000000000
+      internalID: 7958696166725112835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 576
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15fd182bdddf82a0800000000000000
+      internalID: -6732918984554973925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 580
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce0ff7209a0e90b0800000000000000
+      internalID: -5720122862451355962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_7
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 580
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7db6bba9fff35ce0800000000000000
+      internalID: -1417508009898754694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 580
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53fec7e0bdf0e1e0800000000000000
+      internalID: -2170456084147408038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_9
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 268
+        width: 285
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b767ba1d034813a0800000000000000
+      internalID: -6694527122524379214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 236
+        width: 285
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723f62abdf5428440800000000000000
+      internalID: 4936585097603642151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 261
+        width: 286
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60f8ef43933200e0800000000000000
+      internalID: -2305223351466397587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_12
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 218
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fadfe5294f133b00800000000000000
+      internalID: 807023157259000569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_13
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 116
+        width: 124
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbda82f9c93e0870800000000000000
+      internalID: 8650915473745697748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_14
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 117
+        width: 122
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31448388a2db6eb10800000000000000
+      internalID: 2010502274039170067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_15
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 117
+        width: 123
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811983cf5516129f0800000000000000
+      internalID: -495007462102363880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 117
+        width: 140
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaed5a1c298d1fe0800000000000000
+      internalID: -1216665501806236962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 117
+        width: 140
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c8f89c59d89c0e0800000000000000
+      internalID: -2249110864423580551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_18
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 118
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11634f9aa82d6fd10800000000000000
+      internalID: 2159144564369405457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_19
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 17
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3c3afc3c4a14e0800000000000000
+      internalID: -2010210458887505086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 25
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fa36e7f11fb8a40800000000000000
+      internalID: 5371652098136190783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_21
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 17
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fed78f71cfe4750800000000000000
+      internalID: 6291242909366611849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_22
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 19
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c5c12fe09f5a6e0800000000000000
+      internalID: -1826780231242064834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_23
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 27
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b388aa1766379dd90800000000000000
+      internalID: -7072494855977793477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_24
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 19
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52379540bf86575c0800000000000000
+      internalID: -4218350048643550427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_25
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 30
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd65d7ae836957a0800000000000000
+      internalID: -6387965132096049706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_26
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 36
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eafd25f7285d9250800000000000000
+      internalID: 5953011211094063848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_27
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 30
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb952c94b10a22680800000000000000
+      internalID: -8781280284357011009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_28
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 32
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703fad1962a752ad0800000000000000
+      internalID: -2727639693228575993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_29
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 38
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b0145f99658b960800000000000000
+      internalID: 7617933988941859640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_30
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 32
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838e60f4512403be0800000000000000
+      internalID: -1499626016626776008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_31
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 59
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fb7949efdb03220800000000000000
+      internalID: 2463677897283977024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 1_32
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 10
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098a9dd83c4086610800000000000000
+      internalID: 1614545704357308560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

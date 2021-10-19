@@ -116,10 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834688441709088
 Rigidbody2D:
   serializedVersion: 4
@@ -274,10 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834688467058063
 Rigidbody2D:
   serializedVersion: 4
@@ -325,7 +321,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834688564729869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.14, y: 0.22, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834688441709091}
@@ -595,10 +591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834688887382313
 Rigidbody2D:
   serializedVersion: 4
@@ -646,7 +640,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834688897924028}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.26, y: 0.28, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834689593883854}
@@ -816,7 +810,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834689062130421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.14, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834688467058058}
@@ -1086,10 +1080,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834689211463897
 Rigidbody2D:
   serializedVersion: 4
@@ -1137,7 +1129,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834689465359947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.14, y: 0.19, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834690129742127}
@@ -1397,10 +1389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834689593883859
 Rigidbody2D:
   serializedVersion: 4
@@ -1448,7 +1438,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834689764239446}
   m_LocalRotation: {x: 0, y: 0, z: 0.7027742, w: 0.7114129}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.14, y: 0.22, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834689211463892}
@@ -1727,10 +1717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDragging: 0
   LastPosition: {x: 0, y: 0, z: 0}
-  _dragController: {fileID: 0}
   acertou: 0
   check: 0
-  Timer: {fileID: 0}
 --- !u!50 &2941834690129742126
 Rigidbody2D:
   serializedVersion: 4
@@ -1814,7 +1802,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2941834690434169136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.14, y: 0.37, z: 1}
   m_Children: []
   m_Father: {fileID: 2941834688887382308}

@@ -45,12 +45,13 @@ public class RumbleManager : MonoBehaviour
         if (muted == 0)
         {
             muted = 1;
-            AudioListener.pause = true;
+            
         }
         else
         {
             muted = 0;
-            AudioListener.pause = false;
+            Handheld.Vibrate();
+            
         }
         UpdateButtonIcon();
         Save();

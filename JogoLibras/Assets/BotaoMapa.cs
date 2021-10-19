@@ -70,19 +70,19 @@ public class BotaoMapa : MonoBehaviour
             Image image;
             image = _estrela1.GetComponent<Image>();
             var tempColor = image.color;
-            tempColor = new Color(255, 255, 255);
+            tempColor.a = 1f;
             image.color = tempColor;
 
             Image image2;
             image2 = _estrela2.GetComponent<Image>();
             var tempColor2 = image2.color;
-            tempColor2 = new Color(0, 0, 0);
+            tempColor2.a = 0f;
             image2.color = tempColor2;
 
             Image image3;
             image3 = _estrela3.GetComponent<Image>();
             var tempColor3 = image3.color;
-            tempColor3 = new Color(0, 0, 0);
+            tempColor3.a = 0f;
             image3.color = tempColor3;
             Debug.Log((Mapa + Dificuldade));
             Debug.Log(PlayerPrefs.GetInt(Mapa + Dificuldade));
@@ -94,19 +94,19 @@ public class BotaoMapa : MonoBehaviour
             Image image;
             image = _estrela1.GetComponent<Image>();
             var tempColor = image.color;
-            tempColor = new Color(255, 255, 255);
+            tempColor.a = 1f;
             image.color = tempColor;
 
             Image image2;
             image2 = _estrela2.GetComponent<Image>();
             var tempColor2 = image2.color;
-            tempColor2 = new Color(255, 255, 255);
+            tempColor2.a = 1f;
             image2.color = tempColor2;
 
             Image image3;
             image3 = _estrela3.GetComponent<Image>();
             var tempColor3 = image3.color;
-            tempColor3 = new Color(0, 0, 0);
+            tempColor3.a = 0f;
             image3.color = tempColor3;
 
         }
@@ -116,19 +116,19 @@ public class BotaoMapa : MonoBehaviour
             Image image;
             image = _estrela1.GetComponent<Image>();
             var tempColor = image.color;
-            tempColor = new Color(255, 255, 255);
+            tempColor.a = 1f;
             image.color = tempColor;
 
             Image image2;
             image2 = _estrela2.GetComponent<Image>();
             var tempColor2 = image2.color;
-            tempColor2 = new Color(255, 255, 255);
+            tempColor2.a = 1f;
             image2.color = tempColor2;
 
             Image image3;
             image3 = _estrela3.GetComponent<Image>();
             var tempColor3 = image3.color;
-            tempColor3 = new Color(255, 255, 255);
+            tempColor3.a = 1f;
             image3.color = tempColor3;
         }
 
@@ -137,19 +137,19 @@ public class BotaoMapa : MonoBehaviour
             Image image;
             image = _estrela1.GetComponent<Image>();
             var tempColor = image.color;
-            tempColor = new Color(0, 0, 0);
+            tempColor.a = 0f;
             image.color = tempColor;
 
             Image image2;
             image2 = _estrela2.GetComponent<Image>();
             var tempColor2 = image2.color;
-            tempColor2 = new Color(0, 0, 0);
+            tempColor2.a = 0f;
             image2.color = tempColor2;
 
             Image image3;
             image3 = _estrela3.GetComponent<Image>();
             var tempColor3 = image3.color;
-            tempColor3 = new Color(0, 0, 0);
+            tempColor3.a = 0f;
             image3.color = tempColor3;
         }
     }
