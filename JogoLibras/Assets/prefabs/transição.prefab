@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6426476782693256026}
-  - component: {fileID: 5152739775641827478}
-  - component: {fileID: 3013388226122254875}
-  - component: {fileID: 8958245000018023838}
-  - component: {fileID: 7756750122340577561}
-  - component: {fileID: 2224199588742807584}
+  - component: {fileID: 7454281354158322567}
+  - component: {fileID: 6331556286144746290}
+  - component: {fileID: 571541884590746370}
+  - component: {fileID: 5032563283865076542}
+  - component: {fileID: 5380269036282892515}
   m_Layer: 5
   m_Name: "transi\xE7\xE3o"
   m_TagString: Transicao
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchoredPosition: {x: 13.269, y: -24.302}
   m_SizeDelta: {x: 1244.678, y: 1912.431}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5152739775641827478
+--- !u!222 &7454281354158322567
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2961797355910621971}
   m_CullTransparentMesh: 1
---- !u!114 &3013388226122254875
+--- !u!114 &6331556286144746290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &8958245000018023838
+--- !u!225 &571541884590746370
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,7 +90,7 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &7756750122340577561
+--- !u!114 &5032563283865076542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60deb08429512cd48879e66dde35eb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anima: {fileID: 2224199588742807584}
+  anima: {fileID: 5380269036282892515}
   ParaTempo: 0
---- !u!95 &2224199588742807584
+--- !u!95 &5380269036282892515
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

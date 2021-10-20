@@ -45,13 +45,14 @@ public class RumbleManager : MonoBehaviour
         if (muted == 0)
         {
             muted = 1;
-            
+            Vibracao.vibra();
+
         }
         else
         {
             muted = 0;
-            Handheld.Vibrate();
-            
+            Vibracao.vibra();
+
         }
         UpdateButtonIcon();
         Save();

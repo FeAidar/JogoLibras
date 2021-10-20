@@ -8,9 +8,10 @@ public class teleport : MonoBehaviour
 {
     [Header("Level para carregar")]
     [SerializeField] public string level;
-    private AudioSource Som;
+    protected AudioSource Som;
     public bool InterrompeMusica;
-    private transicao _transicao;
+    protected transicao _transicao;
+    public bool sair;
    
 
     void Start()
@@ -21,9 +22,10 @@ public class teleport : MonoBehaviour
 
     public void Carregalevel()
     {
-        StartCoroutine("Carrega");
+        StartCoroutine("Carrega", level);
     }
-    IEnumerator Carrega()
+
+   protected IEnumerator Carrega(string nivel)
     {
 
         Vibracao.vibra();
@@ -55,8 +57,13 @@ public class teleport : MonoBehaviour
                     som.GetComponent<AudioSource>().Play();
             }
         }
-        SceneManager.LoadScene(level);
-
+        if (!sair)
+            SceneManager.LoadScene(nivel);
+        else
+        {
+            Debug.Log(_transicao);
+            Application.Quit();
+        }
 
 
 
@@ -87,4 +94,6 @@ public class teleport : MonoBehaviour
             }
         }
     }
+
+    
 }
