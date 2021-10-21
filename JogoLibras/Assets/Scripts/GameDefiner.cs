@@ -9,6 +9,19 @@ public class GameDefiner : MonoBehaviour
     public int pack;
     public int Quantia;
     public int Etapa;
+
+    [Header("Tempo Total de Jogo")]
+    public int Tempo;
+
+    [Header("Tempo de Estrelas")]
+    public int TempoTresEstrelas;
+    public int TempoDuasEstrelas;
+    public int TempoUmaEstrela;
+
+    [Header("Se é um jogo que perde ou ganha estrelas")]
+    public bool PerdeEstrelas;
+
+
     [HideInInspector]    public int QuantiaEstrela;
     [HideInInspector] public string ID = "1";
     [HideInInspector] public int Dificuldade_do_Minigame;

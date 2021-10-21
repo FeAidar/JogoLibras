@@ -110,7 +110,6 @@ public class ItemSelector : MonoBehaviour
         if (teste)
             Restart();
 
-        //Debug.Log(i);
     }
 
     IEnumerator Remove()

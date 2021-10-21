@@ -12,11 +12,10 @@ public class arrastavel : MonoBehaviour
     private Collider2D _collider;
 
     private DragController _dragController;
-
+    private MochilaGameStarter _Objetos;
     private float _movementTime = 15f;
     private System.Nullable<Vector3> _movementDestination;
-    private ItemSelector _Objetos;
-    public bool acertou;
+        public bool acertou;
     private string firstobject;
     public bool check;
     private AudioSource SomLugarErrado;
@@ -30,7 +29,7 @@ public class arrastavel : MonoBehaviour
     {
               _collider = GetComponent<Collider2D>();
        _dragController = FindObjectOfType<DragController>();
-        _Objetos = FindObjectOfType<ItemSelector>();
+        _Objetos = FindObjectOfType<MochilaGameStarter>();
         SomLugarErrado = GetComponent<AudioSource>();
        
         
@@ -82,8 +81,8 @@ public class arrastavel : MonoBehaviour
             }
         }
 
-        if (_Objetos.GetComponent<ItemSelector>().Objetos.Count != 0)
-            firstobject = _Objetos.GetComponent<ItemSelector>().Objetos[0].gameObject.name;
+        if (_Objetos.Objetos.Count != 0)
+            firstobject = _Objetos.Objetos[0].gameObject.name;
 
 
         else
@@ -107,7 +106,7 @@ public class arrastavel : MonoBehaviour
         if(!acertou)
         {
             acertou = true;
-            _Objetos.GetComponent<ItemSelector>().remove += 1;
+            _Objetos.remove += 1;
            this.GetComponent<Collider2D>().enabled=false;
         }
         
