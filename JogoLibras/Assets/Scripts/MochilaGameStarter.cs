@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class MochilaGameStarter : MonoBehaviour
 {
+
+    private bool JogoComecou;
+    private int ItensConseguidos;
+    private int TempoPerdeuUmaEstrela;
+    private int TempoPerdeuDuasEstrelas;
+    private Timer _timer;
+    private bool Ganhou;
+    private bool Perdeu;
     private GameDefiner _definer;
+  
+
     [Header("Packs")]
     [SerializeField] public List<GameObject> packs;
-    public int TempoPerdeuDuasEstrelas;
+    
 
 
 
@@ -18,92 +29,123 @@ public class MochilaGameStarter : MonoBehaviour
     public GameObject telaganhou;
     public Text Estrelas;
 
-    [HideInInspector] public bool ingame;
-    private bool Ganhou;
-    private bool Perdeu;
-    private ItemSelector controlador;
-
-
-  private bool _start;
-    
 
     [Header("Itens")]
+    [SerializeField] public List<GameObject> Objetos = new List<GameObject>();
+    private List<GameObject> recomeca = new List<GameObject>();
     private List<GameObject> Gestos = new List<GameObject>();
     private Vector3[] objetosInitialPosition { get; set; }
     protected int Totaldeobjetos;
     private GameObject _gesto;
     private string _nome;
+    public AudioSource AcertouItem;
 
 
     [HideInInspector] public int remove;
+    [HideInInspector] public bool ingame;
+    
+   
+    
 
     void Start()
     {
-        Estrelas.text = string.Format ("3 Estrelas");
-        controlador = FindObjectOfType<ItemSelector>();
+       
+        Estrelas.text = string.Format("3 Estrelas");
+        _timer = GetComponent<Timer>();
         _definer = FindObjectOfType<GameDefiner>();
+        TempoPerdeuUmaEstrela = _definer.TempoTresEstrelas;
         TempoPerdeuDuasEstrelas = _definer.TempoDuasEstrelas;
+
 
         if (_definer.pack == 0)
             return;
         else
-           Level = Instantiate(packs[_definer.pack - 1]);
+            StartCoroutine("GameStart");
 
-        nivel = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade_do_Minigame + _definer.pack);
-        Debug.Log(nivel);
 
-        controlador.Comeca();
-      
+    }
 
+    public IEnumerator GameStart()
+    {
+        yield return new WaitForSeconds(0.0001f);
+
+            Instantiate(packs[_definer.pack - 1]);
+        yield return new WaitForSeconds(0.0001f);
+        ListaDeItens();
             JogoComecou = true;
     }
 
     void Update()
     {
-        if (!ingame)
+        if (JogoComecou)
         {
-            this.GetComponent<Timer>().timerIsRunning = false;
-            if (!Perdeu)
+            //sobre os itens
             if (ItensConseguidos < Totaldeobjetos)
+                if (remove == 1)
+                    StartCoroutine("RemoveItens");
+                else
+                    remove = 0;
 
+            if (Objetos.Count == 0 && ingame)
             {
-                telaescolha.SetActive(true);
-                ComecaJogo();
+                                  ganhou();
             }
 
-            if (Ganhou)
+            // fim sobre itens
             // Sobre o resto
+
+            if (!ingame)
             {
-                telaescolha.SetActive(false);
+                _timer.timerIsRunning = false;
+
+                if (!Perdeu && !Ganhou)
+                {
+                    _timer.tempo = _definer.Tempo;
                     _timer.timeRemaining = _definer.Tempo;
+                    telaganhou.SetActive(false);
+                    telatimeup.SetActive(false);
+                    Perdeu = false;
+                    Ganhou = false;
+                    _timer.enabled = true;
                     _timer.timerIsRunning = true;
+                    ingame = true;
+                    ProximoItem();
+                }
             }
+
+
+            if (ingame)
                 if(!Perdeu && !Ganhou)
             {
-                telaescolha.SetActive(true);
-                ComecaJogo();
                 _timer.timerIsRunning = true;
                 StarCounter();
             }
 
-            
-        
 
 
 
+
+            if (ingame && _timer.timeRemaining == 0)
             {
+                perdeu();
+            }
         }
     }
 
+    void StarCounter()
+    {
+
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade_do_Minigame + _definer.pack) == 3)
+        { _definer.QuantiaEstrela = 3; }
         else
         {
+
+            if (GetComponent<Timer>().timeRemaining > TempoPerdeuUmaEstrela)
             {
+                _definer.QuantiaEstrela = 3;
+                Estrelas.text = string.Format("3 Estrelas");
+            }
 
-                if (GetComponent<Timer>().timeRemaining > TempoPerdeuUmaEstrela)
-                {
-                }
-
-                if (GetComponent<Timer>().timeRemaining > TempoPerdeuDuasEstrelas && GetComponent<Timer>().timeRemaining < TempoPerdeuUmaEstrela)
             if (GetComponent<Timer>().timeRemaining > TempoPerdeuDuasEstrelas && GetComponent<Timer>().timeRemaining < TempoPerdeuUmaEstrela)
             {
                 Estrelas.text = string.Format("2 Estrelas");
@@ -276,7 +318,6 @@ public class MochilaGameStarter : MonoBehaviour
 
         // --- SOM VITORIA
         telatimeup.SetActive(false);
-        
         telaganhou.SetActive(true);
  
         _timer.timerIsRunning = false;

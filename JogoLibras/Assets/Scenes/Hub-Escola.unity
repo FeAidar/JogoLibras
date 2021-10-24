@@ -219,6 +219,11 @@ MonoBehaviour:
   Pack: 0
   Quantia: 0
   VersaoDoMinigame: 0
+  Tempo: 0
+  TempoTresEstrelas: 0
+  TempoDuasEstrelas: 0
+  TempoUmaEstrela: 0
+  PerdeEstrelas: 0
 --- !u!114 &89184149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,6 +1629,11 @@ MonoBehaviour:
   Pack: 1
   Quantia: 0
   VersaoDoMinigame: 0
+  Tempo: 50
+  TempoTresEstrelas: 30
+  TempoDuasEstrelas: 15
+  TempoUmaEstrela: 1
+  PerdeEstrelas: 1
 --- !u!114 &917227974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2877,6 +2887,11 @@ MonoBehaviour:
   Pack: 0
   Quantia: 1
   VersaoDoMinigame: 0
+  Tempo: 0
+  TempoTresEstrelas: 0
+  TempoDuasEstrelas: 0
+  TempoUmaEstrela: 0
+  PerdeEstrelas: 0
 --- !u!1 &1258090838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3158,11 @@ MonoBehaviour:
   Pack: 0
   Quantia: 2
   VersaoDoMinigame: 0
+  Tempo: 0
+  TempoTresEstrelas: 0
+  TempoDuasEstrelas: 0
+  TempoUmaEstrela: 0
+  PerdeEstrelas: 0
 --- !u!114 &1694928722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3994,6 +4014,11 @@ MonoBehaviour:
   Pack: 1
   Quantia: 0
   VersaoDoMinigame: 1
+  Tempo: 0
+  TempoTresEstrelas: 0
+  TempoDuasEstrelas: 0
+  TempoUmaEstrela: 0
+  PerdeEstrelas: 0
 --- !u!114 &2147121686
 MonoBehaviour:
   m_ObjectHideFlags: 0

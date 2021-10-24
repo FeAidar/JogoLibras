@@ -10,7 +10,8 @@ public class CountDown : MonoBehaviour
     void Start()
     {
         Blur.GetComponent<transicao>().inicia();
-        Time.timeScale = 0;
+        if(this.isActiveAndEnabled)
+            Time.timeScale = 0;
         StartCoroutine(countdown(4));
     }
 

@@ -17,6 +17,19 @@ public class BotaoMapa : MonoBehaviour
 
     [Header("Se o minigame se repete no pack, troque o número da versão")]
     public int VersaoDoMinigame;
+
+
+    [Header("Tempo Total de Jogo")]
+    public int Tempo;
+
+    [Header("Tempo de Estrelas")]
+    public int TempoTresEstrelas;
+    public int TempoDuasEstrelas;
+    public int TempoUmaEstrela;
+
+    [Header("Se é um jogo que perde ou ganha estrelas")]
+    public bool PerdeEstrelas;
+
     private GameDefiner _definer;
     private GameObject _botao;
     private GameObject _descricao;
@@ -55,14 +68,20 @@ public class BotaoMapa : MonoBehaviour
         _estrela1.SetActive(true);
         _estrela2.SetActive(true);
         _estrela3.SetActive(true);
-        _definer.Dificuldade = Dificuldade;
-        _definer.pack = Pack;
-        _definer.Quantia = Quantia;
-        Controlador.apertou = true;
+     Controlador.apertou = true;
         _botao.SetActive(true);
         textodescricao.text = Texto;
         _botao.GetComponent<teleport>().level =Mapa;
+        _definer.Dificuldade = Dificuldade;
+        _definer.pack = Pack;
+        _definer.Quantia = Quantia;
         _definer.Dificuldade_do_Minigame = VersaoDoMinigame;
+        _definer.Tempo = Tempo;
+        _definer.TempoTresEstrelas = TempoTresEstrelas;
+        _definer.TempoDuasEstrelas = TempoDuasEstrelas;
+        _definer.TempoUmaEstrela = TempoUmaEstrela;
+        _definer.PerdeEstrelas = PerdeEstrelas;
+
 
 
     if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame+Pack) == 1)
