@@ -42,8 +42,6 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-               
-
         if (slider != null)
         slider.maxValue = tempo;
 
@@ -58,7 +56,6 @@ public class Timer : MonoBehaviour
             }
             else
             {
-               
                 timeRemaining = 0;
                 timerIsRunning = false;
                 perdeu = true;
@@ -85,20 +82,12 @@ public class Timer : MonoBehaviour
                         estrela1.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
 
                     if (posicaoestrela.GetComponent<RectTransform>().position.x >= estrela2.GetComponent<RectTransform>().position.x)
-                                      estrela2.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
+                        estrela2.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
 
                     if (posicaoestrela.GetComponent<RectTransform>().position.x >= estrela3.GetComponent<RectTransform>().position.x)
-                                    estrela3.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
+                        estrela3.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
                  
-
                 }
-
-
-
-
-
-
-
             }
         }
     }
@@ -106,59 +95,50 @@ public class Timer : MonoBehaviour
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
-
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     IEnumerator GetStarsPositions()
     {
-
         Debug.Log("Chamou");
-
        if (gameDefiner.PerdeEstrelas == true)
         {
-          slider.value = gameDefiner.Tempo - gameDefiner.TempoTresEstrelas;
+            slider.value = gameDefiner.Tempo - gameDefiner.TempoTresEstrelas;
             yield return
             estrela1.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
             yield return
-         slider.value = gameDefiner.Tempo - gameDefiner.TempoDuasEstrelas;
+            slider.value = gameDefiner.Tempo - gameDefiner.TempoDuasEstrelas;
             yield return
-        estrela2.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
+            estrela2.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
             yield return
             slider.value = gameDefiner.Tempo - gameDefiner.TempoUmaEstrela;
             yield return
-        estrela3.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
+            estrela3.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
 
             estrela1.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
             estrela2.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
             estrela3.GetComponent<Image>().sprite = estrelaligada.GetComponent<Image>().sprite;
         }
-
         if (gameDefiner.PerdeEstrelas == false)
         {
-
             slider.value = gameDefiner.Tempo - gameDefiner.TempoTresEstrelas;
             yield return
             estrela3.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
             yield return
-         slider.value = gameDefiner.Tempo - gameDefiner.TempoDuasEstrelas;
+            slider.value = gameDefiner.Tempo - gameDefiner.TempoDuasEstrelas;
             yield return
-        estrela2.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
+            estrela2.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
             yield return
             slider.value = gameDefiner.Tempo - gameDefiner.TempoUmaEstrela;
             yield return
-        estrela1.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
+            estrela1.GetComponent<RectTransform>().position = posicaoestrela.GetComponent<RectTransform>().position;
             estrela1.GetComponent<Image>().sprite = estreladesligada.GetComponent<Image>().sprite;
             estrela2.GetComponent<Image>().sprite = estreladesligada.GetComponent<Image>().sprite;
             estrela3.GetComponent<Image>().sprite = estreladesligada.GetComponent<Image>().sprite;
 
         }
         slider.value = 0;
-
-
-
     }
 }
