@@ -576,6 +576,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: Tempo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: Quantia
       value: 1
       objectReference: {fileID: 0}
@@ -584,12 +588,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: PerdeEstrelas
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoUmaEstrela
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoDuasEstrelas
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoTresEstrelas
@@ -664,6 +672,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2551473085400308690, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 431210357}
     - target: {fileID: 3382916997062344776, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -708,6 +720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5815140649604819904, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 431210357}
     - target: {fileID: 6238592504577755250, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

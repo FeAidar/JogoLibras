@@ -751,8 +751,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1685382262}
   m_HandleRect: {fileID: 1685382261}
   m_Direction: 0
-  m_Value: 0.00048215175
-  m_Size: 0.20454846
+  m_Value: 0.00048215172
+  m_Size: 0.20454845
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4343,16 +4343,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: Tempo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: PerdeEstrelas
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoUmaEstrela
-      value: 59
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoDuasEstrelas
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: TempoTresEstrelas
