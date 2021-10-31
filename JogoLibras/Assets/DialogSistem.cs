@@ -23,37 +23,52 @@ public class DialogSistem : MonoBehaviour
     private List<int> NessaFala = new List<int>();
     private int FalaAtual = 0;
     private int acao;
+    private bool precisa;
+    private GameObject definer;
     private DialogoEscrito dig ;
 
     private void Start(){
-        dig = GetComponent<DialogoEscrito>();
-        dig.ComecaFala(falas[FalaAtual]);
-        foreach (char d in EmQueFala)
-        {
-            string f = ""+d;
-            NessaFala.Add(int.Parse(f));
+        definer = GameObject.FindGameObjectWithTag("GameController");
+        precisa = definer.GetComponent<GameDefiner>().dialogo;
+        if(precisa == true){
+            dig = GetComponent<DialogoEscrito>();
+            dig.ComecaFala(falas[FalaAtual]);
+            foreach (char d in EmQueFala)
+            {
+                string f = ""+d;
+                NessaFala.Add(int.Parse(f));
+            }
+        }else{
+            Nofim.Invoke();
         }
     }
     private void Update(){
         if(chama){
-            if(falas.Length == FalaAtual){
+            if(FalaAtual>= falas.Length){
                 Nofim.Invoke();
             }else{
-                dig.ComecaFala(falas[FalaAtual]);
+                if(FalaAtual < falas.Length){
+                    dig.ComecaFala(falas[FalaAtual]);
+                }else if(FalaAtual>= falas.Length){
+                    Nofim.Invoke();
+                }
             }
             chama = false;
         }
         if(Action){
-            if(FalaAtual == NessaFala[acao]){
-                Debug.Log("evento");
-                eventos[acao].Invoke();
-                acao++;
-                FalaAtual++;
-                Action = false;
-                PodeClick = true;
+            if(acao < NessaFala.Count){
+                if(FalaAtual == NessaFala[acao]){
+                    eventos[acao].Invoke();
+                    acao++;
+                    FalaAtual++;
+                    Action = false;
+                    PodeClick = true;
+                }else{
+                    FalaAtual++;
+                    Action= false;
+                    PodeClick = true;
+                }
             }else{
-                Debug.Log("sem evento");
-                Debug.Log(FalaAtual+ " "+  NessaFala[acao]);
                 FalaAtual++;
                 Action= false;
                 PodeClick = true;

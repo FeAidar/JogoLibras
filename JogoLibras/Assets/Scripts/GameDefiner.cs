@@ -9,6 +9,7 @@ public class GameDefiner : MonoBehaviour
     public int pack;
     public int Quantia;
     public int Etapa;
+    public bool dialogo;
 
     [Header("Tempo Total de Jogo")]
     public int Tempo;
@@ -18,7 +19,7 @@ public class GameDefiner : MonoBehaviour
     public int TempoDuasEstrelas;
     public int TempoUmaEstrela;
 
-    [Header("Se é um jogo que perde ou ganha estrelas")]
+    [Header("Se ï¿½ um jogo que perde ou ganha estrelas")]
     public bool PerdeEstrelas;
 
 
