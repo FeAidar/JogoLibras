@@ -34,18 +34,18 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[0];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[0];
         definer.GetComponent<GameDefiner>().pack = pack[0];
-        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        //Coloquei aqui a declaraï¿½ï¿½o de qual estrela o jogador tï¿½ tentando conseguir
         definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
                switch (Minigame)
         {
             case 0:
-                memoria.comeca();
+                //memoria.comeca();
             break;
             case 1:
-                palavras.comeca();
+                //palavras.comeca();
             break;
             case 2:
-                alfabeto.comeca();
+                //alfabeto.comeca();
             break;
         }
         this.gameObject.SetActive(false);
@@ -54,18 +54,18 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[1];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[1];
         definer.GetComponent<GameDefiner>().pack = pack[1];
-        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        //Coloquei aqui a declaraï¿½ï¿½o de qual estrela o jogador tï¿½ tentando conseguir
         definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
         switch (Minigame)
         {
             case 0:
-                memoria.comeca();
+                //memoria.comeca();
             break;
             case 1:
-                palavras.comeca();
+               // palavras.comeca();
             break;
             case 2:
-                alfabeto.comeca();
+                //alfabeto.comeca();
             break;
         }
         this.gameObject.SetActive(false);
@@ -74,18 +74,18 @@ public class selecionaDifi : MonoBehaviour
         definer.GetComponent<GameDefiner>().Dificuldade = dificuldade[2];
         definer.GetComponent<GameDefiner>().Quantia = Quantia[2];
         definer.GetComponent<GameDefiner>().pack = pack[2];
-        //Coloquei aqui a declaração de qual estrela o jogador tá tentando conseguir
+        //Coloquei aqui a declaraï¿½ï¿½o de qual estrela o jogador tï¿½ tentando conseguir
         definer.GetComponent<GameDefiner>().QuantiaEstrela = 3;
         switch (Minigame)
         {
             case 0:
-                memoria.comeca();
+               // memoria.comeca();
             break;
             case 1:
-                palavras.comeca();
+                //palavras.comeca();
             break;
             case 2:
-                alfabeto.comeca();
+                //alfabeto.comeca();
             break;
         }
         this.gameObject.SetActive(false);

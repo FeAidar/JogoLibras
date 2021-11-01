@@ -39,7 +39,7 @@ public class WordManege : MonoBehaviour
             telaDerrota.SetActive(true);
         }
     }
-    public void comeca()
+    public void Start()
     {
         //acha o game controller
         Definer = GameObject.FindGameObjectWithTag("GameController");

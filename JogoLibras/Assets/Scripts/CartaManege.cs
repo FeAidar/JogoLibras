@@ -29,7 +29,7 @@ public class CartaManege : MonoBehaviour
     public bool ganhou;
     public AudioSource Acertou2;
     public AudioSource Errou2;
-    public void comeca()
+    public void começa()
     {
         _Definer = GameObject.FindGameObjectWithTag("GameController");
         if(GameObject.FindGameObjectWithTag("GameController") != null){

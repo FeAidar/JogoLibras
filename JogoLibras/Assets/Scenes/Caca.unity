@@ -647,7 +647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &193768111
 MonoBehaviour:
@@ -693,6 +693,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c11234341a064b4ab565347338288f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &206527386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1596847417004344442, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+  m_PrefabInstance: {fileID: 658017579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &225405824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1213,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: Tempo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: PerdeEstrelas
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: TempoUmaEstrela
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: TempoDuasEstrelas
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: TempoTresEstrelas
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8417375300846078517, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_Name
       value: GameDefiner
@@ -1708,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 1449082777}
     - target: {fileID: 1596847417004344442, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1679923078499713652, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: level
@@ -2010,7 +2035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &850029210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2183,8 +2208,8 @@ MonoBehaviour:
   timerIsRunning: 0
   timeText: {fileID: 850029211}
   perdeu: 0
-  estrelaligada: {fileID: 0}
-  estreladesligada: {fileID: 0}
+  estrelaligada: {fileID: 206527386}
+  estreladesligada: {fileID: 206527386}
 --- !u!1 &994070517 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 876068371635024547, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
@@ -4474,7 +4499,7 @@ RectTransform:
   - {fileID: 607174621}
   - {fileID: 850029210}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

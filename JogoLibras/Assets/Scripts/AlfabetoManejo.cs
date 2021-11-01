@@ -37,7 +37,7 @@ public class AlfabetoManejo : MonoBehaviour
             telaDerrota.SetActive(true);
         }
     }
-    public void comeca(){
+    public void Start(){
         //acha o game controller
         Definer = GameObject.FindGameObjectWithTag("GameController");
         //pega a variavel do game controller
