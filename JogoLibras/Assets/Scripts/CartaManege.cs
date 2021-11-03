@@ -66,8 +66,7 @@ public class CartaManege : MonoBehaviour
 
 
     private void EscolhePack(){
-        int a = Random.Range(0, PackDePalavras.Count);
-        GameObject pack = Instantiate(PackDePalavras[a], transform.position, Quaternion.identity);
+        GameObject pack = Instantiate(PackDePalavras[_pack], transform.position, Quaternion.identity);
         int b = pack.transform.childCount;
         for (int i = 0; i < b; i++)
         {

@@ -30,7 +30,7 @@ public class TesouroSitemaUm : MonoBehaviour
     private List<Sprite> ListaDeitens = new List<Sprite>();
     private int PalavraAtual;
 
-    void Start(){
+    public void comeca(){
         definer = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameDefiner>();
         _pack = definer.pack;
         _dificuldade = definer.Dificuldade;
