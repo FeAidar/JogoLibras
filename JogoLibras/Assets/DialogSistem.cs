@@ -15,6 +15,7 @@ public class DialogSistem : MonoBehaviour
 
     [SerializeField]private string[] falas;
     [SerializeField]private string EmQueFala;
+    [SerializeField]private bool TemEvento;
     [SerializeField]private UnityEvent[] eventos;
     [SerializeField]private UnityEvent Nofim;
     [HideInInspector]public bool Action = false;
@@ -33,10 +34,12 @@ public class DialogSistem : MonoBehaviour
         if(precisa == true){
             dig = GetComponent<DialogoEscrito>();
             dig.ComecaFala(falas[FalaAtual]);
-            foreach (char d in EmQueFala)
-            {
-                string f = ""+d;
-                NessaFala.Add(int.Parse(f));
+            if(TemEvento==true){
+                foreach (char d in EmQueFala)
+                {
+                    string f = ""+d;
+                    NessaFala.Add(int.Parse(f));
+                }
             }
         }else{
             Nofim.Invoke();
@@ -57,13 +60,19 @@ public class DialogSistem : MonoBehaviour
             chama = false;
         }
         if(Action){
-            if(acao < NessaFala.Count){
-                if(FalaAtual == NessaFala[acao]){
-                    eventos[acao].Invoke();
-                    acao++;
-                    FalaAtual++;
-                    Action = false;
-                    StartCoroutine(tempoespera());
+            if(TemEvento== true){
+                if(acao < NessaFala.Count){
+                    if(FalaAtual == NessaFala[acao]){
+                        eventos[acao].Invoke();
+                        acao++;
+                        FalaAtual++;
+                        Action = false;
+                        StartCoroutine(tempoespera());
+                    }else{
+                        FalaAtual++;
+                        Action= false;
+                        StartCoroutine(tempoespera());
+                    }
                 }else{
                     FalaAtual++;
                     Action= false;
