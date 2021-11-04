@@ -369,7 +369,8 @@ GameObject:
   - component: {fileID: 6273763198307440008}
   - component: {fileID: 143612104671685900}
   - component: {fileID: 1492112156425813970}
-  - component: {fileID: 4066905631214078352}
+  - component: {fileID: 2138088741660385939}
+  - component: {fileID: 96162534051822789}
   m_Layer: 5
   m_Name: Tela de Estrelas - Minigames
   m_TagString: Untagged
@@ -454,6 +455,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ee07fc513f597478b5984e0bf7bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blur: {fileID: 889750367419183048}
+  ParaTempo: 0
+  ObjetosParaDesligar: []
+  TelaDeVitoria: 0
   Estrela1: {fileID: 7793380924982426771}
   Estrela2: {fileID: 833960268989872238}
   Estrela3: {fileID: 8628794903193051688}
@@ -462,8 +467,7 @@ MonoBehaviour:
   ConseguiuUmaEstrela: "Acho que d\xE1 pra melhorar, ein."
   ConseguiuDuasEstrelas: "Voc\xEA est\xE1 em um bom caminho!"
   ConseguiuTresEstrelas: "Voc\xEA conseguiu todas as estrelas!"
-  blur: {fileID: 889750367419183048}
---- !u!82 &4066905631214078352
+--- !u!82 &2138088741660385939
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,9 +477,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d66cd7ab631214b4a98050c15e92d7f7, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -559,6 +563,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &96162534051822789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876068371635024547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d23224519ecb8342bef29e1837406bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartClip: {fileID: 8300000, guid: d66cd7ab631214b4a98050c15e92d7f7, type: 3}
+  LoopClip: {fileID: 8300000, guid: 8fcadc4cf3fb2894091131f2ba56d5da, type: 3}
+  audioSource: {fileID: 2138088741660385939}
 --- !u!1 &889750366443548286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,7 +4490,8 @@ GameObject:
   - component: {fileID: 2536800722869465668}
   - component: {fileID: 2066188869475704795}
   - component: {fileID: 7273910961053074738}
-  - component: {fileID: 696258015174284752}
+  - component: {fileID: 7979869426413231582}
+  - component: {fileID: 861195079779529925}
   m_Layer: 5
   m_Name: Tela de Derrota - Minigames
   m_TagString: Untagged
@@ -4553,6 +4573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ee07fc513f597478b5984e0bf7bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blur: {fileID: 889750367419183048}
+  ParaTempo: 0
+  ObjetosParaDesligar:
+  - {fileID: 0}
+  TelaDeVitoria: 0
   Estrela1: {fileID: 0}
   Estrela2: {fileID: 0}
   Estrela3: {fileID: 0}
@@ -4561,8 +4586,22 @@ MonoBehaviour:
   ConseguiuUmaEstrela: 
   ConseguiuDuasEstrelas: 
   ConseguiuTresEstrelas: 
-  blur: {fileID: 889750367419183048}
---- !u!82 &696258015174284752
+--- !u!114 &7979869426413231582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730330266400362994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d23224519ecb8342bef29e1837406bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartClip: {fileID: 8300000, guid: 999274f4f0f46e243ae7db7dc803ff06, type: 3}
+  LoopClip: {fileID: 8300000, guid: 4c8dc8edb07f86742b6dd0a54bee7506, type: 3}
+  audioSource: {fileID: 861195079779529925}
+--- !u!82 &861195079779529925
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4572,9 +4611,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 999274f4f0f46e243ae7db7dc803ff06, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

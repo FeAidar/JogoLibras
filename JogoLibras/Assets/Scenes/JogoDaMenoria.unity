@@ -3836,6 +3836,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7273910961053074738, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: ObjetosParaDesligar.Array.data[0]
+      value: 
+      objectReference: {fileID: 1658191497}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
 --- !u!1 &835666062 stripped
@@ -5712,6 +5716,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ea65d9bf87f62e6459d7e6def1c03de1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+--- !u!1 &1658191497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259376660229937422, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+  m_PrefabInstance: {fileID: 1658191496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666474850
 GameObject:
   m_ObjectHideFlags: 0
