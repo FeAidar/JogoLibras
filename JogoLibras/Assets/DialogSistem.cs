@@ -41,6 +41,7 @@ public class DialogSistem : MonoBehaviour
         }else{
             Nofim.Invoke();
         }
+        PodeClick = false;
     }
     private void Update(){
         if(chama){
@@ -62,24 +63,28 @@ public class DialogSistem : MonoBehaviour
                     acao++;
                     FalaAtual++;
                     Action = false;
-                    PodeClick = true;
+                    StartCoroutine(tempoespera());
                 }else{
                     FalaAtual++;
                     Action= false;
-                    PodeClick = true;
+                    StartCoroutine(tempoespera());
                 }
             }else{
                 FalaAtual++;
                 Action= false;
-                PodeClick = true;
+                StartCoroutine(tempoespera());
             }
         }
         if(Input.GetKeyDown(KeyCode.Mouse0)){
-            if(PodeClick){
+            if(PodeClick== true){
                 chama = true;
                 PodeClick = false;
             }
         }
+    }
+    IEnumerator tempoespera(){
+        yield return new WaitForSeconds(2f);
+        PodeClick = true;
     }
     
 }
