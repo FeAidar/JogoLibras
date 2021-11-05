@@ -6,17 +6,15 @@ using UnityEngine.UI;
 public class MVerificaDificuldade : MonoBehaviour
 {
     private GameDefiner controller;
-    private Image image;
 
     [Header("Coloque as imagens na ordem de dificuldade")]
-    [SerializeField] List<Sprite> Dificuldade = new List<Sprite>();
+    [SerializeField] List<GameObject> Dificuldade = new List<GameObject>();
 
     void Start()
     {
         controller = FindObjectOfType<GameDefiner>();
-        image = GetComponent<Image>();
         Operator();
-        }
+    }
 
     // Update is called once per frame
     public void Operator()
@@ -25,20 +23,21 @@ public class MVerificaDificuldade : MonoBehaviour
         {
             if(controller.Dificuldade == 1)
             {
-                image.sprite = Dificuldade[0];
+                Dificuldade[0].SetActive(true);
                 Debug.Log("Facil");
 
             }
 
             if (controller.Dificuldade == 2)
             {
-                image.sprite = Dificuldade[Random.Range(0,2)];
+                int d = Random.Range(0,2);
+                Dificuldade[d].SetActive(true);
                 Debug.Log("Medio");
             }
 
             if (controller.Dificuldade == 3)
             {
-                image.sprite = Dificuldade[1];
+                Dificuldade[1].SetActive(true);
                 Debug.Log("Dificil");
             }
 

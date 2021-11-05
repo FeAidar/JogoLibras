@@ -15,9 +15,9 @@ public class CartaManege : MonoBehaviour
     */
     [SerializeField]private List<GameObject> PackDePalavras = new List<GameObject>();
     [SerializeField]private List<GameObject> Grids = new List<GameObject>();
-    [SerializeField]private int[] QuantiaJogadas;
+    [SerializeField]private GameObject[] efeitosAcerto;
+    [SerializeField]private GameObject[] efeitosErro;
     [SerializeField]private float[] tempos;
-    [SerializeField]private Text Jogadas;
     [SerializeField] private GameObject telaVitoria, teladerrota;
     private List<GameObject> CartasSelecionadasDoPack = new List<GameObject>();
     private List<GameObject> CartasSelecionadas = new List<GameObject>();
@@ -25,7 +25,6 @@ public class CartaManege : MonoBehaviour
     private List<GameObject> CartasPareadas = new List<GameObject>();
     private GameObject _Definer;
     private int _pack, _dificuldade, _quantia, _Etapa;
-    private int JogadasRestantes;
     public bool ganhou;
     public AudioSource Acertou2;
     public AudioSource Errou2;
@@ -46,14 +45,12 @@ public class CartaManege : MonoBehaviour
         Grids[1].SetActive(false);
         Grids[2].SetActive(false);
 
-        JogadasRestantes = QuantiaJogadas[_dificuldade];
 
         EscolhePack();
         ColocaNoGrid();
         Comecatempo();
     }
     private void Update(){
-        Jogadas.text = ""+JogadasRestantes;
         if( this.GetComponent<Timer>().perdeu == true){
             teladerrota.SetActive(true);
         }
@@ -131,6 +128,8 @@ public class CartaManege : MonoBehaviour
     }
 
     public void CartaSelecionada(GameObject esse){
+        efeitosAcerto[0].transform.GetComponent<Animator>().SetTrigger("desativo");
+        efeitosAcerto[1].transform.GetComponent<Animator>().SetTrigger("desativo");
         if(CartasClicadas.Count < 2){
             if(esse.GetComponent<Carta>().par == false){
                 CartasClicadas.Add(esse);
@@ -139,7 +138,11 @@ public class CartaManege : MonoBehaviour
             if(CartasClicadas.Count == 2){
                 if(CartasClicadas[0].GetComponent<Carta>().Significado == CartasClicadas[1].GetComponent<Carta>().Significado){
                     CartasClicadas[0].GetComponent<Carta>().par = true;
+                    efeitosAcerto[0].transform.position = CartasClicadas[0].transform.position;
+                    efeitosAcerto[0].transform.GetComponent<Animator>().SetTrigger("ativo");
                     CartasClicadas[1].GetComponent<Carta>().par = true;
+                    efeitosAcerto[1].transform.position = CartasClicadas[1].transform.position;
+                    efeitosAcerto[1].transform.GetComponent<Animator>().SetTrigger("ativo");
                     CartasPareadas.Add(CartasClicadas[0]);
                     CartasPareadas.Add(CartasClicadas[1]);
                     Acertou2.Play();
@@ -158,25 +161,24 @@ public class CartaManege : MonoBehaviour
             DesselecionaTodas();
             Errou2.Play();
         }
-        JogadasRestantes --;
-        if(JogadasRestantes == 0){
-            teladerrota.SetActive(true);
-        }
     }
 
     public void CartaDesselecionada(GameObject esse){
         esse.GetComponent<Carta>().verso();
         CartasClicadas.Remove(esse);
-        JogadasRestantes --;
-        if(JogadasRestantes == 0){
-            teladerrota.SetActive(true);
-        }
     }
 
     private void DesselecionaTodas(){
+        int d=0;
+        efeitosErro[0].GetComponent<Animator>().SetTrigger("desativo");
+        efeitosErro[1].GetComponent<Animator>().SetTrigger("desativo");
+        efeitosErro[2].GetComponent<Animator>().SetTrigger("desativo");
         foreach (GameObject b in CartasClicadas)
         {
+            efeitosErro[d].transform.position = b.transform.position;
+            efeitosErro[d].GetComponent<Animator>().SetTrigger("ativo");
             b.GetComponent<Carta>().verso();
+            d++;
         }
         CartasClicadas.Clear();
     }

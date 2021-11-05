@@ -13,7 +13,7 @@ public class TesouroSitemaUm : MonoBehaviour
         5. verificar se o objeto apertado é o certo
     */
 
-    private int _pack, _quantia, _dificuldade;
+    private int _pack, _quantia, _dificuldade,_etapa;
     private GameDefiner definer;
     [Header("Palavras")]
     [SerializeField]private GameObject[] Packs;
@@ -23,8 +23,10 @@ public class TesouroSitemaUm : MonoBehaviour
     [SerializeField]private int[] Quantias;
     [SerializeField]private int[] Tempos;
     [SerializeField]private GameObject Mostruario;
+    [SerializeField]private Text Palavra;
     [SerializeField]private GameObject WinScreen;
     [SerializeField]private GameObject LoseScreen;
+    [SerializeField]private GameObject Acerto, erro;
     private List<GameObject> ListaDePalavras = new List<GameObject>();
     private List<GameObject> ListaDePalavrasSelecionadas = new List<GameObject>();
     private List<Sprite> ListaDeitens = new List<Sprite>();
@@ -35,6 +37,7 @@ public class TesouroSitemaUm : MonoBehaviour
         _pack = definer.pack;
         _dificuldade = definer.Dificuldade;
         _quantia = definer.Quantia;
+        _etapa= definer.Etapa;
 
         DefinePack();
         EscolhePalavras();
@@ -69,8 +72,8 @@ public class TesouroSitemaUm : MonoBehaviour
                 ListaDeitens.Add(ItensDoAluno[b]);
                 ItensDoAluno.Remove(ItensDoAluno[b]);
             }else if(_pack == 1){
-                ListaDeitens.Add(ItensDeSala[b]);
-                ItensDeSala.Remove(ItensDeSala[b]);
+                //ListaDeitens.Add(ItensDeSala[b]);
+                //ItensDeSala.Remove(ItensDeSala[b]);
             }
             ListaDePalavras.Remove(ListaDePalavras[b]);
         }
@@ -97,9 +100,21 @@ public class TesouroSitemaUm : MonoBehaviour
     }
     private void ApareceProximaPalavra(){
         if(_pack == 0){
-            Mostruario.GetComponent<Image>().sprite = ItensDoAluno[PalavraAtual];
+            Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
+            if(_etapa == 0){
+                string a = ListaDeitens[PalavraAtual].name;
+                Palavra.text = a;
+            }else{
+                Palavra.text = "";
+            }
         }else if(_pack == 1){
-            Mostruario.GetComponent<Image>().sprite = ItensDeSala[PalavraAtual];
+            Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
+            if(_etapa == 0){
+                string a = ListaDeitens[PalavraAtual].name;
+                Palavra.text = a;
+            }else{
+                Palavra.text = "";
+            }
         }
     }
     private void IniciaTime(){
@@ -108,13 +123,20 @@ public class TesouroSitemaUm : MonoBehaviour
     }
 
     public void Apertou(GameObject d){
+        Acerto.GetComponent<Animator>().SetTrigger("desativo");
+        erro.GetComponent<Animator>().SetTrigger("desativo");
         if(d.name == ListaDePalavrasSelecionadas[PalavraAtual].name){
+            Acerto.transform.position = d.transform.position;
+            Acerto.GetComponent<Animator>().SetTrigger("ativo");
             PalavraAtual++;
             if(PalavraAtual >= ListaDePalavrasSelecionadas.Count){
                 WinScreen.SetActive(true);
             }else{
                 ApareceProximaPalavra();
             }
+        }else{
+            erro.transform.position = d.transform.position;
+            erro.GetComponent<Animator>().SetTrigger("ativo");
         }
     }
 }

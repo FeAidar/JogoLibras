@@ -34,6 +34,9 @@ public class DialogSistem : MonoBehaviour
         if(precisa == true){
             dig = GetComponent<DialogoEscrito>();
             dig.ComecaFala(falas[FalaAtual]);
+            if(dig != null){
+                Debug.Log("aaa");
+            }
             if(TemEvento==true){
                 foreach (char d in EmQueFala)
                 {

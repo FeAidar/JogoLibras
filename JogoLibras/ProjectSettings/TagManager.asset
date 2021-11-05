@@ -21,6 +21,8 @@ TagManager:
   - Sistema
   - materia
   - objeto
+  - erro
+  - acerto
   layers:
   - Default
   - TransparentFX
@@ -55,6 +57,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: uepa
+    uniqueID: 2305501531
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

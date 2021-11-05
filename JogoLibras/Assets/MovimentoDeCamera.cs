@@ -8,7 +8,7 @@ public class MovimentoDeCamera : MonoBehaviour
     private bool zoom;
     private float Settimer =0.5f;
     private float timer;
-    Vector3 d = new Vector3 ();
+    Vector3 d = new Vector3 (0f, 0f, -10f);
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0)){
@@ -18,14 +18,14 @@ public class MovimentoDeCamera : MonoBehaviour
                 if(zoom){
                     Camera.main.orthographicSize = 5f;
                     zoom = false;
-                    if(Camera.main.transform.position.x < 5 && Camera.main.transform.position.x > -5){
+                    if(Camera.main.transform.position.x < 8.5f && Camera.main.transform.position.x > -8.5f){
                         d.x = Camera.main.transform.position.x;
                     }else{
-                        if(Camera.main.transform.position.x >= 5){
-                            d.x= 4.9f;
+                        if(Camera.main.transform.position.x >= 8.5f){
+                            d.x= 8.4f;
                         }
-                        if(Camera.main.transform.position.x <= -5){
-                            d.x= -4.9f;
+                        if(Camera.main.transform.position.x <= -8.5f){
+                            d.x= -8.4f;
                         }
                     }
                 }else{
@@ -41,13 +41,13 @@ public class MovimentoDeCamera : MonoBehaviour
             Vector3 Direction = StartingPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if(zoom == false){
                 Direction.y = 0;
-                if(d.x < 5 && d.x > -5){
+                if(d.x < 8.5f && d.x > -8.5f){
                     d += Direction;
                 }else{
-                    if(d.x > 5 && Direction.x < 0){
+                    if(d.x > 8.5f && Direction.x < 0){
                         d += Direction;
                     }
-                    if(d.x < -5 && Direction.x > 0){
+                    if(d.x < -8.5f && Direction.x > 0){
                         d += Direction;
                     }
                 }

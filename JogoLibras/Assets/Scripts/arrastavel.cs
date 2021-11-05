@@ -15,26 +15,34 @@ public class arrastavel : MonoBehaviour
     private MochilaGameStarter _Objetos;
     private float _movementTime = 15f;
     private System.Nullable<Vector3> _movementDestination;
-        public bool acertou;
+    public bool acertou;
     private string firstobject;
     public bool check;
     private AudioSource SomLugarErrado;
     private bool _som;
-
-
-
-
+    private GameObject acerto, erro;
+    private bool umaVez = true;
 
     private void Start()
     {
-              _collider = GetComponent<Collider2D>();
-       _dragController = FindObjectOfType<DragController>();
+        _collider = GetComponent<Collider2D>();
+        _dragController = FindObjectOfType<DragController>();
         _Objetos = FindObjectOfType<MochilaGameStarter>();
         SomLugarErrado = GetComponent<AudioSource>();
-       
-        
-
-
+        acerto = GameObject.FindGameObjectWithTag("acerto");
+        /*
+            acerto.GetComponent<Animator>().SetTrigger("desativo");
+            if(umaVez== true){
+                acerto.GetComponent<Animator>().SetTrigger("ativo");
+                acerto.transform.position = this.transform.position;
+                umaVez = false;
+            }
+        */
+        erro = GameObject.FindGameObjectWithTag("erro");
+        /*
+            erro.GetComponent<Animator>().SetTrigger("desativo");
+            erro.GetComponent<Animator>().SetTrigger("ativo");
+        */
     }
 
     private void Update()
@@ -65,8 +73,6 @@ public class arrastavel : MonoBehaviour
                         {
                            // Debug.Log("testando");
                             Acertou();
-
-
                         }
                     }
 
@@ -81,24 +87,24 @@ public class arrastavel : MonoBehaviour
             }
         }
 
-        if (_Objetos.Objetos.Count != 0)
+        if (_Objetos.Objetos.Count != 0){
             firstobject = _Objetos.Objetos[0].gameObject.name;
-
-
-        else
-            firstobject = "Parabéns";
-       // Debug.Log(firstobject);
+        }else{
+            firstobject = "Parabï¿½ns";
+            // Debug.Log(firstobject);
+        }
 
     }
 
     void Som()
     {
-        if (!_som)
+        if (!_som){
             if (SomLugarErrado != null)
             {
                 SomLugarErrado.Play();
                 _som = true;
             }
+        }
     }
 
     void Acertou()
@@ -121,12 +127,7 @@ public class arrastavel : MonoBehaviour
             ColliderDistance2D colliderDistance2D = other.Distance(_collider);
             Vector3 diff = new Vector3(colliderDistance2D.normal.x, colliderDistance2D.normal.y) * colliderDistance2D.distance;
             transform.position -= diff;
-            
-            
-            
         }
-
-      
             if (name == firstobject)
             {
             if (other.CompareTag("Area Valida"))
@@ -136,22 +137,15 @@ public class arrastavel : MonoBehaviour
                     check = true;
                     _movementDestination = other.transform.position;
                    // Debug.Log(check);
-
-
-
-
                 }
             }
             else if (other.CompareTag("AreaInvalida"))
-
                 if (!IsDragging && !check)
                 {
                    // check = false;
                     _movementDestination = LastPosition;
                     
                 }
-                
-            
             }
             else
             {
@@ -161,8 +155,7 @@ public class arrastavel : MonoBehaviour
                 {
                    // check = false;
                     _movementDestination = LastPosition;
-                   
-                                                        }
+                }
 
             }
             else if (other.CompareTag("AreaInvalida"))
@@ -173,18 +166,9 @@ public class arrastavel : MonoBehaviour
                     _movementDestination = LastPosition;
                     Debug.Log("ERRADO");
                     Som();
-
-
                 }
             }
-
-            }
-
-      
-       
-
-                    
-       
+        }
     }
 
     void movendo()
