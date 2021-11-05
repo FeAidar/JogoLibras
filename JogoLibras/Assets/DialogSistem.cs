@@ -36,6 +36,8 @@ public class DialogSistem : MonoBehaviour
             dig.ComecaFala(falas[FalaAtual]);
             if(dig != null){
                 Debug.Log("aaa");
+            }else{
+                Debug.Log("bb");
             }
             if(TemEvento==true){
                 foreach (char d in EmQueFala)
