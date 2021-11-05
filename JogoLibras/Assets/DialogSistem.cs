@@ -30,7 +30,11 @@ public class DialogSistem : MonoBehaviour
 
     private void Start(){
         definer = GameObject.FindGameObjectWithTag("GameController");
-        precisa = definer.GetComponent<GameDefiner>().dialogo;
+        if (definer != null)
+            precisa = definer.GetComponent<GameDefiner>().dialogo;
+        else
+            precisa = true;
+
         if(precisa == true){
             dig = GetComponent<DialogoEscrito>();
             dig.ComecaFala(falas[FalaAtual]);
@@ -97,8 +101,11 @@ public class DialogSistem : MonoBehaviour
         }
     }
     IEnumerator tempoespera(){
-        yield return new WaitForSeconds(2f);
-        PodeClick = true;
+        yield return new WaitForSeconds(0.1f);
+        if (dig.podeclicar)
+        {
+            PodeClick = true;
+        }
     }
     
 }
