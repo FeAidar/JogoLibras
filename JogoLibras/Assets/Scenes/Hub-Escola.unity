@@ -123,6 +123,163 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &67569188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67569189}
+  - component: {fileID: 67569193}
+  - component: {fileID: 67569192}
+  - component: {fileID: 67569191}
+  - component: {fileID: 67569190}
+  m_Layer: 5
+  m_Name: Jogo 6
+  m_TagString: Fase
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &67569189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67569188}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1315724334}
+  m_Father: {fileID: 1215683082}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 619, y: -172}
+  m_SizeDelta: {x: 64.5286, y: 64.5286}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &67569190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67569188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Texto: "Voc\xEA consegue formar palavras novas juntando outras palavras?"
+  Mapa: JogoDaMemoria
+  Dificuldade: 0
+  Pack: 0
+  Quantia: 1
+  VersaoDoMinigame: 2
+  Tempo: 60
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
+  PerdeEstrelas: 1
+--- !u!114 &67569191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67569188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 657343669}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 67569190}
+        m_TargetAssemblyTypeName: BotaoMapa, Assembly-CSharp
+        m_MethodName: apertou
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &67569192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67569188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 58998547e2ff8ce408ca777f3346b19a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &67569193
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67569188}
+  m_CullTransparentMesh: 1
 --- !u!1 &89184144
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,16 +371,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texto: Escolha as letras certas para formar as palavras
-  Mapa: alfabeto
-  Dificuldade: 1
+  Mapa: Caca
+  Dificuldade: 0
   Pack: 0
   Quantia: 0
   VersaoDoMinigame: 0
-  Tempo: 0
-  TempoTresEstrelas: 0
-  TempoDuasEstrelas: 0
-  TempoUmaEstrela: 0
-  PerdeEstrelas: 0
+  Tempo: 90
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
+  PerdeEstrelas: 1
 --- !u!114 &89184149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,6 +941,7 @@ MonoBehaviour:
   - {x: 251.09897, y: 116.095505}
   - {x: 351.50403, y: -7.285076}
   - {x: 416.84628, y: 113.21747}
+  - {x: 563.6, y: 66.9}
   lineThickness: 12.07
   relativeSize: 0
   lineList: 1
@@ -1733,15 +1891,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texto: "Voc\xEA consegue colocar os objetos na ordem certa antes do tempo acabar?"
-  Mapa: Mochila
-  Dificuldade: 1
-  Pack: 1
+  Mapa: JogoDaMemoria
+  Dificuldade: 0
+  Pack: 0
   Quantia: 0
-  VersaoDoMinigame: 0
-  Tempo: 50
-  TempoTresEstrelas: 30
-  TempoDuasEstrelas: 15
-  TempoUmaEstrela: 1
+  VersaoDoMinigame: 1
+  Tempo: 90
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
   PerdeEstrelas: 1
 --- !u!114 &917227974
 MonoBehaviour:
@@ -2663,14 +2821,15 @@ RectTransform:
   - {fileID: 89184145}
   - {fileID: 2147121682}
   - {fileID: 1694928718}
+  - {fileID: 67569189}
   - {fileID: 1424240401}
   m_Father: {fileID: 1108066046}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230.36786, y: 49}
-  m_SizeDelta: {x: 525.2643, y: 315.9621}
+  m_AnchoredPosition: {x: 300.47, y: 49}
+  m_SizeDelta: {x: 665.47, y: 315.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215683083
 MonoBehaviour:
@@ -2881,7 +3040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 97, y: -190.69998}
+  m_AnchoredPosition: {x: 97, y: -193}
   m_SizeDelta: {x: 64.5286, y: 64.5286}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235344181
@@ -2991,16 +3150,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texto: "Voc\xEA consegue memorizar as palavras e os gestos?"
-  Mapa: JogoDaMenoria
+  Mapa: Mochila
   Dificuldade: 1
   Pack: 0
   Quantia: 1
   VersaoDoMinigame: 0
-  Tempo: 0
-  TempoTresEstrelas: 0
-  TempoDuasEstrelas: 0
-  TempoUmaEstrela: 0
-  PerdeEstrelas: 0
+  Tempo: 90
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
+  PerdeEstrelas: 1
 --- !u!1 &1258090838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,6 +3235,216 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258090838}
   m_CullTransparentMesh: 1
+--- !u!1 &1315724333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315724334}
+  - component: {fileID: 1315724336}
+  - component: {fileID: 1315724335}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1315724334
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315724333}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1417669212}
+  m_Father: {fileID: 67569189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -38.6}
+  m_SizeDelta: {x: 86.1914, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1315724335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315724333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1315724336
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315724333}
+  m_CullTransparentMesh: 1
+--- !u!1 &1417669211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417669212}
+  - component: {fileID: 1417669214}
+  - component: {fileID: 1417669213}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1417669212
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417669211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1315724334}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1417669213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417669211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Palavras
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
+  m_sharedMaterial: {fileID: -1152584203684083190, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 13.7
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: -3.82
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 5, y: 0, z: 5, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1417669214
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417669211}
+  m_CullTransparentMesh: 1
 --- !u!1 &1424240400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +3475,7 @@ Transform:
   m_Children:
   - {fileID: 1053400474}
   m_Father: {fileID: 1215683082}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1424240402
 MonoBehaviour:
@@ -3262,16 +3631,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texto: "Voc\xEA consegue formar palavras novas juntando outras palavras?"
-  Mapa: SinalComposto
+  Mapa: Caca
   Dificuldade: 0
   Pack: 0
-  Quantia: 2
-  VersaoDoMinigame: 0
-  Tempo: 0
-  TempoTresEstrelas: 0
-  TempoDuasEstrelas: 0
-  TempoUmaEstrela: 0
-  PerdeEstrelas: 0
+  Quantia: 0
+  VersaoDoMinigame: 1
+  Tempo: 60
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
+  PerdeEstrelas: 1
 --- !u!114 &1694928722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4119,15 +4488,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Texto: "Voc\xEA lembra todos os objetos que v\xE3o na mochila?"
   Mapa: Mochila
-  Dificuldade: 3
+  Dificuldade: 2
   Pack: 1
   Quantia: 0
   VersaoDoMinigame: 1
-  Tempo: 0
-  TempoTresEstrelas: 0
-  TempoDuasEstrelas: 0
-  TempoUmaEstrela: 0
-  PerdeEstrelas: 0
+  Tempo: 60
+  TempoTresEstrelas: 45
+  TempoDuasEstrelas: 30
+  TempoUmaEstrela: 15
+  PerdeEstrelas: 1
 --- !u!114 &2147121686
 MonoBehaviour:
   m_ObjectHideFlags: 0
