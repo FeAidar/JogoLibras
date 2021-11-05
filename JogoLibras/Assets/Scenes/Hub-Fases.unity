@@ -1103,8 +1103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 381.68, y: 0}
-  m_SizeDelta: {x: 234.9, y: 306.46}
+  m_AnchoredPosition: {x: -76.32001, y: 150}
+  m_SizeDelta: {x: 234.90002, y: 306.46}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &768425967
 MonoBehaviour:
@@ -1498,7 +1498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 34, y: 3.2299957}
+  m_AnchoredPosition: {x: 34, y: 153.23}
   m_SizeDelta: {x: 301.5811, y: 306.46}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1158407173
@@ -1861,7 +1861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 659, y: 303.23}
+  m_AnchoredPosition: {x: -256, y: 150}
   m_SizeDelta: {x: 256.24, y: 306.46}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1445498164
@@ -2432,8 +2432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.65, y: 0}
-  m_SizeDelta: {x: 953.73, y: 300}
+  m_AnchoredPosition: {x: 272.82947, y: 0}
+  m_SizeDelta: {x: 915.24, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754150670
 MonoBehaviour:
@@ -2511,7 +2511,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.00099564}
-  m_SizeDelta: {x: 301.5811, y: 600}
+  m_SizeDelta: {x: 256.24, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082709171
 MonoBehaviour:
@@ -2825,6 +2825,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6814176518125472536, guid: ea8f3f42b5910f649b189abf97359db4, type: 3}
+    - target: {fileID: 5536622118986403697, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573075462915659555, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8781995766001196814, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 1
