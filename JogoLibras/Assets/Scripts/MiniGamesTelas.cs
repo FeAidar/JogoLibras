@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MiniGamesTelas : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MiniGamesTelas : MonoBehaviour
 
     [Header("Se tem algum objeto que precisa ser desligado ao entrar no menu (Nao esqueca de invocar o retorno")]
     public List<GameObject> ObjetosParaDesligar = new List<GameObject>();
+    [SerializeField]private AudioSource musica;
 
     [Header("Tela de Vitoria")]
     public bool TelaDeVitoria;
@@ -37,6 +39,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela1.SetActive(false);
             Estrela2.SetActive(false);
             Estrela3.SetActive(false);
+            musica.mute = true;
             controller = FindObjectOfType<GameDefiner>();
              Starchecker();
             if (ParaTempo)
@@ -62,7 +65,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela2.SetActive(false);
             Estrela3.SetActive(false);
             frase.text = ConseguiuUmaEstrela;
-            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";                
+            countdown.text = "Vocï¿½ completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";                
         }
 
         if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 2)
@@ -71,7 +74,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela2.SetActive(true);
             Estrela3.SetActive(false);
             frase.text = ConseguiuDuasEstrelas;
-            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
+            countdown.text = "Vocï¿½ completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
 
         }
 
@@ -81,7 +84,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela2.SetActive(true);
             Estrela3.SetActive(true);
             frase.text = ConseguiuTresEstrelas;
-            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
+            countdown.text = "Vocï¿½ completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
 
         }
 
@@ -113,6 +116,7 @@ public class MiniGamesTelas : MonoBehaviour
 
     public void LigaObjetosDeVolta()
     {
+        
         for (int i = 0; i < ObjetosParaDesligar.Count; i++)
         {
             ObjetosParaDesligar[i].SetActive(false);

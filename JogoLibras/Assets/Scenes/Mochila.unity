@@ -1536,6 +1536,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 608923649212405376, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 2676029095240054390}
+    - target: {fileID: 608923649212405376, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: ParaTempo
       value: 1
       objectReference: {fileID: 0}
@@ -1811,6 +1815,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8661626830736665696, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 2676029095240054390}
     - target: {fileID: 8661626830736665696, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: Estrela1
       value: 
@@ -3965,6 +3973,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8b292ebfa0b314a4095ce66457922e60, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+--- !u!82 &2676029095240054390 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1259376660229937425, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+  m_PrefabInstance: {fileID: 2676029095240054389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8923022401902482174
 Transform:
   m_ObjectHideFlags: 0
