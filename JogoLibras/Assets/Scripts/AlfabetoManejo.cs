@@ -21,7 +21,6 @@ public class AlfabetoManejo : MonoBehaviour
     [SerializeField]private GameObject posipalavra;
     [SerializeField]private float[] tempos;
     [SerializeField]private GameObject telavitoria;
-    [SerializeField]private GameObject telaDerrota;
     private List<GameObject> PackSelecionado = new List<GameObject>();
     private GameObject palavraConfirma;
     private List<char> LetrasCertas = new List<char>();
@@ -35,11 +34,23 @@ public class AlfabetoManejo : MonoBehaviour
     public bool ganhou;
     int quantas;
     public string nome;
+    public TMPro.TextMeshProUGUI textoconfirmacao;
+    public Button BotaoOK;
     private void Update(){
         // if( this.GetComponent<Timer>().perdeu == true){
         //        telaDerrota.SetActive(true);
         //  }
+        if (EscreveNome)
+        {
+            BTM_Entername();
 
+            if (nome == "")
+                BotaoOK.interactable = false;
+            else if (nome == null)
+                BotaoOK.interactable = false;
+            else
+                BotaoOK.interactable = true;
+        }
 
     }
     public void Start(){
@@ -185,6 +196,9 @@ public class AlfabetoManejo : MonoBehaviour
         foreach (GameObject s in LetrasSelecionadas)
         {
             nome = nome + s.GetComponent<BotaoLetra>().letra;
+            
+
+            textoconfirmacao.text = "Seu nome é " + nome+"?";
             
         }
 
