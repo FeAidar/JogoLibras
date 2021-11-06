@@ -39,6 +39,9 @@ public class AlfabetoManejo : MonoBehaviour
     public GameObject telavitoria2;
     private GameObject espaco;
     public GameObject NomedaAlana;
+    private GameObject Packconfima;
+    private int palavra;
+    private bool etapanome;
     private void Update(){
         if (EscreveNome)
         {
@@ -64,9 +67,11 @@ public class AlfabetoManejo : MonoBehaviour
                 _Dificudade = Definer.GetComponent<GameDefiner>().Dificuldade;
                 _Pack = Definer.GetComponent<GameDefiner>().pack;
                 _quantia = Definer.GetComponent<GameDefiner>().Quantia;
+
             }
         }
         _Pack = 0;
+        palavra = 0;
 
         if (!EscreveNome)
         {
@@ -86,19 +91,21 @@ public class AlfabetoManejo : MonoBehaviour
  //       Debug.Log(this.GetComponent<Timer>().timeRemaining);
 //    }
     private void SelecionaPalavra(){
-        LetrasCertas.Clear();
-        GameObject Packconfima = Instantiate(PackDePalavras[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
+        
+        Packconfima = Instantiate(PackDePalavras[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
         int a = Packconfima.transform.childCount;
         for (int i = 0; i < a; i++)
         {
             PackSelecionado.Add(Packconfima.transform.GetChild(i).gameObject);
         }
-        int b = Random.Range(0, PackSelecionado.Count);
-        palavraConfirma = PackSelecionado[b];
+       // int b = Random.Range(0, PackSelecionado.Count);
+        palavraConfirma = PackSelecionado[0 + palavra];
         palavraConfirma.transform.position = posipalavra.transform.position;
-        if(_Pack == 0)
-         palavraConfirma.GetComponent<palavra>().Palavra = PlayerPrefs.GetString("Nome"); 
-
+        if (!etapanome)
+        {
+            palavraConfirma.GetComponent<palavra>().Palavra = PlayerPrefs.GetString("Nome");
+            etapanome =true;
+        }
          palavraSelecionada = palavraConfirma.GetComponent<palavra>().Palavra;
         foreach (char s in palavraSelecionada)
         {
@@ -267,22 +274,23 @@ public class AlfabetoManejo : MonoBehaviour
     IEnumerator Allana()
     {
 
-
-        BTM_clear();
+        Packconfima.SetActive(false);
+        palavraConfirma.SetActive(false) ;
         Destroy(espaco);
-        _Pack = 1;
-        yield return new WaitForSeconds(0.1f);
-         quantidadeLetras = 0;
+        BTM_clear();
         foreach (GameObject b in espacosCertos)
         {
             Destroy(b);
         }
+        yield return new WaitForSeconds(0.1f);
+         quantidadeLetras = 0;
         LetrasCertas.Clear();
         palavraSelecionada = null;
         espacosCertos.Clear();
         LetrasSelecionadas.Clear();
+        palavra++;
         quantas = 0;
-
+        _Pack = 0;
         yield return new WaitForSeconds(0.1f);
        SelecionaPalavra();
         Debug.Log(palavraSelecionada);
