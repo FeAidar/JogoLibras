@@ -36,10 +36,10 @@ public class AlfabetoManejo : MonoBehaviour
     public string nome;
     public TMPro.TextMeshProUGUI textoconfirmacao;
     public Button BotaoOK;
+    public GameObject telavitoria2;
+    private GameObject espaco;
+    public GameObject NomedaAlana;
     private void Update(){
-        // if( this.GetComponent<Timer>().perdeu == true){
-        //        telaDerrota.SetActive(true);
-        //  }
         if (EscreveNome)
         {
             BTM_Entername();
@@ -51,6 +51,8 @@ public class AlfabetoManejo : MonoBehaviour
             else
                 BotaoOK.interactable = true;
         }
+
+
 
     }
     public void Start(){
@@ -64,6 +66,7 @@ public class AlfabetoManejo : MonoBehaviour
                 _quantia = Definer.GetComponent<GameDefiner>().Quantia;
             }
         }
+        _Pack = 0;
 
         if (!EscreveNome)
         {
@@ -83,6 +86,7 @@ public class AlfabetoManejo : MonoBehaviour
  //       Debug.Log(this.GetComponent<Timer>().timeRemaining);
 //    }
     private void SelecionaPalavra(){
+        LetrasCertas.Clear();
         GameObject Packconfima = Instantiate(PackDePalavras[_Pack], new Vector3(1000f, 1000f,0f), Quaternion.identity);
         int a = Packconfima.transform.childCount;
         for (int i = 0; i < a; i++)
@@ -92,8 +96,10 @@ public class AlfabetoManejo : MonoBehaviour
         int b = Random.Range(0, PackSelecionado.Count);
         palavraConfirma = PackSelecionado[b];
         palavraConfirma.transform.position = posipalavra.transform.position;
-        palavraConfirma.GetComponent<palavra>().Palavra = PlayerPrefs.GetString("Nome");
-        palavraSelecionada = palavraConfirma.GetComponent<palavra>().Palavra;
+        if(_Pack == 0)
+         palavraConfirma.GetComponent<palavra>().Palavra = PlayerPrefs.GetString("Nome"); 
+
+         palavraSelecionada = palavraConfirma.GetComponent<palavra>().Palavra;
         foreach (char s in palavraSelecionada)
         {
             LetrasCertas.Add(s);
@@ -123,6 +129,8 @@ public class AlfabetoManejo : MonoBehaviour
                 espaco.transform.SetParent(espaços.transform);
                 espaco.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
             }
+
+            quantas= 0;
             LetrasSelecionadas.Add(Instantiate(letras[numero], espacosCertos[LetrasSelecionadas.Count].transform.position, Quaternion.identity));
                 LetrasSelecionadas[LetrasSelecionadas.Count - 1].transform.SetParent(espacosCertos[LetrasSelecionadas.Count - 1].transform);
                 LetrasSelecionadas[LetrasSelecionadas.Count - 1].transform.localScale = new Vector3(1f, 1f, 1f);
@@ -142,21 +150,15 @@ public class AlfabetoManejo : MonoBehaviour
 
         if(quantas == quantidadeLetras){
             telavitoria.SetActive(true);
+            
             //Coloquei aqui a chamada de pontuação do Definer
-           // Definer.GetComponent<GameDefiner>().ganhou();
+            // Definer.GetComponent<GameDefiner>().ganhou();
         }
     }
 
     public void BTM_REMOVE()
     {
-        
-        if (!EscreveNome)
-            if (LetrasSelecionadas[LetrasSelecionadas.Count - 1].GetComponent<BotaoLetra>().letra == LetrasCertas[LetrasSelecionadas.Count - 1])
-            {
-
-                quantas--;
-            }
-        if (EscreveNome)
+       if (EscreveNome)
         {
             if (espacosCertos.Count != 0)
             {
@@ -165,11 +167,29 @@ public class AlfabetoManejo : MonoBehaviour
             }
 
         }
+
+
+        if (!EscreveNome)
+        {
+
+            quantas = 0;
+            if (LetrasSelecionadas[LetrasSelecionadas.Count - 1].GetComponent<BotaoLetra>().letra == LetrasCertas[LetrasSelecionadas.Count - 1])
+          {
+
+               quantas--;
+
+          }
+          
+            
+
+            }
+
         if (LetrasSelecionadas.Count != 0)
         {
             Destroy(LetrasSelecionadas[LetrasSelecionadas.Count - 1]);
             LetrasSelecionadas.Remove(LetrasSelecionadas[LetrasSelecionadas.Count - 1]);
         }
+
     }
 
     public void BTM_clear(){
@@ -208,7 +228,7 @@ public class AlfabetoManejo : MonoBehaviour
     {
         PlayerPrefs.SetString ("Nome", nome);
 
-            GameObject espaco = Instantiate(espaços, espaços.transform.position, Quaternion.identity);
+            espaco = Instantiate(espaços, espaços.transform.position, Quaternion.identity);
                         espaco.transform.SetParent(espaçosnome.transform);
         espaco.GetComponent<RectTransform>().anchorMin = espaços.GetComponent<RectTransform>().anchorMin;
         espaco.GetComponent<RectTransform>().anchorMax = espaços.GetComponent<RectTransform>().anchorMax;
@@ -220,7 +240,7 @@ public class AlfabetoManejo : MonoBehaviour
         SelecionaPalavra();
         EspacosAdd();
         quantidadeLetras = LetrasCertas.Count;
-        espaco.name = "novo";
+        
 
     }
 
@@ -235,5 +255,51 @@ public class AlfabetoManejo : MonoBehaviour
                         s.GetComponent<BotaoLetra>().EntraLetra();
         }
         
+    }
+
+    public void Restart()
+    {
+        StartCoroutine("Allana");
+
+
+    }
+
+    IEnumerator Allana()
+    {
+
+
+        BTM_clear();
+        Destroy(espaco);
+        _Pack = 1;
+        yield return new WaitForSeconds(0.1f);
+         quantidadeLetras = 0;
+        foreach (GameObject b in espacosCertos)
+        {
+            Destroy(b);
+        }
+        LetrasCertas.Clear();
+        palavraSelecionada = null;
+        espacosCertos.Clear();
+        LetrasSelecionadas.Clear();
+        quantas = 0;
+
+        yield return new WaitForSeconds(0.1f);
+       SelecionaPalavra();
+        Debug.Log(palavraSelecionada);
+            yield return new WaitForSeconds(0.1f);
+        quantidadeLetras = LetrasCertas.Count;
+        
+        yield return new WaitForSeconds(0.1f);
+        EspacosAdd();
+        NomedaAlana.SetActive(true);
+        Debug.Log(quantas + " letras atuais");
+        Debug.Log(quantidadeLetras + " letras totais");
+        telavitoria = telavitoria2;
+
+    }
+
+    public void completoututorial()
+    {
+        PlayerPrefs.SetInt("Introducao", 1);
     }
 }

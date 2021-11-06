@@ -27,18 +27,19 @@ public class teleport : MonoBehaviour
 
    protected IEnumerator Carrega(string nivel)
     {
-
+        Debug.Log(Som);
         Vibracao.vibra();
 
         if(_transicao != null)
         _transicao.inicia();
 
+
         if (Som != null)
         {
             Som.Play();
-            yield return new WaitForSeconds(Som.clip.length);
+            yield return new WaitForSecondsRealtime(Som.clip.length);
         }
-        else yield return new WaitForSecondsRealtime (1f);
+       else yield return new WaitForSecondsRealtime (1f);
 
         if (InterrompeMusica)
         { GameObject som= GameObject.FindWithTag("Musica");
