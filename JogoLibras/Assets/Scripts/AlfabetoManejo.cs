@@ -297,4 +297,9 @@ public class AlfabetoManejo : MonoBehaviour
         telavitoria = telavitoria2;
 
     }
+
+    public void completoututorial()
+    {
+        PlayerPrefs.SetInt("Introducao", 1);
+    }
 }

@@ -15,14 +15,14 @@ public class ComecaJogo : teleport
 
     public void CarregaCustomizacao()
     {
-        if (PlayerPrefs.HasKey("Customizou"))
+         if (PlayerPrefs.HasKey("Introducao"))
         {
-            if (PlayerPrefs.GetInt("Customizou") == 1)
+            if (PlayerPrefs.GetInt("Introducao") == 1)
             {
                 StartCoroutine ("Carrega", level);
 
             }
-            if (PlayerPrefs.GetInt("Customizou") == 0)
+            if (PlayerPrefs.GetInt("Introducao") == 0)
             {
                 StartCoroutine("Carrega", LevelCustomizacao);
 
