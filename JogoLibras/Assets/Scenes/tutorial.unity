@@ -5582,6 +5582,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1197781520411362970, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: ParaTempo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1887864845386206154, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -5650,7 +5654,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1197781520411362970, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
 --- !u!4 &1610615210 stripped
 Transform:

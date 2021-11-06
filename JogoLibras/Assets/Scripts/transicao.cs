@@ -16,6 +16,12 @@ public class transicao : MonoBehaviour
     }
     public void finaliza(){
         anima.SetTrigger("start");
+
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+
         if (ParaTempo)
         {
             Time.timeScale = 1;

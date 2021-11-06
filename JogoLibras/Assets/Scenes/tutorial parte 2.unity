@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1197781520411362970, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: ParaTempo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1197781520411362973, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: weight
       value: 0.6
@@ -219,7 +223,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1197781520411362970, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
 --- !u!20 &33961191 stripped
 Camera:
@@ -3630,6 +3635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "transi\xE7\xE3o"
       objectReference: {fileID: 0}
+    - target: {fileID: 2961797355910621971, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5032563283865076542, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: ParaTempo
       value: 0
@@ -5319,7 +5328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53a5c97fba91c442816ea6d7f14c00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: alfabeto
+  level: Hub-Fases
   InterrompeMusica: 0
   sair: 0
 --- !u!1 &1866003037 stripped

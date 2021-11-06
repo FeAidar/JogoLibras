@@ -58,8 +58,9 @@ public class teleport : MonoBehaviour
             }
         }
         if (!sair)
+        { Time.timeScale = 1;
             SceneManager.LoadScene(nivel);
-        else
+        }else
         {
             Debug.Log(_transicao);
             Application.Quit();
