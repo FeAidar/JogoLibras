@@ -26,17 +26,16 @@ public class DialogSistem : MonoBehaviour
     private int acao;
     private bool precisa;
     private GameObject definer;
-    private DialogoEscrito dig ;
+    public DialogoEscrito dig ;
 
     private void Start(){
         definer = GameObject.FindGameObjectWithTag("GameController");
-        if (definer != null)
+        if (definer != null){
             precisa = definer.GetComponent<GameDefiner>().dialogo;
-        else
+        }else{
             precisa = true;
-
+        }
         if(precisa == true){
-            dig = GetComponent<DialogoEscrito>();
             dig.ComecaFala(falas[FalaAtual]);
             if(dig != null){
                 Debug.Log("aaa");

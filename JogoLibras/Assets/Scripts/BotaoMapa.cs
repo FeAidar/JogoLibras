@@ -6,16 +6,17 @@ using UnityEngine.UI;
 public class BotaoMapa : MonoBehaviour
 {
     private Posicionaplayer Controlador;
-    [Header("Descrição do Minigame e nome do mapa")]
+    [Header("Descriï¿½ï¿½o do Minigame e nome do mapa")]
     [SerializeField] public string Texto;
     [SerializeField] public string Mapa;
 
-    [Header("Configurações do Minigame")]
+    [Header("Configuraï¿½ï¿½es do Minigame")]
     public int Dificuldade;
     public int Pack;
     public int Quantia;
+    public bool tutorial;
 
-    [Header("Se o minigame se repete no pack, troque o número da versão")]
+    [Header("Se o minigame se repete no pack, troque o nï¿½mero da versï¿½o")]
     public int VersaoDoMinigame;
 
 
@@ -27,7 +28,7 @@ public class BotaoMapa : MonoBehaviour
     public int TempoDuasEstrelas;
     public int TempoUmaEstrela;
 
-    [Header("Se é um jogo que perde ou ganha estrelas")]
+    [Header("Se ï¿½ um jogo que perde ou ganha estrelas")]
     public bool PerdeEstrelas;
 
     private GameDefiner _definer;
@@ -43,7 +44,7 @@ public class BotaoMapa : MonoBehaviour
     {
         Controlador = FindObjectOfType<Posicionaplayer>();
         _definer = FindObjectOfType<GameDefiner>();
-        _descricao = GameObject.Find("Descrição");
+        _descricao = GameObject.Find("Descricao");
         textodescricao = _descricao.GetComponent<Text>();
         _botao = GameObject.Find("Jogar");
         _estrela1 = GameObject.Find("Estrela 1");
@@ -81,6 +82,7 @@ public class BotaoMapa : MonoBehaviour
         _definer.TempoDuasEstrelas = TempoDuasEstrelas;
         _definer.TempoUmaEstrela = TempoUmaEstrela;
         _definer.PerdeEstrelas = PerdeEstrelas;
+        _definer.dialogo = tutorial;
 
 
 
