@@ -1829,6 +1829,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 212.35999
       objectReference: {fileID: 0}
+    - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cb57531e19f6714881a5771398b0480, type: 2}
+    - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4494805253068932429, guid: 6cb57531e19f6714881a5771398b0480, type: 2}
+    - target: {fileID: 7303245302612629807, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -577.302
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
 --- !u!1 &542186712 stripped
@@ -3290,6 +3302,14 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1197781519522736529, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197781519539652075, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197781520581560108, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

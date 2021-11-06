@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class DialogSistem : MonoBehaviour
 {
@@ -29,30 +30,65 @@ public class DialogSistem : MonoBehaviour
     public DialogoEscrito dig ;
 
     private void Start(){
-        definer = GameObject.FindGameObjectWithTag("GameController");
-        if (definer != null){
-            precisa = definer.GetComponent<GameDefiner>().dialogo;
-        }else{
-            precisa = true;
-        }
-        if(precisa == true){
-            dig.ComecaFala(falas[FalaAtual]);
-            if(dig != null){
-                Debug.Log("aaa");
-            }else{
-                Debug.Log("bb");
-            }
-            if(TemEvento==true){
-                foreach (char d in EmQueFala)
-                {
-                    string f = ""+d;
-                    NessaFala.Add(int.Parse(f));
+        if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
+            int b = PlayerPrefs.GetInt("hubtuto");
+            b ++;
+            Debug.Log(b);
+            PlayerPrefs.SetInt("hubtuto",b);
+            if(b <= 2){
+                definer = GameObject.FindGameObjectWithTag("GameController");
+                if (definer != null){
+                    precisa = definer.GetComponent<GameDefiner>().dialogo;
+                }else{
+                    precisa = true;
                 }
+                if(precisa == true){
+                    dig.ComecaFala(falas[FalaAtual]);
+                    if(dig != null){
+                        Debug.Log("aaa");
+                    }else{
+                        Debug.Log("bb");
+                    }
+                    if(TemEvento==true){
+                        foreach (char d in EmQueFala)
+                        {
+                            string f = ""+d;
+                            NessaFala.Add(int.Parse(f));
+                        }
+                    }
+                }else{
+                    Nofim.Invoke();
+                }
+                PodeClick = false;
+            }else{
+                Nofim.Invoke();
             }
         }else{
-            Nofim.Invoke();
+            definer = GameObject.FindGameObjectWithTag("GameController");
+            if (definer != null){
+                precisa = definer.GetComponent<GameDefiner>().dialogo;
+            }else{
+                precisa = true;
+            }
+            if(precisa == true){
+                dig.ComecaFala(falas[FalaAtual]);
+                if(dig != null){
+                    Debug.Log("aaa");
+                }else{
+                    Debug.Log("bb");
+                }
+                if(TemEvento==true){
+                    foreach (char d in EmQueFala)
+                    {
+                        string f = ""+d;
+                        NessaFala.Add(int.Parse(f));
+                    }
+                }
+            }else{
+                Nofim.Invoke();
+            }
+            PodeClick = false;
         }
-        PodeClick = false;
     }
     private void Update(){
         if(chama){

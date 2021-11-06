@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class DialogoEscrito : MonoBehaviour
 {
-    [SerializeField]private Text FalaNaTela;
+    [SerializeField]private TMP_Text FalaNaTela;
     [SerializeField]private float VelocidadeDaFala;
     private string FalaAtual = "";
     private DialogSistem digo;
