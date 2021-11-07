@@ -69,21 +69,21 @@ public class BotaoMapa : MonoBehaviour
         _estrela1.SetActive(true);
         _estrela2.SetActive(true);
         _estrela3.SetActive(true);
-     Controlador.apertou = true;
+         Controlador.apertou = true;
         _botao.SetActive(true);
         textodescricao.text = Texto;
-        _botao.GetComponent<teleport>().level =Mapa;
         _definer.Dificuldade = Dificuldade;
         _definer.pack = Pack;
         _definer.Quantia = Quantia;
         _definer.Dificuldade_do_Minigame = VersaoDoMinigame;
+        _definer.Etapa = VersaoDoMinigame;
         _definer.Tempo = Tempo;
         _definer.TempoTresEstrelas = TempoTresEstrelas;
         _definer.TempoDuasEstrelas = TempoDuasEstrelas;
         _definer.TempoUmaEstrela = TempoUmaEstrela;
         _definer.PerdeEstrelas = PerdeEstrelas;
         _definer.dialogo = tutorial;
-
+        _botao.GetComponent<teleport>().level =Mapa;
 
 
     if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame+Pack) == 1)

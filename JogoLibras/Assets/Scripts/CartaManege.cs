@@ -103,10 +103,12 @@ public class CartaManege : MonoBehaviour
     private void selecionacartas(int a){
         for (int i = 0; i < a; i++)
         {
+            Debug.Log("bbbbb");
             GameObject b = Instantiate(CartasSelecionadasDoPack[i],transform.position, Quaternion.identity);
             CartasSelecionadas.Add(CartasSelecionadasDoPack[i]);
             CartasSelecionadas.Add(b);
             if(_Etapa == 1){
+                Debug.Log("aaaaaaaaa");
                 b.GetComponent<Carta>().essa = true;
             }else if(_Etapa == 2){
                 b.GetComponent<Carta>().essa = true;
