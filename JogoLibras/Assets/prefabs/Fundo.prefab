@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 326979335064240545}
+  - component: {fileID: 8266394910713023736}
   - component: {fileID: 326979335064240573}
   - component: {fileID: 326979335064240572}
   - component: {fileID: 326979335064240575}
@@ -21,7 +21,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &326979335064240545
+--- !u!4 &8266394910713023736
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: -0.0246, y: -0.1227, z: -0.2}
   m_LocalScale: {x: 6.4409804, y: 11.698747, z: 5.8654}
   m_Children: []
-  m_Father: {fileID: 326979335765302502}
+  m_Father: {fileID: 1368080285353943869}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &326979335064240573
@@ -139,7 +139,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 326979335765302502}
+  - component: {fileID: 1368080285353943869}
   - component: {fileID: 326979335765302505}
   m_Layer: 0
   m_Name: Fundo
@@ -148,18 +148,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &326979335765302502
+--- !u!4 &1368080285353943869
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326979335765302504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 326979335064240545}
+  - {fileID: 8266394910713023736}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d20cbde0e9c8a6b4b940124419b8b38b, type: 3}
   m_Color: {r: 0.5801887, g: 0.9049864, b: 1, a: 1}
   m_FlipX: 0
