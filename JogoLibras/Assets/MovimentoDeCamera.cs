@@ -11,6 +11,7 @@ public class MovimentoDeCamera : MonoBehaviour
     Vector3 d = new Vector3 (0f, 0f, -10f);
     void Update()
     {
+        d.z = -10;
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             StartingPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if(timer >= Time.time){
