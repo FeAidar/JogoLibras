@@ -28,27 +28,31 @@ public class CartaManege : MonoBehaviour
     public bool ganhou;
     public AudioSource Acertou2;
     public AudioSource Errou2;
+    private bool umavez = true;
     public void começa()
     {
-        _Definer = GameObject.FindGameObjectWithTag("GameController");
-        if(GameObject.FindGameObjectWithTag("GameController") != null){
-            if(_Definer.GetComponent<GameDefiner>() != null){
-                _dificuldade = _Definer.GetComponent<GameDefiner>().Dificuldade;
-                _pack = _Definer.GetComponent<GameDefiner>().pack;
-                _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
-                _Etapa =_Definer.GetComponent<GameDefiner>().Etapa;
+        if(umavez){
+            _Definer = GameObject.FindGameObjectWithTag("GameController");
+            if(GameObject.FindGameObjectWithTag("GameController") != null){
+                if(_Definer.GetComponent<GameDefiner>() != null){
+                    _dificuldade = _Definer.GetComponent<GameDefiner>().Dificuldade;
+                    _pack = _Definer.GetComponent<GameDefiner>().pack;
+                    _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
+                    _Etapa =_Definer.GetComponent<GameDefiner>().Etapa;
+                }
             }
+
+
+            Grids[0].SetActive(false);
+            Grids[1].SetActive(false);
+            Grids[2].SetActive(false);
+
+
+            EscolhePack();
+            ColocaNoGrid();
+            Comecatempo();
+            umavez = false;
         }
-
-
-        Grids[0].SetActive(false);
-        Grids[1].SetActive(false);
-        Grids[2].SetActive(false);
-
-
-        EscolhePack();
-        ColocaNoGrid();
-        Comecatempo();
     }
     private void Update(){
         if( this.GetComponent<Timer>().perdeu == true){

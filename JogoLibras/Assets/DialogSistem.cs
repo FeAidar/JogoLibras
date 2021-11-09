@@ -137,10 +137,7 @@ public class DialogSistem : MonoBehaviour
     }
     IEnumerator tempoespera(){
         yield return new WaitForSeconds(0.1f);
-        if (dig.podeclicar)
-        {
-            PodeClick = true;
-        }
+        PodeClick = true;
     }
     
 }

@@ -7,32 +7,39 @@ public class DialogoEscrito : MonoBehaviour
 {
     [SerializeField]private TMP_Text FalaNaTela;
     [SerializeField]private float VelocidadeDaFala;
-    private string FalaAtual = "";
+    private float tempo;
+    private string FalaAtual = "", fala;
     private DialogSistem digo;
-    public bool podeclicar;
+    public bool rolando;
+    public int letraAtual;
     private void Start(){
         digo = GetComponent<DialogSistem>();
     }
     public void ComecaFala(string a){
-        StartCoroutine(Fala(a));
+        fala = a;
+        letraAtual = 0;
+        FalaAtual = "";
+        rolando = true;
     }
-    IEnumerator Fala(string dialogo){
-        for (int i = 0; i < dialogo.Length; i++)
-        {
-            if(podeclicar)
-            if(Input.GetKeyDown(KeyCode.Mouse0)){
-                i = 10000;
+
+    void Update(){
+        if(rolando == true){
+            if(tempo< Time.time){
+                FalaAtual = fala.Substring(0,letraAtual+1);
+                letraAtual++;
+                FalaNaTela.text = FalaAtual;
+                if(FalaAtual == fala){
+                    digo.Action = true;
+                    rolando = false;
+                }
+                tempo = Time.time + VelocidadeDaFala;
             }
-            FalaAtual = dialogo.Substring(0,i+1);
-            FalaNaTela.text = FalaAtual;
-            podeclicar = false;
-           // Debug.Log(FalaAtual);
-            yield return new WaitForSeconds(VelocidadeDaFala);
+            if(Input.GetKeyDown(KeyCode.Mouse0)){
+                FalaAtual = fala;
+                FalaNaTela.text = FalaAtual;
+                digo.Action = true;
+                rolando = false;
+            }
         }
-        if (FalaAtual == dialogo)
-        {
-            podeclicar = true;
-        }
-        digo.Action = true;
     }
 }
