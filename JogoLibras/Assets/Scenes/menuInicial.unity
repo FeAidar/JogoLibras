@@ -952,7 +952,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 3619540602697487990, guid: d15162a53486ee34a80bbbbffa1de695, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -990,6 +990,10 @@ PrefabInstance:
     - target: {fileID: 326979335765302504, guid: fa161581a328afa408fe89ee216865e6, type: 3}
       propertyPath: m_Name
       value: Fundo
+      objectReference: {fileID: 0}
+    - target: {fileID: 326979335765302504, guid: fa161581a328afa408fe89ee216865e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1368080285353943869, guid: fa161581a328afa408fe89ee216865e6, type: 3}
       propertyPath: m_RootOrder
@@ -1076,7 +1080,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 55b2945e0efb6a842b0c8d1cb47210b3, type: 3}
-  m_Color: {r: 0.6933962, g: 1, b: 0.9794359, a: 1}
+  m_Color: {r: 0.6933962, g: 1, b: 0.9794359, a: 0.6039216}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1597,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445795778372859970, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Color.a
@@ -1614,6 +1618,14 @@ PrefabInstance:
     - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Color.r
       value: 0.5801887
+      objectReference: {fileID: 0}
+    - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 445795779274253577, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1197781520893812745, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_ClearDepth
