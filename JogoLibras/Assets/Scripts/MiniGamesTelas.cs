@@ -46,13 +46,14 @@ public class MiniGamesTelas : MonoBehaviour
              Starchecker();
             if (ParaTempo)
                 paratempo();
-           if(ObjetosParaDesligar.Count >0)
+            if(ObjetosParaDesligar.Count >0)
             {
                 for (int i = 0; i < ObjetosParaDesligar.Count; i++)
                 {
                     ObjetosParaDesligar[i].SetActive(false);
                 }
             }
+            DesligaCodigos.Invoke();
         }
         blur.inicia();
     }
@@ -123,7 +124,6 @@ public class MiniGamesTelas : MonoBehaviour
         {
             ObjetosParaDesligar[i].SetActive(false);
         }
-        DesligaCodigos.Invoke();
     }
 
 }
