@@ -458,6 +458,9 @@ MonoBehaviour:
   blur: {fileID: 889750367419183048}
   ParaTempo: 0
   ObjetosParaDesligar: []
+  DesligaCodigos:
+    m_PersistentCalls:
+      m_Calls: []
   musica: {fileID: 0}
   TelaDeVitoria: 0
   Estrela1: {fileID: 7793380924982426771}
@@ -480,7 +483,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.306
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4578,6 +4581,9 @@ MonoBehaviour:
   ParaTempo: 0
   ObjetosParaDesligar:
   - {fileID: 0}
+  DesligaCodigos:
+    m_PersistentCalls:
+      m_Calls: []
   musica: {fileID: 0}
   TelaDeVitoria: 0
   Estrela1: {fileID: 0}
@@ -4615,7 +4621,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.306
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7343,6 +7349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Transi\xE7\xF5es"
       objectReference: {fileID: 0}
+    - target: {fileID: 3381878248820584807, guid: c74ab2d2c3294794b8f8ed23c3a941a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3720989571018066813, guid: c74ab2d2c3294794b8f8ed23c3a941a3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7385,6 +7395,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720989571018066813, guid: c74ab2d2c3294794b8f8ed23c3a941a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578964019910875666, guid: c74ab2d2c3294794b8f8ed23c3a941a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
