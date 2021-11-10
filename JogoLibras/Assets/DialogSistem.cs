@@ -15,16 +15,20 @@ public class DialogSistem : MonoBehaviour
     */
 
     [SerializeField]private string[] falas;
+    [SerializeField]private string EmQueFalaAntes;
     [SerializeField]private string EmQueFala;
+    [SerializeField]private bool TemEventoAntes;
+    [SerializeField]private UnityEvent[] eventosAntes;
     [SerializeField]private bool TemEvento;
     [SerializeField]private UnityEvent[] eventos;
     [SerializeField]private UnityEvent Nofim;
     [HideInInspector]public bool Action = false;
-    private bool chama = true;
+    private bool chama, ActionAntes = true;
     private bool PodeClick= false;
     private List<int> NessaFala = new List<int>();
+    private List<int> NessaFalaAntes = new List<int>();
     private int FalaAtual = 0;
-    private int acao;
+    private int acao, acaoAntes;
     private bool precisa;
     private GameObject definer;
     public DialogoEscrito dig ;
@@ -43,11 +47,12 @@ public class DialogSistem : MonoBehaviour
                     precisa = true;
                 }
                 if(precisa == true){
-                    dig.ComecaFala(falas[FalaAtual]);
-                    if(dig != null){
-                        Debug.Log("aaa");
-                    }else{
-                        Debug.Log("bb");
+                    if(TemEventoAntes==true){
+                        foreach (char d in EmQueFalaAntes)
+                        {
+                            string f = ""+d;
+                            NessaFalaAntes.Add(int.Parse(f));
+                        }
                     }
                     if(TemEvento==true){
                         foreach (char d in EmQueFala)
@@ -71,11 +76,12 @@ public class DialogSistem : MonoBehaviour
                 precisa = true;
             }
             if(precisa == true){
-                dig.ComecaFala(falas[FalaAtual]);
-                if(dig != null){
-                    Debug.Log("aaa");
-                }else{
-                    Debug.Log("bb");
+                if(TemEventoAntes==true){
+                    foreach (char d in EmQueFalaAntes)
+                    {
+                        string f = ""+d;
+                        NessaFalaAntes.Add(int.Parse(f));
+                    }
                 }
                 if(TemEvento==true){
                     foreach (char d in EmQueFala)
@@ -91,6 +97,31 @@ public class DialogSistem : MonoBehaviour
         }
     }
     private void Update(){
+        if(ActionAntes){
+            if(FalaAtual>= falas.Length){
+                Nofim.Invoke();
+            }else{
+                if(TemEventoAntes){
+                    if(acaoAntes < NessaFalaAntes.Count){
+                        if(FalaAtual == NessaFalaAntes[acaoAntes]){
+                            eventosAntes[acaoAntes].Invoke();
+                            acaoAntes++;
+                            chama = true;
+                            ActionAntes = false;
+                        }else{
+                            chama = true;
+                            ActionAntes = false;
+                        }
+                    }else{
+                        chama = true;
+                        ActionAntes = false;
+                    }
+                }else{
+                    chama = true;
+                    ActionAntes = false;
+                }
+            }
+        }   
         if(chama){
             if(FalaAtual>= falas.Length){
                 Nofim.Invoke();
@@ -130,7 +161,7 @@ public class DialogSistem : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             if(PodeClick== true){
-                chama = true;
+                ActionAntes = true;
                 PodeClick = false;
             }
         }

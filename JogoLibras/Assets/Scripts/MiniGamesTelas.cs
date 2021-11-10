@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using UnityEngine.Audio;
 
 public class MiniGamesTelas : MonoBehaviour
@@ -16,6 +17,7 @@ public class MiniGamesTelas : MonoBehaviour
 
     [Header("Se tem algum objeto que precisa ser desligado ao entrar no menu (Nao esqueca de invocar o retorno")]
     public List<GameObject> ObjetosParaDesligar = new List<GameObject>();
+    [SerializeField]private UnityEvent DesligaCodigos;
     [SerializeField]private AudioSource musica;
 
     [Header("Tela de Vitoria")]
@@ -121,6 +123,7 @@ public class MiniGamesTelas : MonoBehaviour
         {
             ObjetosParaDesligar[i].SetActive(false);
         }
+        DesligaCodigos.Invoke();
     }
 
 }
