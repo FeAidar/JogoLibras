@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BackButton : teleport
 {
@@ -11,11 +13,15 @@ public class BackButton : teleport
     public GameObject ConfigPrincipal;
     public GameObject ConfigMinigame;
     private bool foi;
+    private int usos= 3;
+    [SerializeField]GameObject dici;
+    [SerializeField]TMP_Text texto;
+    Scene opa;
     void Start()
     {
         Som = GetComponent<AudioSource>();
         _transicao = GameObject.FindWithTag("Transicao").GetComponent<transicao>();
-        
+        opa = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -39,6 +45,11 @@ public class BackButton : teleport
 
                 return;
             }
+        }
+        if(opa.name == "JogoDaMenoria" || opa.name == "Mochila" || opa.name == "SinalComposto"|| opa.name == "Caca"){
+            texto.text = usos + "/3";
+        }else{
+            texto.text = "";
         }
     }
 
@@ -73,5 +84,18 @@ public class BackButton : teleport
             BackVoltaTela();
             foi = false;
         
+    }
+    public void DiciBTM(){
+        if(opa.name == "JogoDaMenoria" || opa.name == "Mochila" || opa.name == "SinalComposto"|| opa.name == "Caca"){
+            if(usos >0){
+                dici.SetActive(true);
+                usos--;
+            }
+        }else{
+            dici.SetActive(true);
+        }
+    }
+    public void FechaDici(){
+        dici.SetActive(false);
     }
 }

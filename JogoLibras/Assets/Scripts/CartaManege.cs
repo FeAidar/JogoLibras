@@ -161,6 +161,9 @@ public class CartaManege : MonoBehaviour
 
                     }
                     CartasClicadas.Clear();
+                }else{
+                    DesselecionaTodas();
+                    Errou2.Play();
                 }
             }
         }else{
