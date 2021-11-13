@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class BotaoMapa : MonoBehaviour
 {
     private Posicionaplayer Controlador;
+    [Header("Posição do jogo no mapa")]
+    public int Posicao;
+
+
     [Header("Descri��o do Minigame e nome do mapa")]
     [SerializeField] public string Texto;
     [SerializeField] public string Mapa;
@@ -28,7 +32,7 @@ public class BotaoMapa : MonoBehaviour
     public int TempoDuasEstrelas;
     public int TempoUmaEstrela;
 
-    [Header("Se � um jogo que perde ou ganha estrelas")]
+    [Header("Se é um jogo que perde ou ganha estrelas")]
     public bool PerdeEstrelas;
 
     private GameDefiner _definer;
@@ -61,15 +65,11 @@ public class BotaoMapa : MonoBehaviour
 
     public void apertou()
     {
-        if(Controlador != null)
-        {
-            Controlador.Fase = transform.position;
-        }
         _botao.SetActive(true);
         _estrela1.SetActive(true);
         _estrela2.SetActive(true);
         _estrela3.SetActive(true);
-         Controlador.apertou = true;
+         Controlador.fase = Posicao;
         _botao.SetActive(true);
         textodescricao.text = Texto;
         _definer.Dificuldade = Dificuldade;
@@ -84,6 +84,7 @@ public class BotaoMapa : MonoBehaviour
         _definer.PerdeEstrelas = PerdeEstrelas;
         _definer.dialogo = tutorial;
         _botao.GetComponent<teleport>().level =Mapa;
+        PlayerPrefs.SetInt ("fasenomapa", Posicao);
 
 
     if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame+Pack) == 1)

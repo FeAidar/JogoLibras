@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 6
   Texto: "Voc\xEA consegue formar palavras novas juntando outras palavras?"
   Mapa: JogoDaMenoria
   Dificuldade: 1
@@ -371,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 3
   Texto: Escolha as letras certas para formar as palavras
   Mapa: Caca
   Dificuldade: 0
@@ -549,7 +551,6 @@ GameObject:
   - component: {fileID: 192176237}
   - component: {fileID: 192176239}
   - component: {fileID: 192176238}
-  - component: {fileID: 192176240}
   m_Layer: 5
   m_Name: Estrela 1
   m_TagString: Untagged
@@ -614,18 +615,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192176236}
   m_CullTransparentMesh: 1
---- !u!114 &192176240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192176236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b3634bf25e02a46882945c63a1b7d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &203999372 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4604229339745346299, guid: 3fc33aa9e3eea234e8caf37661d1cc70, type: 3}
@@ -667,6 +656,7 @@ MonoBehaviour:
   level: 
   InterrompeMusica: 1
   sair: 0
+  CorteSeco: 0
 --- !u!114 &307046589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2565,6 +2555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 2
   Texto: "Voc\xEA consegue colocar os objetos na ordem certa antes do tempo acabar?"
   Mapa: JogoDaMenoria
   Dificuldade: 0
@@ -3883,6 +3874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 1
   Texto: "Voc\xEA consegue memorizar as palavras e os gestos?"
   Mapa: Mochila
   Dificuldade: 1
@@ -4224,8 +4216,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e432f1b187e024abd871fa84742099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apertou: 0
-  Fase: {x: 0, y: 0, z: 0}
+  pontos:
+  - {fileID: 984230578}
+  - {fileID: 1235344179}
+  - {fileID: 917227969}
+  - {fileID: 89184144}
+  - {fileID: 2147121681}
+  - {fileID: 1694928717}
+  - {fileID: 67569188}
+  velocidade: 5
   fase: 0
 --- !u!212 &1548958234 stripped
 SpriteRenderer:
@@ -4365,6 +4364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 5
   Texto: "Voc\xEA consegue formar palavras novas juntando outras palavras?"
   Mapa: Caca
   Dificuldade: 0
@@ -4883,7 +4883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4504252437511411421, guid: 3fc33aa9e3eea234e8caf37661d1cc70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4504252437511411421, guid: 3fc33aa9e3eea234e8caf37661d1cc70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5050,7 +5050,6 @@ GameObject:
   - component: {fileID: 2002309522}
   - component: {fileID: 2002309525}
   - component: {fileID: 2002309524}
-  - component: {fileID: 2002309523}
   m_Layer: 5
   m_Name: Estrela Apagada 1
   m_TagString: Untagged
@@ -5077,18 +5076,6 @@ RectTransform:
   m_AnchoredPosition: {x: -56.5, y: 59.500004}
   m_SizeDelta: {x: 48, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2002309523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002309521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b3634bf25e02a46882945c63a1b7d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2002309524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,6 +5209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99855a500975e3943b87896f6028d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Posicao: 4
   Texto: "Voc\xEA lembra todos os objetos que v\xE3o na mochila?"
   Mapa: Mochila
   Dificuldade: 3

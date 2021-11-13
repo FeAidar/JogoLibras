@@ -121,6 +121,7 @@ public class AlfabetoManejo : MonoBehaviour
             espacosCertos.Add(espaco);
             espaco.transform.SetParent(espaços.transform);
             espaco.transform.localScale = new Vector3(1.5f,1.5f,1f);
+            espaco.transform.localPosition = new Vector3(0, +20, 0);
         }
     }
 
@@ -239,7 +240,7 @@ public class AlfabetoManejo : MonoBehaviour
                         espaco.transform.SetParent(espaçosnome.transform);
         espaco.GetComponent<RectTransform>().anchorMin = espaços.GetComponent<RectTransform>().anchorMin;
         espaco.GetComponent<RectTransform>().anchorMax = espaços.GetComponent<RectTransform>().anchorMax;
-        espaco.GetComponent<RectTransform>().anchoredPosition = espaços.GetComponent<RectTransform>().anchoredPosition + new Vector2 (0, +200);
+        espaco.GetComponent<RectTransform>().anchoredPosition = espaços.GetComponent<RectTransform>().anchoredPosition + new Vector2 (+20, +260);
         espaco.GetComponent<RectTransform>().sizeDelta = espaços.GetComponent<RectTransform>().sizeDelta;
         espaco.GetComponent<RectTransform>().localScale = espaços.GetComponent<RectTransform>().localScale;
         BTM_clear();

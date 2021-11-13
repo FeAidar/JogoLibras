@@ -10,6 +10,7 @@ public class ComecaJogo : teleport
     {
         Som = GetComponent<AudioSource>();
         _transicao = GameObject.FindWithTag("Transicao").GetComponent<transicao>();
+        PlayerPrefs.SetInt("fasenomapa", 0);
 
     }
 

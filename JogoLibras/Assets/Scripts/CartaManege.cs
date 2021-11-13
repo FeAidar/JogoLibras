@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CartaManege : MonoBehaviour
 {
@@ -55,9 +56,11 @@ public class CartaManege : MonoBehaviour
         }
     }
     private void Update(){
-        if( this.GetComponent<Timer>().perdeu == true){
+        if (this.GetComponent<Timer>().perdeu == true)
+        {
             teladerrota.SetActive(true);
         }
+        else StarCounter();
     }
     private void Comecatempo(){
         this.GetComponent<Timer>().timeRemaining = tempos[_dificuldade];
@@ -154,6 +157,7 @@ public class CartaManege : MonoBehaviour
                     Acertou2.Play();
 
                     if(CartasPareadas.Count == CartasSelecionadas.Count){
+                        _Definer.GetComponent<GameDefiner>().ganhou();
                         telaVitoria.SetActive(true);
                         //Coloquei aqui a chamada de pontuação do Definer
                         _Definer.GetComponent<GameDefiner>().ganhou();
@@ -190,5 +194,38 @@ public class CartaManege : MonoBehaviour
             d++;
         }
         CartasClicadas.Clear();
+    }
+
+    void StarCounter()
+    {
+
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _Definer.GetComponent<GameDefiner>().Dificuldade_do_Minigame + _Definer.GetComponent<GameDefiner>().pack) == 3)
+        { _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 3; }
+        else
+        {
+
+            if (GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoTresEstrelas)
+            {
+                _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 3;
+                
+            }
+
+            if (GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
+            {
+                
+                _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
+            }
+
+            if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining != 0)
+            {
+                
+                _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
+            }
+            if (GetComponent<Timer>().timeRemaining < 0.05f)
+            {
+                
+                _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 0;
+            }
+        }
     }
 }

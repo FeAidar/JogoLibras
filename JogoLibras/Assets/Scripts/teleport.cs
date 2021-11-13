@@ -41,7 +41,7 @@ public class teleport : MonoBehaviour
             Som.Play();
             yield return new WaitForSecondsRealtime(Som.clip.length);
         }
-       else yield return new WaitForSecondsRealtime (1f);
+       else yield return new WaitForSecondsRealtime (0.5f);
 
         if (InterrompeMusica)
         { GameObject som= GameObject.FindWithTag("Musica");

@@ -51,7 +51,10 @@ MonoBehaviour:
   - dddddddddddd
   - fffffffffffffff
   - gggggggggggggg
+  EmQueFalaAntes: 
   EmQueFala: 234
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 0
   eventos:
   - m_PersistentCalls:
@@ -141,7 +144,7 @@ GameObject:
   - component: {fileID: 5286326199644632023}
   - component: {fileID: 5286326199644632022}
   m_Layer: 0
-  m_Name: fundo
+  m_Name: Caixa De Dialogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +320,7 @@ GameObject:
   - component: {fileID: 5674330215633614518}
   - component: {fileID: 6791850911980189677}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

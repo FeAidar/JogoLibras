@@ -1062,8 +1062,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1685382262}
   m_HandleRect: {fileID: 1685382261}
   m_Direction: 0
-  m_Value: 0.00131114
-  m_Size: 0.22371621
+  m_Value: 0.0034541918
+  m_Size: 0.2237162
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1799,7 +1799,10 @@ MonoBehaviour:
   - ...e apertar para entrar seu nome.
   - Quando tiver terminado, aperte em OK!
   - "Ent\xE3o vamos nessa! Escreva seu nome!"
+  EmQueFalaAntes: 
   EmQueFala: 46
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 1
   eventos:
   - m_PersistentCalls:
@@ -2780,7 +2783,10 @@ MonoBehaviour:
   - "Mas aqui \xE9 meio sem gra\xE7a\u2026 "
   - Acho que falta mais cor!
   - "Vamos para a Escola M\xE1gica!"
+  EmQueFalaAntes: 
   EmQueFala: 0
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 1
   eventos:
   - m_PersistentCalls:
@@ -2881,6 +2887,7 @@ MonoBehaviour:
   level: Hub-Fases
   InterrompeMusica: 0
   sair: 0
+  CorteSeco: 0
 --- !u!224 &675112221 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 887845831721013353, guid: 0facd43753aecd54d97201bfffa95ac9, type: 3}
@@ -5245,7 +5252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7226427, y: -53.5}
+  m_AnchoredPosition: {x: -4.53831, y: -53.5}
   m_SizeDelta: {x: 3111.0537, y: 716}
   m_Pivot: {x: 0, y: 1}
 --- !u!95 &1159637728
@@ -6015,7 +6022,10 @@ MonoBehaviour:
   - "Agora um desafio pra voc\xEA!"
   - "Esse \xE9 o nome da garota!"
   - "Voc\xEA consegue entender o nome dela?"
+  EmQueFalaAntes: 
   EmQueFala: 012
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 1
   eventos:
   - m_PersistentCalls:
@@ -7615,7 +7625,10 @@ MonoBehaviour:
   - "Eu quero ver voc\xEA escrever de novo!"
   - Mas com os gestos!
   - "Ser\xE1 que voc\xEA consegue?"
+  EmQueFalaAntes: 
   EmQueFala: 0
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 0
   eventos: []
   Nofim:
@@ -8245,7 +8258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.142944, y: 446}
+  m_AnchoredPosition: {x: 0, y: 333}
   m_SizeDelta: {x: 122.637, y: -1219.919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062641665
@@ -8762,6 +8775,9 @@ MonoBehaviour:
   ParaTempo: 0
   ObjetosParaDesligar:
   - {fileID: 0}
+  DesligaCodigos:
+    m_PersistentCalls:
+      m_Calls: []
   musica: {fileID: 0}
   TelaDeVitoria: 0
   Estrela1: {fileID: 0}
@@ -20429,6 +20445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anima: {fileID: 7788173289103458621}
   ParaTempo: 1
+  FadeInicial: 1
 --- !u!222 &7788173289103458623
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22079,6 +22096,9 @@ MonoBehaviour:
   blur: {fileID: 7788173289103458622}
   ParaTempo: 0
   ObjetosParaDesligar: []
+  DesligaCodigos:
+    m_PersistentCalls:
+      m_Calls: []
   musica: {fileID: 0}
   TelaDeVitoria: 0
   Estrela1: {fileID: 894958211647951461}
@@ -22291,10 +22311,13 @@ MonoBehaviour:
   level: 
   InterrompeMusica: 0
   sair: 1
+  CorteSeco: 0
   disablebackbutton: 0
   Blur: {fileID: 7788173289103458622}
   ConfigPrincipal: {fileID: 7788173288767177295}
   ConfigMinigame: {fileID: 3286765620292021145}
+  dici: {fileID: 0}
+  texto: {fileID: 0}
 --- !u!1 &8632083308067281296
 GameObject:
   m_ObjectHideFlags: 0
