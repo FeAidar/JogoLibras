@@ -51,47 +51,53 @@ public class arrastavel : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(!acertou)
+        if (Time.timeScale == 1)
         {
-
-            if (_movementDestination.HasValue)
+            if (!acertou)
             {
-                if (IsDragging)
+
+                if (_movementDestination.HasValue)
                 {
-                    _movementDestination = null;
-                    return;
-                }
-                if (transform.position == _movementDestination)
-                {
-                    gameObject.layer = Layer.Default;
-                    _movementDestination = null;
-                    _som = false;
-                    if(check)
-                    { 
-                    if (!IsDragging)
-                        if (name == firstobject)
+                    if (IsDragging)
+                    {
+                        _movementDestination = null;
+                        return;
+                    }
+                    if (transform.position == _movementDestination)
+                    {
+                        gameObject.layer = Layer.Default;
+                        _movementDestination = null;
+                        _som = false;
+                        if (check)
                         {
-                           // Debug.Log("testando");
-                            Acertou();
+                            if (!IsDragging)
+                                if (name == firstobject)
+                                {
+                                    // Debug.Log("testando");
+                                    Acertou();
+                                }
                         }
+
+                    }
+                    else
+                    {
+                        transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
+
+
                     }
 
                 }
-                else
-                {
-                    transform.position = Vector3.Lerp(transform.position, _movementDestination.Value, _movementTime * Time.fixedDeltaTime);
-
-                    
-                }
-
             }
-        }
 
-        if (_Objetos.Objetos.Count != 0){
-            firstobject = _Objetos.Objetos[0].gameObject.name;
-        }else{
-            firstobject = "Parab�ns";
-            // Debug.Log(firstobject);
+            if (_Objetos.Objetos.Count != 0)
+            {
+                firstobject = _Objetos.Objetos[0].gameObject.name;
+            }
+            else
+            {
+                firstobject = "Parab�ns";
+                // Debug.Log(firstobject);
+            }
         }
 
     }

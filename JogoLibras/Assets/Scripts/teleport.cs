@@ -12,6 +12,7 @@ public class teleport : MonoBehaviour
     public bool InterrompeMusica;
     protected transicao _transicao;
     public bool sair;
+    public bool CorteSeco;
    
 
     void Start()
@@ -31,6 +32,7 @@ public class teleport : MonoBehaviour
         Vibracao.vibra();
 
         if(_transicao != null)
+            if(!CorteSeco)
         _transicao.inicia();
 
 

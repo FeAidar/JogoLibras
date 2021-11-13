@@ -24,6 +24,7 @@ public class ComecaJogo : teleport
             }
             if (PlayerPrefs.GetInt("Introducao") == 0)
             {
+                _transicao.inicia();
                 StartCoroutine("Carrega", LevelCustomizacao);
 
             }

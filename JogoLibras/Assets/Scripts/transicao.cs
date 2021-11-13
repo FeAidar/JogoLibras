@@ -6,7 +6,13 @@ public class transicao : MonoBehaviour
 {
     [SerializeField]private Animator anima;
     public bool ParaTempo=false;
+    public bool FadeInicial = true;
 
+    public void awake()
+    {
+        if (FadeInicial)
+           finaliza();
+    }
     public void inicia(){
         anima.SetTrigger("end");
         if(ParaTempo)
