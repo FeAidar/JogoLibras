@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Carta : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class Carta : MonoBehaviour
     private GameObject canvas;
     public bool EtapaSemPalavra;
     public bool essa;
+    [SerializeField]private bool Composto;
+    private bool CoTrue;
+    [SerializeField]private Sprite[] imaCo;
+    [SerializeField]private float TempoCompos;
+    private float tempoCo;
+    private int a;
 
     private void Start(){
         canvas = GameObject.FindGameObjectWithTag("canvas");
@@ -33,9 +40,11 @@ public class Carta : MonoBehaviour
         virado = false;
         if(essa == false){
             if(EtapaSemPalavra){
+                CoTrue=false;
                 lado[0].SetActive(true);
                 lado[3].SetActive(false);
             }else{
+                CoTrue=false;
                 lado[0].SetActive(true);
                 lado[1].SetActive(false);
             }
@@ -48,9 +57,15 @@ public class Carta : MonoBehaviour
         virado = true;
         if(essa == false){
             if(EtapaSemPalavra){
+                if(Composto==true){
+                    CoTrue=true;
+                }
                 lado[3].SetActive(true);
                 lado[0].SetActive(false);
             }else{
+                if(Composto==true){
+                    CoTrue=true;
+                }
                 lado[1].SetActive(true);
                 lado[0].SetActive(false);
             }
@@ -59,4 +74,22 @@ public class Carta : MonoBehaviour
             lado[0].SetActive(false);
         }
     }
+    private void Update(){
+        if(CoTrue== true){
+            if(tempoCo <Time.time){
+                if(EtapaSemPalavra){
+                    lado[3].transform.GetChild(0).GetComponent<Image>().sprite = imaCo[a];
+                }else{
+                    lado[1].transform.GetChild(0).GetComponent<Image>().sprite = imaCo[a];
+                }
+                if(a==0){
+                    a = 1;
+                }else{
+                    a=0;
+                }
+                tempoCo = Time.time + TempoCompos;
+            }
+        }
+    }
+    
 }

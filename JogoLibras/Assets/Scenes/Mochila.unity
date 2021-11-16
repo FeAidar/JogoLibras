@@ -455,6 +455,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: Contagem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: EmQueFala
       value: 12356
       objectReference: {fileID: 0}
@@ -559,6 +563,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: Nofim.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
@@ -591,6 +599,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -610,6 +626,14 @@ PrefabInstance:
       propertyPath: eventos.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 998453252}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 598622356}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: Nofim.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
@@ -671,6 +695,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -705,6 +745,14 @@ PrefabInstance:
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -769,6 +817,14 @@ PrefabInstance:
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: ato5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: NofimAntesDaContagem.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventos.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

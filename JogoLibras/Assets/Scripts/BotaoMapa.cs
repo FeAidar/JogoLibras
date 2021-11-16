@@ -19,6 +19,7 @@ public class BotaoMapa : MonoBehaviour
     public int Pack;
     public int Quantia;
     public bool tutorial;
+    
 
     [Header("Se o minigame se repete no pack, troque o n�mero da vers�o")]
     public int VersaoDoMinigame;

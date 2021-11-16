@@ -34,7 +34,7 @@ public class DialogSistem : MonoBehaviour
     private bool precisa;
     private GameObject definer;
     public DialogoEscrito dig ;
-    private bool Contagem;
+    [SerializeField]private bool Contagem;
 
     private void Start(){
         if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
@@ -75,10 +75,8 @@ public class DialogSistem : MonoBehaviour
             definer = GameObject.FindGameObjectWithTag("GameController");
             if (definer != null){
                 precisa = definer.GetComponent<GameDefiner>().dialogo;
-                Contagem = definer.GetComponent<GameDefiner>().contagem;
             }else{
                 precisa = true;
-                Contagem = false;
             }
             if(precisa == true){
                 if(TemEventoAntes==true){

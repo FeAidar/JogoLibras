@@ -9,7 +9,7 @@ public class GameDefiner : MonoBehaviour
     public int pack;
     public int Quantia;
     public int Etapa;
-    public bool dialogo, contagem;
+    public bool dialogo;
 
     [Header("Tempo Total de Jogo")]
     public int Tempo;

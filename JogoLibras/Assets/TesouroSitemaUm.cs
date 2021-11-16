@@ -27,11 +27,22 @@ public class TesouroSitemaUm : MonoBehaviour
     [SerializeField]private GameObject WinScreen;
     [SerializeField]private GameObject LoseScreen;
     [SerializeField]private GameObject Acerto, erro;
+    [SerializeField]private string[] Compostospack1;
+    [SerializeField]private string[] Compostospack2;
     private List<GameObject> ListaDePalavras = new List<GameObject>();
     private List<GameObject> ListaDePalavrasSelecionadas = new List<GameObject>();
     private List<Sprite> ListaDeitens = new List<Sprite>();
     private int PalavraAtual;
-
+    private bool composta;
+    [SerializeField]private float TempoCompos;
+    private float tempoCo;
+    private string compostaAtual;
+    private int qual;
+    [SerializeField]private Sprite[] estojo;
+    [SerializeField]private Sprite[] tinta;
+    [SerializeField]private Sprite[] lousa;
+    [SerializeField]private Sprite[] armario;
+    [SerializeField]private Sprite[] lixeira;
     public void comeca(){
         definer = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameDefiner>();
         _pack = definer.pack;
@@ -48,6 +59,25 @@ public class TesouroSitemaUm : MonoBehaviour
     void Update(){
         if(GetComponent<Timer>().timeRemaining <= 0){
             LoseScreen.SetActive(true);
+        }
+        if(composta==true){
+            if(tempoCo<Time.time){
+                if(_pack==0){
+                    if(compostaAtual == Compostospack1[0]){
+                        Mostruario.GetComponent<Image>().sprite= estojo[qual];
+                    }else if(compostaAtual == Compostospack1[1]){
+                        Mostruario.GetComponent<Image>().sprite= tinta[qual];
+                    }
+                }else if(_pack ==1){
+
+                }
+                if(qual== 0){
+                    qual = 1;
+                }else{
+                    qual =0;
+                }
+                tempoCo = Time.time +TempoCompos;
+            }
         }
     }
 
@@ -93,30 +123,52 @@ public class TesouroSitemaUm : MonoBehaviour
         int e = ListaDePalavras.Count;
         for (int i = 0; i < e; i++)
         {
-            int a = Random.Range(0, posicoes.Count);
-            ListaDePalavras[i].transform.position = posicoes[a].transform.position;
-            posicoes.Remove(posicoes[a]);
+            int r = Random.Range(0, posicoes.Count);
+            if(ListaDePalavras[i]!=null &&posicoes[r]!=null){
+                ListaDePalavras[i].transform.position = posicoes[r].transform.position;
+                posicoes.Remove(posicoes[r]);
+            }
+            
         }
     }
     private void ApareceProximaPalavra(){
+        string a= "";
+        composta = false;
         if(_pack == 0){
             Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
             if(_etapa == 0){
-                string a = ListaDeitens[PalavraAtual].name;
+                a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
             }else{
                 Palavra.text = "";
+            }
+            foreach (string b in Compostospack1)
+            {   
+                if(b == a){
+                    composta = true;
+                    qual =0;
+                    compostaAtual= b;
+                }
             }
         }else if(_pack == 1){
             Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
             if(_etapa == 0){
-                string a = ListaDeitens[PalavraAtual].name;
+                a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
             }else{
                 Palavra.text = "";
             }
+            foreach (string b in Compostospack2)
+            {   
+                if(b == a){
+                    composta = true;
+                    qual =0;
+                    compostaAtual= b;
+                }
+            }
         }
     }
+
     private void IniciaTime(){
         GetComponent<Timer>().timeRemaining = Tempos[_dificuldade];
         GetComponent<Timer>().timerIsRunning = true;
