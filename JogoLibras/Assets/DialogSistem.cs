@@ -21,6 +21,8 @@ public class DialogSistem : MonoBehaviour
     [SerializeField]private UnityEvent[] eventosAntes;
     [SerializeField]private bool TemEvento;
     [SerializeField]private UnityEvent[] eventos;
+    [Header("se tiver contagem regressiva coloque aqui o que seria realizado antes de dela")]
+    [SerializeField]private UnityEvent NofimAntesDaContagem;
     [SerializeField]private UnityEvent Nofim;
     [HideInInspector]public bool Action = false;
     private bool chama, ActionAntes = true;
@@ -32,6 +34,7 @@ public class DialogSistem : MonoBehaviour
     private bool precisa;
     private GameObject definer;
     public DialogoEscrito dig ;
+    private bool Contagem;
 
     private void Start(){
         if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
@@ -72,8 +75,10 @@ public class DialogSistem : MonoBehaviour
             definer = GameObject.FindGameObjectWithTag("GameController");
             if (definer != null){
                 precisa = definer.GetComponent<GameDefiner>().dialogo;
+                Contagem = definer.GetComponent<GameDefiner>().contagem;
             }else{
                 precisa = true;
+                Contagem = false;
             }
             if(precisa == true){
                 if(TemEventoAntes==true){
@@ -91,7 +96,7 @@ public class DialogSistem : MonoBehaviour
                     }
                 }
             }else{
-                Nofim.Invoke();
+                Fim();
             }
             PodeClick = false;
         }
@@ -99,7 +104,7 @@ public class DialogSistem : MonoBehaviour
     private void Update(){
         if(ActionAntes){
             if(FalaAtual>= falas.Length){
-                Nofim.Invoke();
+                Fim();
             }else{
                 if(TemEventoAntes){
                     if(acaoAntes < NessaFalaAntes.Count){
@@ -129,7 +134,7 @@ public class DialogSistem : MonoBehaviour
                 if(FalaAtual < falas.Length){
                     dig.ComecaFala(falas[FalaAtual]);
                 }else if(FalaAtual>= falas.Length){
-                    Nofim.Invoke();
+                    Fim();
                 }
             }
             chama = false;
@@ -170,5 +175,18 @@ public class DialogSistem : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         PodeClick = true;
     }
-    
+    private void Fim(){
+        if(Contagem== true){
+            StartCoroutine(regressiva());
+        }else{
+            Debug.Log("não espera");
+            Nofim.Invoke();
+        }
+    }
+
+    IEnumerator regressiva(){
+        NofimAntesDaContagem.Invoke();
+        yield return new WaitForSeconds(0.1f);
+        Nofim.Invoke();
+    }
 }

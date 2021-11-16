@@ -26,17 +26,42 @@ public class MateriasSystem : MonoBehaviour
     [SerializeField]private GameObject[] PosicoesMaterias;
     [SerializeField]private GameObject[] PosicoesItens;
     [SerializeField]private int[] Quantia;
+    [SerializeField]private GameObject telaWin, telaLose;
     
-
+    public bool startado;
     private List<GameObject> _MateriasEscolhidas = new List<GameObject>();
-    private List<GameObject> _ItensRestantes = new List<GameObject>();
+    public List<GameObject> itensRestantes = new List<GameObject>();
     private List<GameObject> _PosicoesMat = new List<GameObject>();
     private List<GameObject> _PosicoesIte = new List<GameObject>();
-    public void Start(){
-        GameDef();
-        DefineMaterias();
-        PegaPosicoes();
-        DefinePosicoes();
+    private bool ganhou, perdeu;
+
+    public void comeca(){
+        if(startado == false){
+            GameDef();
+            DefineMaterias();
+            PegaPosicoes();
+            DefinePosicoes();
+            ComecaTimer();
+            startado = true;
+        }
+    }
+    void Update(){
+        if(startado == true){
+            if(tim.perdeu == true && ganhou == false){
+                telaLose.SetActive(true);
+                perdeu = true;
+            }
+        }
+    }
+    public void verificaGanhou(){
+        if(itensRestantes.Count <= 0 && perdeu == false){
+            telaWin.SetActive(true);
+            ganhou = true;
+        }
+    }
+    void ComecaTimer(){
+        tim = GetComponent<Timer>();
+        tim.timerIsRunning = true;
     }
 
     void GameDef(){
@@ -44,6 +69,7 @@ public class MateriasSystem : MonoBehaviour
         _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
         _difi = _Definer.GetComponent<GameDefiner>().Dificuldade;
     }
+
     void DefineMaterias(){
         int a = Quantia[_quantia];
         for (int i = 0; i < a; i++)
@@ -57,13 +83,14 @@ public class MateriasSystem : MonoBehaviour
             int c = b.transform.GetChild(0).transform.childCount;
             for (int i = 0; i < c; i++)
             {
-                _ItensRestantes.Add(b.transform.GetChild(0).transform.GetChild(i).gameObject);
+                itensRestantes.Add(b.transform.GetChild(0).transform.GetChild(i).gameObject);
             }
         }
         foreach(GameObject r in Materias){
             r.SetActive(false);
         }
     }
+    
     void PegaPosicoes(){
         int a = PosicoesMaterias[_quantia].transform.childCount;
         for (int i = 0; i < a; i++)
@@ -84,7 +111,7 @@ public class MateriasSystem : MonoBehaviour
             a.transform.position = _PosicoesMat[c].transform.position;
             _PosicoesMat.Remove(_PosicoesMat[c]);
         }
-        foreach (GameObject e in _ItensRestantes)
+        foreach (GameObject e in itensRestantes)
         {
             int f = Random.Range(0,_PosicoesIte.Count);
             e.GetComponent<ObjetoMaterial>().posicao = _PosicoesIte[f];
