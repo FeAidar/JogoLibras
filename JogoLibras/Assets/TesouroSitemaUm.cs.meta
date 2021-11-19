@@ -3,7 +3,15 @@ guid: e418b55a76c16544c943db07fad4c093
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Mostruario: {instanceID: 0}
+  - Palavra: {instanceID: 0}
+  - WinScreen: {instanceID: 0}
+  - LoseScreen: {instanceID: 0}
+  - Acerto: {instanceID: 0}
+  - erro: {instanceID: 0}
+  - Acertou: {instanceID: 0}
+  - Errou: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

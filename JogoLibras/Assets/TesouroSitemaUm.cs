@@ -43,6 +43,8 @@ public class TesouroSitemaUm : MonoBehaviour
     [SerializeField]private Sprite[] lousa;
     [SerializeField]private Sprite[] armario;
     [SerializeField]private Sprite[] lixeira;
+    [SerializeField]private AudioSource Acertou;
+    [SerializeField]private AudioSource Errou;
     public void comeca(){
         definer = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameDefiner>();
         _pack = definer.pack;
@@ -189,15 +191,18 @@ public class TesouroSitemaUm : MonoBehaviour
         if(d.name == ListaDePalavrasSelecionadas[PalavraAtual].name){
             Acerto.transform.position = d.transform.position;
             Acerto.GetComponent<Animator>().SetTrigger("ativo");
-            PalavraAtual++;
-            if(PalavraAtual >= ListaDePalavrasSelecionadas.Count){
+            PalavraAtual++; 
+            Acertou.Play();
+            if (PalavraAtual >= ListaDePalavrasSelecionadas.Count){
                 WinScreen.SetActive(true);
+                  
             }else{
                 ApareceProximaPalavra();
             }
         }else{
             erro.transform.position = d.transform.position;
             erro.GetComponent<Animator>().SetTrigger("ativo");
+            Errou.Play();
         }
     }
 }
