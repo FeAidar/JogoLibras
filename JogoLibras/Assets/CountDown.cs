@@ -7,11 +7,19 @@ public class CountDown : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI Countdown;
     public GameObject Blur;
+    private bool b;
     void Start()
     {
         Blur.GetComponent<transicao>().inicia();
         if(this.isActiveAndEnabled)
             Time.timeScale = 0;
+        StartCoroutine(countdown(4));
+    }
+    public void Destroycount(){
+        Destroy(this.gameObject);
+    }
+
+    public void denovo(){
         StartCoroutine(countdown(4));
     }
 
@@ -41,7 +49,10 @@ public class CountDown : MonoBehaviour
     {
         Countdown.text = "";
         Time.timeScale = 1;
-        Blur.GetComponent<transicao>().finaliza();
-        gameObject.SetActive(false);
+        if(b==false){
+            Blur.GetComponent<transicao>().finaliza();
+            b=true;
+        }
+        this.gameObject.SetActive(false);
     }
 }

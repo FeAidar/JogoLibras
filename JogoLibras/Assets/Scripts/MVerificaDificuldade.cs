@@ -24,20 +24,23 @@ public class MVerificaDificuldade : MonoBehaviour
             if(controller.Dificuldade == 1)
             {
                 Dificuldade[0].SetActive(true);
+                Dificuldade[1].SetActive(false);
                 Debug.Log("Facil");
 
-            }
-
-            if (controller.Dificuldade == 2)
+            }else if (controller.Dificuldade == 2)
             {
                 int d = Random.Range(0,2);
                 Dificuldade[d].SetActive(true);
+                if(d == 0){
+                    Dificuldade[1].SetActive(false);
+                }else{
+                    Dificuldade[0].SetActive(false);
+                }
                 Debug.Log("Medio");
-            }
-
-            if (controller.Dificuldade == 3)
+            }else if (controller.Dificuldade == 3)
             {
                 Dificuldade[1].SetActive(true);
+                Dificuldade[0].SetActive(false);
                 Debug.Log("Dificil");
             }
 

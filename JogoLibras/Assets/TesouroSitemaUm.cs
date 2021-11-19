@@ -69,7 +69,13 @@ public class TesouroSitemaUm : MonoBehaviour
                         Mostruario.GetComponent<Image>().sprite= tinta[qual];
                     }
                 }else if(_pack ==1){
-
+                    if(compostaAtual == Compostospack2[0]){
+                        Mostruario.GetComponent<Image>().sprite= armario[qual];
+                    }else if(compostaAtual == Compostospack2[1]){
+                        Mostruario.GetComponent<Image>().sprite= lousa[qual];
+                    }else if(compostaAtual == Compostospack2[2]){
+                        Mostruario.GetComponent<Image>().sprite= lixeira[qual];
+                    }
                 }
                 if(qual== 0){
                     qual = 1;
@@ -102,8 +108,8 @@ public class TesouroSitemaUm : MonoBehaviour
                 ListaDeitens.Add(ItensDoAluno[b]);
                 ItensDoAluno.Remove(ItensDoAluno[b]);
             }else if(_pack == 1){
-                //ListaDeitens.Add(ItensDeSala[b]);
-                //ItensDeSala.Remove(ItensDeSala[b]);
+                ListaDeitens.Add(ItensDeSala[b]);
+                ItensDeSala.Remove(ItensDeSala[b]);
             }
             ListaDePalavras.Remove(ListaDePalavras[b]);
         }
@@ -126,6 +132,7 @@ public class TesouroSitemaUm : MonoBehaviour
             int r = Random.Range(0, posicoes.Count);
             if(ListaDePalavras[i]!=null &&posicoes[r]!=null){
                 ListaDePalavras[i].transform.position = posicoes[r].transform.position;
+
                 posicoes.Remove(posicoes[r]);
             }
             
@@ -140,6 +147,7 @@ public class TesouroSitemaUm : MonoBehaviour
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
             }else{
+                a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = "";
             }
             foreach (string b in Compostospack1)
@@ -156,6 +164,7 @@ public class TesouroSitemaUm : MonoBehaviour
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
             }else{
+                a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = "";
             }
             foreach (string b in Compostospack2)

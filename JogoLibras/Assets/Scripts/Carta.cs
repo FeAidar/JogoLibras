@@ -74,6 +74,27 @@ public class Carta : MonoBehaviour
             lado[0].SetActive(false);
         }
     }
+    public void mostra(){
+        Debug.Log("vai?");
+        if(essa == false){
+            if(EtapaSemPalavra){
+                if(Composto==true){
+                    CoTrue=true;
+                }
+                lado[3].SetActive(true);
+                lado[0].SetActive(false);
+            }else{
+                if(Composto==true){
+                    CoTrue=true;
+                }
+                lado[1].SetActive(true);
+                lado[0].SetActive(false);
+            }
+        }else if(essa == true){
+            lado[2].SetActive(true);
+            lado[0].SetActive(false);
+        }
+    }
     private void Update(){
         if(CoTrue== true){
             if(tempoCo <Time.time){
