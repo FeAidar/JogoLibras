@@ -188,7 +188,7 @@ public class CartaManege : MonoBehaviour
                         }
                         CartasClicadas.Clear();
                     }else{
-                        DesselecionaTodas();
+                        deErro();
                         Errou2.Play();
                     }
                 }
@@ -218,7 +218,18 @@ public class CartaManege : MonoBehaviour
         }
         CartasClicadas.Clear();
     }
-
+    private void deErro(){
+        int d=0;
+        efeitosErro[0].GetComponent<Animator>().SetTrigger("desativo");
+        efeitosErro[1].GetComponent<Animator>().SetTrigger("desativo");
+        efeitosErro[2].GetComponent<Animator>().SetTrigger("desativo");
+        foreach (GameObject b in CartasClicadas)
+        {
+            efeitosErro[d].transform.position = b.transform.position;
+            efeitosErro[d].GetComponent<Animator>().SetTrigger("ativo");
+            d++;
+        }
+    }
     void StarCounter()
     {
         if(mostrado==true){
