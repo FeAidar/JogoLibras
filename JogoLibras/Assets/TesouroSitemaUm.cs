@@ -45,6 +45,7 @@ public class TesouroSitemaUm : MonoBehaviour
     [SerializeField]private Sprite[] lixeira;
     [SerializeField]private AudioSource Acertou;
     [SerializeField]private AudioSource Errou;
+    private bool caca,coco,cucu,cece,cici;
     public void comeca(){
         definer = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameDefiner>();
         _pack = definer.pack;
@@ -90,54 +91,72 @@ public class TesouroSitemaUm : MonoBehaviour
     }
 
     private void DefinePack(){
-        int a = Packs[_pack].transform.childCount;
-        Packs[_pack].SetActive(true);
-        for (int i = 0; i < a; i++)
-        {
-            ListaDePalavras.Add(Packs[_pack].transform.GetChild(i).gameObject);
-        }
-        if(_pack == 0){
-            ColocaNaPosi();
+        if(caca == false){
+            int a = Packs[_pack].transform.childCount;
+            Packs[_pack].SetActive(true);
+            for (int i = 0; i < a; i++)
+            {
+                ListaDePalavras.Add(Packs[_pack].transform.GetChild(i).gameObject);
+            }
+            if(_pack == 0){
+                ColocaNaPosi();
+            }
+            caca = true;
         }
     }
     private void EscolhePalavras(){
-        int a = Quantias[_quantia];
-        for (int i = 0; i < a; i++)
-        {
-            int b = Random.Range(0, ListaDePalavras.Count);
-            ListaDePalavrasSelecionadas.Add(ListaDePalavras[b]);
-            if(_pack == 0){
-                ListaDeitens.Add(ItensDoAluno[b]);
-                ItensDoAluno.Remove(ItensDoAluno[b]);
-            }else if(_pack == 1){
-                ListaDeitens.Add(ItensDeSala[b]);
-                ItensDeSala.Remove(ItensDeSala[b]);
+        if(cece == false){
+            int a = Quantias[_quantia];
+            for (int i = 0; i < a; i++)
+            {
+                int b = Random.Range(0, ListaDePalavras.Count);
+                if(b< ListaDePalavras.Count){
+                    ListaDePalavrasSelecionadas.Add(ListaDePalavras[b]);
+                    if(_pack == 0){
+                        if(b< ItensDoAluno.Count){
+                            ListaDeitens.Add(ItensDoAluno[b]);
+                            ItensDoAluno.Remove(ItensDoAluno[b]);
+                        }
+                    }else if(_pack == 1){
+                        if(b< ItensDeSala.Count){
+                            ListaDeitens.Add(ItensDeSala[b]);
+                            ItensDeSala.Remove(ItensDeSala[b]);
+                        }
+                    }
+                    ListaDePalavras.Remove(ListaDePalavras[b]);
+                }
             }
-            ListaDePalavras.Remove(ListaDePalavras[b]);
+            cece = true;
         }
     }
     private void EscolheOrdem(){
-        for (int i = 0; i < ListaDePalavrasSelecionadas.Count; i++) {
-            GameObject temp = ListaDePalavrasSelecionadas[i];
-            Sprite tempSpri = ListaDeitens[i];
-            int randomIndex = Random.Range(i, ListaDePalavrasSelecionadas.Count);
-            ListaDePalavrasSelecionadas[i] =ListaDePalavrasSelecionadas[randomIndex];
-            ListaDeitens[i] = ListaDeitens[randomIndex];
-            ListaDePalavrasSelecionadas[randomIndex] = temp;
-            ListaDeitens[randomIndex] = tempSpri;
+        if(cici == false){
+            for (int i = 0; i < ListaDePalavrasSelecionadas.Count; i++) {
+                GameObject temp = ListaDePalavrasSelecionadas[i];
+                Sprite tempSpri = ListaDeitens[i];
+                int randomIndex = Random.Range(i, ListaDePalavrasSelecionadas.Count);
+                ListaDePalavrasSelecionadas[i] =ListaDePalavrasSelecionadas[randomIndex];
+                ListaDeitens[i] = ListaDeitens[randomIndex];
+                ListaDePalavrasSelecionadas[randomIndex] = temp;
+                ListaDeitens[randomIndex] = tempSpri;
+            }
+            cici = true;
         }
     }
     private void ColocaNaPosi(){
-        int e = ListaDePalavras.Count;
-        for (int i = 0; i < e; i++)
-        {
-            int r = Random.Range(0, posicoes.Count);
-            if(ListaDePalavras[i]!=null &&posicoes[r]!=null){
-                ListaDePalavras[i].transform.position = posicoes[r].transform.position;
+        if(coco ==false){
+            int e = ListaDePalavras.Count;
+            for (int i = 0; i < e; i++)
+            {
+                int r = Random.Range(0, posicoes.Count);
+                if(ListaDePalavras[i]!=null &&posicoes[r]!=null){
+                    ListaDePalavras[i].transform.position = posicoes[r].transform.position;
 
-                posicoes.Remove(posicoes[r]);
+                    posicoes.Remove(posicoes[r]);
+                }
+
             }
-            
+            coco = true;
         }
     }
     private void ApareceProximaPalavra(){

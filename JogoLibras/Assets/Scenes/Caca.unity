@@ -726,8 +726,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
-      propertyPath: Etapa
+      propertyPath: pack
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
+      propertyPath: Etapa
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5090888348513755001, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: dialogo
@@ -10276,8 +10280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 55.664, y: 10.618}
+  m_SizeDelta: {x: 66.361, y: 27.305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582523152
 MonoBehaviour:
