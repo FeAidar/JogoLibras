@@ -7,11 +7,22 @@ public class transicao : MonoBehaviour
     [SerializeField]private Animator anima;
     public bool ParaTempo=false;
     public bool FadeInicial = true;
+    private bool Confirma;
 
-    public void awake()
+    public void start()
     {
         if (FadeInicial)
            finaliza();
+    }
+
+    private void Update()
+    {
+        if (FadeInicial)
+            if (!Confirma)
+            {
+                Confirma = true;
+                finaliza();
+            }
     }
     public void inicia(){
         anima.SetTrigger("end");

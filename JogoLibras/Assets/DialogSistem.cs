@@ -40,7 +40,7 @@ public class DialogSistem : MonoBehaviour
         if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
             int b = PlayerPrefs.GetInt("hubtuto");
             b ++;
-            Debug.Log(b);
+           // Debug.Log(b);
             PlayerPrefs.SetInt("hubtuto",b);
             if(b <= 2){
                 definer = GameObject.FindGameObjectWithTag("GameController");
@@ -177,7 +177,7 @@ public class DialogSistem : MonoBehaviour
         if(Contagem== true){
             StartCoroutine(regressiva());
         }else{
-            Debug.Log("não espera");
+            //Debug.Log("não espera");
             Nofim.Invoke();
         }
     }

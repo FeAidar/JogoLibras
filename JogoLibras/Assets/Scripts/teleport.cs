@@ -19,6 +19,7 @@ public class teleport : MonoBehaviour
     {
         Som = GetComponent<AudioSource>();
         _transicao = GameObject.FindWithTag("Transicao").GetComponent<transicao>();
+        
     }
 
     public void Carregalevel()
@@ -43,6 +44,7 @@ public class teleport : MonoBehaviour
         }
        else yield return new WaitForSecondsRealtime (0.5f);
 
+        yield return new WaitForSecondsRealtime(1f);
         if (InterrompeMusica)
         { GameObject som= GameObject.FindWithTag("Musica");
             if (som !=null)

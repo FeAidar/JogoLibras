@@ -86,7 +86,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2961797355910621971}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anima: {fileID: 5380269036282892515}
   ParaTempo: 0
+  FadeInicial: 1
 --- !u!95 &5380269036282892515
 Animator:
   serializedVersion: 3

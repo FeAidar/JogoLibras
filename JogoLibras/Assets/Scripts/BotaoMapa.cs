@@ -107,8 +107,8 @@ public class BotaoMapa : MonoBehaviour
             var tempColor3 = image3.color;
             tempColor3.a = 0f;
             image3.color = tempColor3;
-            Debug.Log((Mapa + Dificuldade));
-            Debug.Log(PlayerPrefs.GetInt(Mapa + Dificuldade));
+           // Debug.Log((Mapa + Dificuldade));
+          //  Debug.Log(PlayerPrefs.GetInt(Mapa + Dificuldade));
 
         }
 

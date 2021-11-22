@@ -1062,8 +1062,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1685382262}
   m_HandleRect: {fileID: 1685382261}
   m_Direction: 0
-  m_Value: 0.0034541918
-  m_Size: 0.2237162
+  m_Value: 0.0039668665
+  m_Size: 0.22371618
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1833,6 +1833,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -1850,6 +1853,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 491425044}
+  Contagem: 0
 --- !u!1 &496509819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2819,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -2856,6 +2863,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 673135788}
+  Contagem: 0
 --- !u!4 &673135790
 Transform:
   m_ObjectHideFlags: 0
@@ -5252,7 +5260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.53831, y: -53.5}
+  m_AnchoredPosition: {x: -5.211876, y: -53.5}
   m_SizeDelta: {x: 3111.0537, y: 716}
   m_Pivot: {x: 0, y: 1}
 --- !u!95 &1159637728
@@ -6106,6 +6114,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -6123,6 +6134,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 1336060822}
+  Contagem: 0
 --- !u!4 &1336060824
 Transform:
   m_ObjectHideFlags: 0
@@ -7631,6 +7643,9 @@ MonoBehaviour:
   eventosAntes: []
   TemEvento: 0
   eventos: []
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -7660,6 +7675,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 1862764333}
+  Contagem: 0
 --- !u!4 &1862764335
 Transform:
   m_ObjectHideFlags: 0
@@ -8108,7 +8124,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571541884590746370, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2961797355910621971, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Name
@@ -21689,6 +21705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Countdown: {fileID: 544011665867067654}
   Blur: {fileID: 7788173289103458618}
+  Iniciar: {fileID: 0}
 --- !u!222 &8221588526193924831
 CanvasRenderer:
   m_ObjectHideFlags: 0
