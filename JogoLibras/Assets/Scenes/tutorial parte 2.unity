@@ -1905,7 +1905,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571541884590746370, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2961797355910621971, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Name
@@ -2388,7 +2388,10 @@ MonoBehaviour:
   - "Agora ela est\xE1 te dizendo \"Tudo bem?\""
   - "Mostre que voc\xEA \xE9 legal!"
   - "Fale \"Tudo bem?\" tamb\xE9m!"
+  EmQueFalaAntes: 
   EmQueFala: 35
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 1
   eventos:
   - m_PersistentCalls:
@@ -2419,11 +2422,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls: []
   Action: 0
   dig: {fileID: 1489628134}
+  Contagem: 0
 --- !u!4 &1489628136
 Transform:
   m_ObjectHideFlags: 0
@@ -3205,9 +3212,15 @@ MonoBehaviour:
   - "E tamb\xE9m sabe dizer \"Tudo bem?\""
   - "Acho que agora voc\xEA podia dizer seu nome!"
   - Vamos tentar?
+  EmQueFalaAntes: 
   EmQueFala: 
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 0
   eventos: []
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -3249,6 +3262,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 1840740423}
+  Contagem: 0
 --- !u!4 &1840740425
 Transform:
   m_ObjectHideFlags: 0
@@ -3280,6 +3294,7 @@ MonoBehaviour:
   level: alfabeto
   InterrompeMusica: 1
   sair: 0
+  CorteSeco: 0
 --- !u!1 &1964341876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3948,8 +3963,8 @@ MonoBehaviour:
   - {fileID: 3378179544994129910}
   - {fileID: 5534044216118257363}
   m_Bounds:
-    m_Center: {x: -0.0004232973, y: -0.0011525154, z: 0}
-    m_Extent: {x: 0.21624337, y: 0.5055138, z: 0}
+    m_Center: {x: -0.00042326748, y: -0.0011520386, z: 0}
+    m_Extent: {x: 0.21624333, y: 0.50551367, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &715161362838076864
@@ -4722,8 +4737,8 @@ MonoBehaviour:
   - {fileID: 7535807517998761127}
   - {fileID: 3378179544994129910}
   m_Bounds:
-    m_Center: {x: 0.0015102029, y: -0.00055646896, z: 0}
-    m_Extent: {x: 0.7351567, y: 2.0261104, z: 0}
+    m_Center: {x: 0.0015102029, y: -0.0005559921, z: 0}
+    m_Extent: {x: 0.73515666, y: 2.0261104, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &2291857976432348606
@@ -4875,8 +4890,8 @@ MonoBehaviour:
   - {fileID: 8939005134771101445}
   - {fileID: 5331869651469341373}
   m_Bounds:
-    m_Center: {x: -0.0000030994415, y: 0.0006067753, z: 0}
-    m_Extent: {x: 0.3733102, y: 1.392667, z: 0}
+    m_Center: {x: -0.0000030696392, y: 0.00060772896, z: 0}
+    m_Extent: {x: 0.37331015, y: 1.3926668, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3007446908918118260
@@ -5186,8 +5201,8 @@ MonoBehaviour:
   - {fileID: 1685110296620690506}
   - {fileID: 3249099731895626219}
   m_Bounds:
-    m_Center: {x: -0.00038331747, y: 0.00031906366, z: 0}
-    m_Extent: {x: 0.6171168, y: 0.36634666, z: 0}
+    m_Center: {x: -0.00038325787, y: 0.0003210008, z: 0}
+    m_Extent: {x: 0.6171168, y: 0.3663466, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &4065430205372808830
@@ -5674,7 +5689,10 @@ MonoBehaviour:
   falas:
   - "Olha s\xF3, ela est\xE1 dizendo \"Oi!\"."
   - "Diga \"Oi\" de volta, n\xE3o seja uma pessoa mal educada!"
+  EmQueFalaAntes: 
   EmQueFala: 1
+  TemEventoAntes: 0
+  eventosAntes: []
   TemEvento: 1
   eventos:
   - m_PersistentCalls:
@@ -5691,11 +5709,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls: []
   Action: 0
   dig: {fileID: 5286326199547369766}
+  Contagem: 0
 --- !u!4 &5286326199547369768
 Transform:
   m_ObjectHideFlags: 0
@@ -6680,8 +6702,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5534044216118257363}
   m_Bounds:
-    m_Center: {x: -0.00049975514, y: -0.0000018775463, z: 0}
-    m_Extent: {x: 0.2652933, y: 0.27771005, z: 0}
+    m_Center: {x: -0.00049978495, y: -0.0000014007092, z: 0}
+    m_Extent: {x: 0.2652933, y: 0.27771002, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &7853095306427682243

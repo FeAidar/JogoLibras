@@ -1403,6 +1403,7 @@ MonoBehaviour:
   level: tutorial parte 2
   InterrompeMusica: 0
   sair: 0
+  CorteSeco: 0
 --- !u!1 &340430786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,7 +4867,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571541884590746370, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2961797355910621971, guid: d0fa15c20e5572441b6244b49077150a, type: 3}
       propertyPath: m_Name
