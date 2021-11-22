@@ -1763,6 +1763,10 @@ PrefabInstance:
       propertyPath: disablebackbutton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 965200642771383895, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: Iniciar
+      value: 
+      objectReference: {fileID: 301172893}
     - target: {fileID: 1025144876648836463, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Enabled
       value: 0

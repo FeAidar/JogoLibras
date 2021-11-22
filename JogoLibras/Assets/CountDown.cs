@@ -8,6 +8,7 @@ public class CountDown : MonoBehaviour
     public TMPro.TextMeshProUGUI Countdown;
     public GameObject Blur;
     private bool b;
+    [SerializeField] public GameObject Iniciar;
     void Start()
     {
         Blur.GetComponent<transicao>().inicia();
@@ -48,6 +49,8 @@ public class CountDown : MonoBehaviour
     void StartGame()
     {
         Countdown.text = "";
+        if (Iniciar != null)
+            Iniciar.SetActive(true);
         Time.timeScale = 1;
         if(b==false){
             Blur.GetComponent<transicao>().finaliza();
