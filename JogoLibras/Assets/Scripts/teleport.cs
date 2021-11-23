@@ -27,46 +27,42 @@ public class teleport : MonoBehaviour
         StartCoroutine("Carrega", level);
     }
 
-   protected IEnumerator Carrega(string nivel)
+    protected IEnumerator Carrega(string nivel)
     {
         Debug.Log(Som);
         Vibracao.vibra();
 
-        if(_transicao != null)
-            if(!CorteSeco)
-        _transicao.inicia();
+        if(_transicao != null){
+            if(!CorteSeco){
+                _transicao.inicia();
+            }    
+        }
 
-
-        if (Som != null)
-        {
+        if(Som != null){
             Som.Play();
             yield return new WaitForSecondsRealtime(Som.clip.length);
+        }else{
+            yield return new WaitForSecondsRealtime (0.5f);
         }
-       else yield return new WaitForSecondsRealtime (0.5f);
-
         yield return new WaitForSecondsRealtime(1f);
-        if (InterrompeMusica)
-        { GameObject som= GameObject.FindWithTag("Musica");
-            if (som !=null)
-            {
+        if(InterrompeMusica){ 
+            GameObject som= GameObject.FindWithTag("Musica");
+            if(som !=null){
                 som.GetComponent<AudioSource>().Stop();
             }
         
-        }
-        else
-        {
+        }else{
             GameObject som = GameObject.FindWithTag("Musica");
-            if (som != null)
-            {
-               if(som.GetComponent<AudioSource>().isPlaying == false)
+            if(som != null){
+                if(som.GetComponent<AudioSource>().isPlaying == false){
                     som.GetComponent<AudioSource>().Play();
+                }    
             }
         }
-        if (!sair)
-        { Time.timeScale = 1;
+        if(!sair){ 
+            Time.timeScale = 1f;
             SceneManager.LoadScene(nivel);
-        }else
-        {
+        }else{
             Debug.Log(_transicao);
             Application.Quit();
         }
