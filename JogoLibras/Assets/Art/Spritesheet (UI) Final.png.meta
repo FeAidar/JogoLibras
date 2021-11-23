@@ -1,0 +1,1224 @@
+fileFormatVersion: 2
+guid: 33bb8cad742a4a344b0ae422c7cc837f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5477725696937840394
+    second: UI.Pause
+  - first:
+      213: 9080389742041338230
+    second: UI.Perdeu
+  - first:
+      213: -8386496884746387559
+    second: UI.Menu
+  - first:
+      213: 5003564343956636858
+    second: UI.Paus
+  - first:
+      213: -4261833742128403251
+    second: UI.Ganhou
+  - first:
+      213: -7555581557383499565
+    second: UI.Estela1ON
+  - first:
+      213: -2069318307247735037
+    second: UI.Estela2ON
+  - first:
+      213: -4440945581552453341
+    second: UI.Estela3ON
+  - first:
+      213: 4438331311290169193
+    second: UI.Sair
+  - first:
+      213: 9059102750476844783
+    second: UI.Barra
+  - first:
+      213: -6306502017854050311
+    second: UI.Avatar
+  - first:
+      213: 3078966094613433194
+    second: UI.Engrenagem
+  - first:
+      213: -7056854274234212344
+    second: UI.Agenda
+  - first:
+      213: 2036603537062953667
+    second: Ui.BarraVazia
+  - first:
+      213: 3161348518749500546
+    second: UI.BotaoLetra
+  - first:
+      213: -650102228633401372
+    second: Ui.CaixadeTexto
+  - first:
+      213: -8220928529501162094
+    second: UI.Estela1OFF
+  - first:
+      213: 1770261350698289714
+    second: UI.Estela2OFF
+  - first:
+      213: 2253774830388055288
+    second: UI.Estela3OFF
+  - first:
+      213: 374195155122426308
+    second: Spritesheet (UI) Final_20
+  - first:
+      213: 8484289480268366447
+    second: UI.Voltar
+  - first:
+      213: -8099379294414211216
+    second: Ui.Confirmar
+  - first:
+      213: 5174731313796764324
+    second: Spritesheet (UI) Final_23
+  - first:
+      213: 6720704489224322539
+    second: Spritesheet (UI) Final_24
+  - first:
+      213: -5087720293707430768
+    second: Spritesheet (UI) Final_25
+  - first:
+      213: 3976378711060218520
+    second: Spritesheet (UI) Final_26
+  - first:
+      213: 6302566308610846570
+    second: UI.Entrar
+  - first:
+      213: 8343578350609178641
+    second: UI.Reset
+  - first:
+      213: -4823122439160177646
+    second: UI.Nao
+  - first:
+      213: -938361346542933695
+    second: UI.Limpar
+  - first:
+      213: -2737331662464977748
+    second: UI.DarOi
+  - first:
+      213: 485784930018951393
+    second: UI.Primeirapag
+  - first:
+      213: 5854609850216238494
+    second: UI.BarraTimerFundo
+  - first:
+      213: 774228387040601822
+    second: UI..BarraTimerRecheio
+  - first:
+      213: 7792086305185138919
+    second: UI.Home
+  - first:
+      213: -4369877863344570083
+    second: UI.Apagar
+  - first:
+      213: 6773512444527281307
+    second: UI.Sim
+  - first:
+      213: 6923303455221079943
+    second: Ui.Creditos
+  - first:
+      213: 6189799442478157721
+    second: UI.TudoBem
+  - first:
+      213: -992111723719145669
+    second: UI.IrpraEscola
+  - first:
+      213: -1472581077443219470
+    second: Spritesheet (UI) Final_41
+  - first:
+      213: -5874674772479414362
+    second: UI.Ligado
+  - first:
+      213: 1736808594946575795
+    second: Ui.Desligado
+  - first:
+      213: 4297288425248486985
+    second: UI.SetaLado
+  - first:
+      213: 4591699172494085325
+    second: UI.SetaProx
+  - first:
+      213: 1592845095706934756
+    second: UI.Xfechar
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI.Pause
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5651
+        width: 2400
+        height: 2833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f4207cf7ac40c40800000000000000
+      internalID: 5477725696937840394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Perdeu
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 5434
+        width: 2469
+        height: 3100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67199744c56040e70800000000000000
+      internalID: 9080389742041338230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Menu
+      rect:
+        serializedVersion: 2
+        x: 5234
+        y: 6084
+        width: 2416
+        height: 2450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f75c2548d2d9b80800000000000000
+      internalID: -8386496884746387559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Paus
+      rect:
+        serializedVersion: 2
+        x: 7942
+        y: 6186
+        width: 327
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab48854c24b307540800000000000000
+      internalID: 5003564343956636858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Ganhou
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2534
+        width: 2566
+        height: 3083
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcca9acaaccead4c0800000000000000
+      internalID: -4261833742128403251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela1ON
+      rect:
+        serializedVersion: 2
+        x: 5098
+        y: 5436
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0f9a0da9e252790800000000000000
+      internalID: -7555581557383499565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela2ON
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 5511
+        width: 492
+        height: 491
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f394996fd4843e0800000000000000
+      internalID: -2069318307247735037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela3ON
+      rect:
+        serializedVersion: 2
+        x: 6269
+        y: 5436
+        width: 367
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329b9b0d5879e52c0800000000000000
+      internalID: -4440945581552453341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Sair
+      rect:
+        serializedVersion: 2
+        x: 7940
+        y: 5601
+        width: 321
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967b1f4ffce189d30800000000000000
+      internalID: 4438331311290169193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Barra
+      rect:
+        serializedVersion: 2
+        x: 2844
+        y: 4544
+        width: 4073
+        height: 733
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feebfe154f568bd70800000000000000
+      internalID: 9059102750476844783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Avatar
+      rect:
+        serializedVersion: 2
+        x: 7107
+        y: 4583
+        width: 708
+        height: 714
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff668af3ddca78a0800000000000000
+      internalID: -6306502017854050311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Engrenagem
+      rect:
+        serializedVersion: 2
+        x: 7940
+        y: 5015
+        width: 350
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bc7e8995faaba20800000000000000
+      internalID: 3078966094613433194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Agenda
+      rect:
+        serializedVersion: 2
+        x: 7944
+        y: 4457
+        width: 492
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800a2982d64011e90800000000000000
+      internalID: -7056854274234212344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui.BarraVazia
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3544
+        width: 4084
+        height: 729
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c201f66028734c10800000000000000
+      internalID: 2036603537062953667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.BotaoLetra
+      rect:
+        serializedVersion: 2
+        x: 7944
+        y: 3817
+        width: 400
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 104, y: 104, z: 104, w: 104}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284754f6abd5fdb20800000000000000
+      internalID: 3161348518749500546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui.CaixadeTexto
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 2550
+        width: 1779
+        height: 723
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7cd9aa77f5af6f0800000000000000
+      internalID: -650102228633401372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela1OFF
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 2711
+        width: 370
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295753b0f0569ed80800000000000000
+      internalID: -8220928529501162094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela2OFF
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 2786
+        width: 492
+        height: 491
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a89f7b15b319810800000000000000
+      internalID: 1770261350698289714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Estela3OFF
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 2711
+        width: 375
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc0ff86444074f10800000000000000
+      internalID: 2253774830388055288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_20
+      rect:
+        serializedVersion: 2
+        x: 6523
+        y: 2227
+        width: 1761
+        height: 1217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c19eb1d288613500800000000000000
+      internalID: 374195155122426308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Voltar
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1894
+        width: 575
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62caf2a4504eb570800000000000000
+      internalID: 8484289480268366447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui.Confirmar
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1894
+        width: 571
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077794fa179399f80800000000000000
+      internalID: -8099379294414211216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_23
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1894
+        width: 733
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a252f686b650d740800000000000000
+      internalID: 5174731313796764324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_24
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 1894
+        width: 729
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedb698002db44d50800000000000000
+      internalID: 6720704489224322539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_25
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 1894
+        width: 1072
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094c5094959c469b0800000000000000
+      internalID: -5087720293707430768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_26
+      rect:
+        serializedVersion: 2
+        x: 4765
+        y: 1894
+        width: 1408
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8928b25be5fee2730800000000000000
+      internalID: 3976378711060218520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Entrar
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1227
+        width: 575
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f281e4aa6377750800000000000000
+      internalID: 6302566308610846570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Reset
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1227
+        width: 571
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11023bfbd485ac370800000000000000
+      internalID: 8343578350609178641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Nao
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1227
+        width: 729
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c54a112b3d01db0800000000000000
+      internalID: -4823122439160177646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Limpar
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 1227
+        width: 1071
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149e954b3554af2f0800000000000000
+      internalID: -938361346542933695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.DarOi
+      rect:
+        serializedVersion: 2
+        x: 3848
+        y: 1227
+        width: 1071
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca478522b5b030ad0800000000000000
+      internalID: -2737331662464977748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Primeirapag
+      rect:
+        serializedVersion: 2
+        x: 5102
+        y: 1227
+        width: 1532
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0840fe1daddb600800000000000000
+      internalID: 485784930018951393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.BarraTimerFundo
+      rect:
+        serializedVersion: 2
+        x: 6767
+        y: 1131
+        width: 644
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 143, y: 143, z: 143, w: 143}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d44a4c3a0cf3150800000000000000
+      internalID: 5854609850216238494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI..BarraTimerRecheio
+      rect:
+        serializedVersion: 2
+        x: 7527
+        y: 1161
+        width: 609
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 143, y: 143, z: 143, w: 143}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed62490bd9c9eba00800000000000000
+      internalID: 774228387040601822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Home
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 557
+        width: 575
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e80fb7d53d032c60800000000000000
+      internalID: 7792086305185138919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Apagar
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 556
+        width: 573
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1101836c331b53c0800000000000000
+      internalID: -4369877863344570083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Sim
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 557
+        width: 729
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b948cb14ea9500e50800000000000000
+      internalID: 6773512444527281307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui.Creditos
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 557
+        width: 1071
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fdfa0bfc3841060800000000000000
+      internalID: 6923303455221079943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.TudoBem
+      rect:
+        serializedVersion: 2
+        x: 3848
+        y: 557
+        width: 1202
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f42d74cc596e550800000000000000
+      internalID: 6189799442478157721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.IrpraEscola
+      rect:
+        serializedVersion: 2
+        x: 5265
+        y: 557
+        width: 2054
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37483ac4af4b32f0800000000000000
+      internalID: -992111723719145669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet (UI) Final_41
+      rect:
+        serializedVersion: 2
+        x: 7532
+        y: 431
+        width: 591
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffe808ef47509be0800000000000000
+      internalID: -1472581077443219470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Ligado
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 127
+        width: 337
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af6a677b66f87ea0800000000000000
+      internalID: -5874674772479414362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui.Desligado
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 127
+        width: 338
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdc2a017326a1810800000000000000
+      internalID: 1736808594946575795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.SetaLado
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 127
+        width: 296
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94675540e0903ab30800000000000000
+      internalID: 4297288425248486985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.SetaProx
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 127
+        width: 179
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc07fbc11ef8bf30800000000000000
+      internalID: 4591699172494085325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI.Xfechar
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 181
+        width: 133
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edb5dfdc2cea1610800000000000000
+      internalID: 1592845095706934756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

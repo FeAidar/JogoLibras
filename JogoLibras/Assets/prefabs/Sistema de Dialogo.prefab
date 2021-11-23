@@ -99,6 +99,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NofimAntesDaContagem:
+    m_PersistentCalls:
+      m_Calls: []
   Nofim:
     m_PersistentCalls:
       m_Calls:
@@ -116,6 +119,7 @@ MonoBehaviour:
         m_CallState: 2
   Action: 0
   dig: {fileID: 5286326199532833071}
+  Contagem: 0
 --- !u!114 &5286326199532833071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4696324549047807505, guid: 671a643589243044e94e0b7d69501f31, type: 3}
+  m_Sprite: {fileID: -650102228633401372, guid: 33bb8cad742a4a344b0ae422c7cc837f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
