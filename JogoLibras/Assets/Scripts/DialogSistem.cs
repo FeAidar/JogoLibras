@@ -184,7 +184,7 @@ public class DialogSistem : MonoBehaviour
 
     IEnumerator regressiva(){
         NofimAntesDaContagem.Invoke();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(3f);
         Nofim.Invoke();
     }
 }

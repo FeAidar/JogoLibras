@@ -3506,6 +3506,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5843022834652146749, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6188513416577608607, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3928,9 +3932,9 @@ MonoBehaviour:
   Mapa: Mochila
   Dificuldade: 1
   Pack: 1
-  Quantia: 1
+  Quantia: 0
   tutorial: 1
-  VersaoDoMinigame: 0
+  VersaoDoMinigame: 1
   Tempo: 90
   TempoTresEstrelas: 45
   TempoDuasEstrelas: 30

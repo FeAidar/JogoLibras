@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 20e58653a8db90c4b8631e4899364651
+guid: 9ef813541257ac84db0e4f333f6e7917
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7955661465570078789
-    second: teste_0
+      213: 301856202680201165
+    second: Biologia
   - first:
-      213: 966847934177230680
-    second: teste_1
+      213: -3076634412317346614
+    second: educacao fisica
   - first:
-      213: -8650574779793479004
-    second: teste_2
+      213: -4513760602350065882
+    second: filosofia
   - first:
-      213: -5177552189848330075
-    second: teste_3
+      213: 8802623161124311585
+    second: fisica
   - first:
-      213: -1612611113377972437
-    second: teste_4
+      213: 290876400366261345
+    second: geografia
   - first:
-      213: 8791759646111374389
-    second: teste_5
+      213: 7796576813067011456
+    second: portugues
   - first:
-      213: -8731792816728583797
-    second: teste_6
+      213: 7879052313612034787
+    second: quimica
+  - first:
+      213: 1918725699597675598
+    second: historia
+  - first:
+      213: 1099247073339155555
+    second: matematica
+  - first:
+      213: -6196684672505899497
+    second: artes
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -172,13 +181,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teste_0
+      name: Biologia
       rect:
         serializedVersion: 2
-        x: 28
-        y: 273
-        width: 168
-        height: 192
+        x: 87
+        y: 6075
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5407198b3ff286e60800000000000000
-      internalID: 7955661465570078789
+      spriteID: dcf6006fd98603400800000000000000
+      internalID: 301856202680201165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_1
+      name: educacao fisica
       rect:
         serializedVersion: 2
-        x: 219
-        y: 283
-        width: 167
-        height: 191
+        x: 2243
+        y: 6086
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f3474d21fea6d00800000000000000
-      internalID: 966847934177230680
+      spriteID: ac4f41e7d499d45d0800000000000000
+      internalID: -3076634412317346614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_2
+      name: filosofia
       rect:
         serializedVersion: 2
-        x: 407
-        y: 288
-        width: 181
-        height: 195
+        x: 4662
+        y: 6094
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aae47b021cf2f780800000000000000
-      internalID: -8650574779793479004
+      spriteID: 62765c7a5a6eb51c0800000000000000
+      internalID: -4513760602350065882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_3
+      name: fisica
       rect:
         serializedVersion: 2
-        x: 373
-        y: 43
-        width: 227
-        height: 204
+        x: 6584
+        y: 6094
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a06b0617b3a528b0800000000000000
-      internalID: -5177552189848330075
+      spriteID: 122d0727023392a70800000000000000
+      internalID: 8802623161124311585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_4
+      name: geografia
       rect:
         serializedVersion: 2
-        x: 215
-        y: 41
-        width: 158
-        height: 221
+        x: 0
+        y: 3168
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f32428cbade99e0800000000000000
-      internalID: -1612611113377972437
+      spriteID: 16410658b86690400800000000000000
+      internalID: 290876400366261345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_5
+      name: portugues
       rect:
         serializedVersion: 2
-        x: 56
-        y: 43
-        width: 114
-        height: 223
+        x: 2268
+        y: 3165
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c151141da920a70800000000000000
-      internalID: 8791759646111374389
+      spriteID: 08508eead41033c60800000000000000
+      internalID: 7796576813067011456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teste_6
+      name: quimica
       rect:
         serializedVersion: 2
-        x: 40
-        y: 28
-        width: 158
-        height: 223
+        x: 4535
+        y: 3156
+        width: 1950
+        height: 2440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +321,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b81d59a32b072d680800000000000000
-      internalID: -8731792816728583797
+      spriteID: 3e2a09f8554085d60800000000000000
+      internalID: 7879052313612034787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: historia
+      rect:
+        serializedVersion: 2
+        x: 6584
+        y: 3165
+        width: 1950
+        height: 2440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4caee1abdea0aa10800000000000000
+      internalID: 1918725699597675598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: matematica
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 221
+        width: 1950
+        height: 2440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364a4ce936f414f00800000000000000
+      internalID: 1099247073339155555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artes
+      rect:
+        serializedVersion: 2
+        x: 4469
+        y: 229
+        width: 1950
+        height: 2440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7169d2e2f14f00aa0800000000000000
+      internalID: -6196684672505899497
       vertices: []
       indices: 
       edges: []

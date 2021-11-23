@@ -68,10 +68,9 @@ public class MochilaGameStarter : MonoBehaviour
     public IEnumerator GameStart()
     {
         yield return new WaitForSeconds(0.0001f);
-
             Instantiate(packs[_definer.pack - 1]);
         yield return new WaitForSeconds(0.0001f);
-        ListaDeItens();
+            ListaDeItens();
             JogoComecou = true;
     }
 
