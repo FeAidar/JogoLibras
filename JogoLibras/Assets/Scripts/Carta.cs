@@ -28,7 +28,7 @@ public class Carta : MonoBehaviour
     }
 
     public void clica(){
-        
+        Debug.Log("banana");
         if(virado == true && par == false){
             canvas.GetComponent<CartaManege>().CartaDesselecionada(this.gameObject);
         }else if(par == false){
@@ -75,7 +75,6 @@ public class Carta : MonoBehaviour
         }
     }
     public void mostra(){
-        Debug.Log("vai?");
         if(essa == false){
             if(EtapaSemPalavra){
                 if(Composto==true){

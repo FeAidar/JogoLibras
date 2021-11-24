@@ -35,14 +35,46 @@ public class DialogSistem : MonoBehaviour
     private GameObject definer;
     public DialogoEscrito dig ;
     [SerializeField]private bool Contagem;
-
+    private bool jafoi;
     private void Start(){
-        if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
-            int b = PlayerPrefs.GetInt("hubtuto");
-            b ++;
-           // Debug.Log(b);
-            PlayerPrefs.SetInt("hubtuto",b);
-            if(b <= 2){
+        if(jafoi==false){
+            if(SceneManager.GetActiveScene().name== "Hub-Escola"||SceneManager.GetActiveScene().name== "Hub-Fases"){
+                int b = PlayerPrefs.GetInt("hubtuto");
+                b ++;
+               // Debug.Log(b);
+                PlayerPrefs.SetInt("hubtuto",b);
+                if(b <= 2){
+                    definer = GameObject.FindGameObjectWithTag("GameController");
+                    if (definer != null){
+                        precisa = definer.GetComponent<GameDefiner>().dialogo;
+                    }else{
+                        precisa = true;
+                    }
+                    if(precisa == true){
+                        if(TemEventoAntes==true){
+                            foreach (char d in EmQueFalaAntes)
+                            {
+                                string f = ""+d;
+                                NessaFalaAntes.Add(int.Parse(f));
+                            }
+                        }
+                        if(TemEvento==true){
+                            foreach (char d in EmQueFala)
+                            {
+                                string f = ""+d;
+                                NessaFala.Add(int.Parse(f));
+                            }
+                        }
+                    }else{
+                        Nofim.Invoke();
+                        jafoi=true;
+                    }
+                    PodeClick = false;
+                }else{
+                    Nofim.Invoke();
+                    jafoi=true;
+                }
+            }else{
                 definer = GameObject.FindGameObjectWithTag("GameController");
                 if (definer != null){
                     precisa = definer.GetComponent<GameDefiner>().dialogo;
@@ -65,52 +97,29 @@ public class DialogSistem : MonoBehaviour
                         }
                     }
                 }else{
-                    Nofim.Invoke();
+                    Fim();
                 }
                 PodeClick = false;
-            }else{
-                Nofim.Invoke();
             }
-        }else{
-            definer = GameObject.FindGameObjectWithTag("GameController");
-            if (definer != null){
-                precisa = definer.GetComponent<GameDefiner>().dialogo;
-            }else{
-                precisa = true;
-            }
-            if(precisa == true){
-                if(TemEventoAntes==true){
-                    foreach (char d in EmQueFalaAntes)
-                    {
-                        string f = ""+d;
-                        NessaFalaAntes.Add(int.Parse(f));
-                    }
-                }
-                if(TemEvento==true){
-                    foreach (char d in EmQueFala)
-                    {
-                        string f = ""+d;
-                        NessaFala.Add(int.Parse(f));
-                    }
-                }
-            }else{
-                Fim();
-            }
-            PodeClick = false;
         }
     }
     private void Update(){
-        if(ActionAntes){
-            if(FalaAtual>= falas.Length){
-                Fim();
-            }else{
-                if(TemEventoAntes){
-                    if(acaoAntes < NessaFalaAntes.Count){
-                        if(FalaAtual == NessaFalaAntes[acaoAntes]){
-                            eventosAntes[acaoAntes].Invoke();
-                            acaoAntes++;
-                            chama = true;
-                            ActionAntes = false;
+        if(jafoi==false){
+            if(ActionAntes){
+                if(FalaAtual>= falas.Length){
+                    Fim();
+                }else{
+                    if(TemEventoAntes){
+                        if(acaoAntes < NessaFalaAntes.Count){
+                            if(FalaAtual == NessaFalaAntes[acaoAntes]){
+                                eventosAntes[acaoAntes].Invoke();
+                                acaoAntes++;
+                                chama = true;
+                                ActionAntes = false;
+                            }else{
+                                chama = true;
+                                ActionAntes = false;
+                            }
                         }else{
                             chama = true;
                             ActionAntes = false;
@@ -119,33 +128,34 @@ public class DialogSistem : MonoBehaviour
                         chama = true;
                         ActionAntes = false;
                     }
+                }
+            }   
+            if(chama){
+                if(FalaAtual>= falas.Length){
+                    Nofim.Invoke();
                 }else{
-                    chama = true;
-                    ActionAntes = false;
+                    if(FalaAtual < falas.Length){
+                        dig.ComecaFala(falas[FalaAtual]);
+                    }else if(FalaAtual>= falas.Length){
+                        Fim();
+                    }
                 }
+                chama = false;
             }
-        }   
-        if(chama){
-            if(FalaAtual>= falas.Length){
-                Nofim.Invoke();
-            }else{
-                if(FalaAtual < falas.Length){
-                    dig.ComecaFala(falas[FalaAtual]);
-                }else if(FalaAtual>= falas.Length){
-                    Fim();
-                }
-            }
-            chama = false;
-        }
-        if(Action){
-            if(TemEvento== true){
-                if(acao < NessaFala.Count){
-                    if(FalaAtual == NessaFala[acao]){
-                        eventos[acao].Invoke();
-                        acao++;
-                        FalaAtual++;
-                        Action = false;
-                        StartCoroutine(tempoespera());
+            if(Action){
+                if(TemEvento== true){
+                    if(acao < NessaFala.Count){
+                        if(FalaAtual == NessaFala[acao]){
+                            eventos[acao].Invoke();
+                            acao++;
+                            FalaAtual++;
+                            Action = false;
+                            StartCoroutine(tempoespera());
+                        }else{
+                            FalaAtual++;
+                            Action= false;
+                            StartCoroutine(tempoespera());
+                        }
                     }else{
                         FalaAtual++;
                         Action= false;
@@ -156,16 +166,12 @@ public class DialogSistem : MonoBehaviour
                     Action= false;
                     StartCoroutine(tempoespera());
                 }
-            }else{
-                FalaAtual++;
-                Action= false;
-                StartCoroutine(tempoespera());
             }
-        }
-        if(Input.GetKeyDown(KeyCode.Mouse0)){
-            if(PodeClick== true){
-                ActionAntes = true;
-                PodeClick = false;
+            if(Input.GetKeyDown(KeyCode.Mouse0)){
+                if(PodeClick== true){
+                    ActionAntes = true;
+                    PodeClick = false;
+                }
             }
         }
     }
@@ -180,6 +186,7 @@ public class DialogSistem : MonoBehaviour
             //Debug.Log("não espera");
             Nofim.Invoke();
         }
+        jafoi=true;
     }
 
     IEnumerator regressiva(){
