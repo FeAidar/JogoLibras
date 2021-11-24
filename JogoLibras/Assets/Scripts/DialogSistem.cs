@@ -43,7 +43,7 @@ public class DialogSistem : MonoBehaviour
                 b ++;
                // Debug.Log(b);
                 PlayerPrefs.SetInt("hubtuto",b);
-                if(b <= 2){
+                if(b <= 3){
                     definer = GameObject.FindGameObjectWithTag("GameController");
                     if (definer != null){
                         precisa = definer.GetComponent<GameDefiner>().dialogo;
