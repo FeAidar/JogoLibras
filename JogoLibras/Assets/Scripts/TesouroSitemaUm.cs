@@ -200,7 +200,6 @@ public class TesouroSitemaUm : MonoBehaviour
     }
 
     private void IniciaTime(){
-        GetComponent<Timer>().timeRemaining = Tempos[_dificuldade];
         GetComponent<Timer>().timerIsRunning = true;
     }
 
