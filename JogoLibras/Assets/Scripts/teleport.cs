@@ -13,6 +13,7 @@ public class teleport : MonoBehaviour
     protected transicao _transicao;
     public bool sair;
     public bool CorteSeco;
+    public bool Reset;
    
 
     void Start()
@@ -61,7 +62,13 @@ public class teleport : MonoBehaviour
         }
         if(!sair){ 
             Time.timeScale = 1f;
+
+            if(!Reset)
             SceneManager.LoadScene(nivel);
+            else
+            {
+                Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+            }
         }else{
             Debug.Log(_transicao);
             Application.Quit();
