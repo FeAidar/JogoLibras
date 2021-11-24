@@ -61,8 +61,9 @@ public class MiniGamesTelas : MonoBehaviour
     // Update is called once per frame
     void Starchecker()
     {
+        string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + controller.Dificuldade + ".Pack" + controller.pack + ".Quantia" + controller.Quantia + ".Etapa" + controller.Etapa);
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) ==1)
+        if (PlayerPrefs.GetInt(premio) ==1)
             {
             Estrela1.SetActive(true);
             Estrela2.SetActive(false);
@@ -71,7 +72,7 @@ public class MiniGamesTelas : MonoBehaviour
             countdown.text = "Voc� completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";                
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 2)
+        if (PlayerPrefs.GetInt(premio) == 2)
         {
             Estrela1.SetActive(true);
             Estrela2.SetActive(true);
@@ -81,7 +82,7 @@ public class MiniGamesTelas : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 3)
+        if (PlayerPrefs.GetInt(premio) == 3)
         {
             Estrela1.SetActive(true);
             Estrela2.SetActive(true);
@@ -91,7 +92,7 @@ public class MiniGamesTelas : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + controller.Dificuldade_do_Minigame + controller.pack) == 0)
+        if (PlayerPrefs.GetInt(premio) == 0)
         {
             Estrela1.SetActive(false);
             Estrela2.SetActive(false);

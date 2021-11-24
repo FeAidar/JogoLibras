@@ -10,11 +10,11 @@ public class BotaoMapa : MonoBehaviour
     public int Posicao;
 
 
-    [Header("Descri��o do Minigame e nome do mapa")]
+    [Header("Descrição do Minigame e nome do mapa")]
     [SerializeField] public string Texto;
     [SerializeField] public string Mapa;
 
-    [Header("Configura��es do Minigame")]
+    [Header("Configurações do Minigame")]
     public int Dificuldade;
     public int Pack;
     public int Quantia;
@@ -55,6 +55,10 @@ public class BotaoMapa : MonoBehaviour
         _estrela1 = GameObject.Find("Estrela 1");
         _estrela2 = GameObject.Find("Estrela 2");
         _estrela3 = GameObject.Find("Estrela 3");
+        if(PlayerPrefs.GetInt("fasenomapa") == Posicao)
+        {
+            apertou();
+        }
 
     }
 
@@ -76,7 +80,6 @@ public class BotaoMapa : MonoBehaviour
         _definer.Dificuldade = Dificuldade;
         _definer.pack = Pack;
         _definer.Quantia = Quantia;
-        _definer.Dificuldade_do_Minigame = VersaoDoMinigame;
         _definer.Etapa = VersaoDoMinigame;
         _definer.Tempo = Tempo;
         _definer.TempoTresEstrelas = TempoTresEstrelas;
@@ -87,8 +90,9 @@ public class BotaoMapa : MonoBehaviour
         _botao.GetComponent<teleport>().level =Mapa;
         PlayerPrefs.SetInt ("fasenomapa", Posicao);
 
+        string premio = (Mapa + ".Dificuldade" + Dificuldade + ".Pack" + Pack + ".Quantia" + Quantia + ".Etapa" + VersaoDoMinigame); ;
 
-    if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame+Pack) == 1)
+        if (PlayerPrefs.GetInt(premio) == 1)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -112,7 +116,7 @@ public class BotaoMapa : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) == 2)
+        if (PlayerPrefs.GetInt(premio) == 2)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -134,7 +138,7 @@ public class BotaoMapa : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) >= 3)
+        if (PlayerPrefs.GetInt(premio) >= 3)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();
@@ -155,7 +159,7 @@ public class BotaoMapa : MonoBehaviour
             image3.color = tempColor3;
         }
 
-        if (PlayerPrefs.GetInt(Mapa + VersaoDoMinigame + Pack) == 0)
+        if (PlayerPrefs.GetInt(premio) == 0)
         {
             Image image;
             image = _estrela1.GetComponent<Image>();

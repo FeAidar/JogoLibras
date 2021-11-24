@@ -233,7 +233,10 @@ public class CartaManege : MonoBehaviour
     void StarCounter()
     {
         if(mostrado==true){
-            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _Definer.GetComponent<GameDefiner>().Dificuldade_do_Minigame + _Definer.GetComponent<GameDefiner>().pack) == 3)
+
+            string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + _Definer.GetComponent<GameDefiner>().Dificuldade + ".Pack" + _Definer.GetComponent<GameDefiner>().pack + ".Quantia" + _Definer.GetComponent<GameDefiner>().Quantia + ".Etapa" + _Definer.GetComponent<GameDefiner>().Etapa);
+
+            if (PlayerPrefs.GetInt(premio) == 3)
             { _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 3; }
             else
             {

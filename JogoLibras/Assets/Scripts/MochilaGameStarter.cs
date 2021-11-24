@@ -133,8 +133,9 @@ public class MochilaGameStarter : MonoBehaviour
 
     void StarCounter()
     {
+        string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + _definer.Dificuldade + ".Pack" + _definer.pack + ".Quantia" + _definer.Quantia + ".Etapa" + _definer.Etapa);
 
-        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + _definer.Dificuldade_do_Minigame + _definer.pack) == 3)
+        if (PlayerPrefs.GetInt(premio) == 3)
         { _definer.QuantiaEstrela = 3; }
         else
         {

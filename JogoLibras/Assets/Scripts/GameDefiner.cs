@@ -25,7 +25,6 @@ public class GameDefiner : MonoBehaviour
 
     [HideInInspector]    public int QuantiaEstrela;
     [HideInInspector] public string ID = "1";
-    [HideInInspector] public int Dificuldade_do_Minigame;
 
     private static Dictionary<string, GameObject> _instancias = new Dictionary<string, GameObject>();
    
@@ -56,9 +55,11 @@ public class GameDefiner : MonoBehaviour
 
     public void ganhou()
     {
+          
+    string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + Dificuldade+ ".Pack" + pack + ".Quantia" +  Quantia + ".Etapa" + Etapa);
         if (QuantiaEstrela == 1)
         {
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
+            
             if (PlayerPrefs.GetInt(premio) == 0)
                 PlayerPrefs.SetInt(premio, 1);
             else return;
@@ -68,7 +69,7 @@ public class GameDefiner : MonoBehaviour
 
         if (QuantiaEstrela == 2)
         {
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
+            
             if (PlayerPrefs.GetInt(premio) > QuantiaEstrela)
                 return;
             else
@@ -80,7 +81,7 @@ public class GameDefiner : MonoBehaviour
         if (QuantiaEstrela == 3)
         {
 
-            string premio = (SceneManager.GetActiveScene().name + Dificuldade_do_Minigame + pack);
+            
             if (PlayerPrefs.GetInt(premio) > QuantiaEstrela)
                 return;
             else
