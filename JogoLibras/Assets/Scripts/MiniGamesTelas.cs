@@ -61,15 +61,17 @@ public class MiniGamesTelas : MonoBehaviour
     // Update is called once per frame
     void Starchecker()
     {
+        
         string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + controller.Dificuldade + ".Pack" + controller.pack + ".Quantia" + controller.Quantia + ".Etapa" + controller.Etapa);
+        Debug.Log(PlayerPrefs.GetInt(premio));
 
-        if (PlayerPrefs.GetInt(premio) ==1)
+        if (PlayerPrefs.GetInt(premio) == 1)
             {
             Estrela1.SetActive(true);
             Estrela2.SetActive(false);
             Estrela3.SetActive(false);
             frase.text = ConseguiuUmaEstrela;
-            countdown.text = "Voc� completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";                
+            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";                
         }
 
         if (PlayerPrefs.GetInt(premio) == 2)
@@ -78,7 +80,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela2.SetActive(true);
             Estrela3.SetActive(false);
             frase.text = ConseguiuDuasEstrelas;
-            countdown.text = "Voc� completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
+            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
 
         }
 
@@ -88,7 +90,7 @@ public class MiniGamesTelas : MonoBehaviour
             Estrela2.SetActive(true);
             Estrela3.SetActive(true);
             frase.text = ConseguiuTresEstrelas;
-            countdown.text = "Voc� completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
+            countdown.text = "Você completou em " + (FindObjectOfType<Timer>().tempo - FindObjectOfType<Timer>().timeRemaining).ToString("0") + " segundos!";
 
         }
 

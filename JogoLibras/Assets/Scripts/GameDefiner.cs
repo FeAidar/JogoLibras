@@ -88,6 +88,8 @@ public class GameDefiner : MonoBehaviour
                 PlayerPrefs.SetInt(premio, 3);
 
         }
+
+        Debug.Log(premio + ": " + PlayerPrefs.GetInt(premio));
     }
 
     public void Apagatudo()

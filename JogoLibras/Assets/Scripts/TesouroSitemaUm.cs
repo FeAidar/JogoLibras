@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TesouroSitemaUm : MonoBehaviour
 {
@@ -13,45 +14,47 @@ public class TesouroSitemaUm : MonoBehaviour
         5. verificar se o objeto apertado é o certo
     */
 
-    private int _pack, _quantia, _dificuldade,_etapa;
+    private int _pack, _quantia, _dificuldade, _etapa;
     private GameDefiner definer;
     [Header("Palavras")]
-    [SerializeField]private GameObject[] Packs;
-    [SerializeField]private List<GameObject> posicoes = new List<GameObject>();
-    [SerializeField]private List<Sprite> ItensDeSala= new List<Sprite>();
-    [SerializeField]private List<Sprite> ItensDoAluno= new List<Sprite>();
-    [SerializeField]private int[] Quantias;
-    [SerializeField]private int[] Tempos;
-    [SerializeField]private GameObject Mostruario;
-    [SerializeField]private Text Palavra;
-    [SerializeField]private GameObject WinScreen;
-    [SerializeField]private GameObject LoseScreen;
-    [SerializeField]private GameObject Acerto, erro;
-    [SerializeField]private string[] Compostospack1;
-    [SerializeField]private string[] Compostospack2;
+    [SerializeField] private GameObject[] Packs;
+    [SerializeField] private List<GameObject> posicoes = new List<GameObject>();
+    [SerializeField] private List<Sprite> ItensDeSala = new List<Sprite>();
+    [SerializeField] private List<Sprite> ItensDoAluno = new List<Sprite>();
+    [SerializeField] private int[] Quantias;
+   // [SerializeField] private int[] Tempos;
+    [SerializeField] private GameObject Mostruario;
+    [SerializeField] private Text Palavra;
+    [SerializeField] private GameObject WinScreen;
+    [SerializeField] private GameObject LoseScreen;
+    [SerializeField] private GameObject Acerto, erro;
+    [SerializeField] private string[] Compostospack1;
+    [SerializeField] private string[] Compostospack2;
     private List<GameObject> ListaDePalavras = new List<GameObject>();
     private List<GameObject> ListaDePalavrasSelecionadas = new List<GameObject>();
     private List<Sprite> ListaDeitens = new List<Sprite>();
     private int PalavraAtual;
     private bool composta;
-    [SerializeField]private float TempoCompos;
+    [SerializeField] private float TempoCompos;
     private float tempoCo;
     private string compostaAtual;
     private int qual;
-    [SerializeField]private Sprite[] estojo;
-    [SerializeField]private Sprite[] tinta;
-    [SerializeField]private Sprite[] lousa;
-    [SerializeField]private Sprite[] armario;
-    [SerializeField]private Sprite[] lixeira;
-    [SerializeField]private AudioSource Acertou;
-    [SerializeField]private AudioSource Errou;
-    private bool caca,coco,cucu,cece,cici;
-    public void comeca(){
-        definer = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameDefiner>();
+    [SerializeField] private Sprite[] estojo;
+    [SerializeField] private Sprite[] tinta;
+    [SerializeField] private Sprite[] lousa;
+    [SerializeField] private Sprite[] armario;
+    [SerializeField] private Sprite[] lixeira;
+    [SerializeField] private AudioSource Acertou;
+    [SerializeField] private AudioSource Errou;
+    private bool comecou;
+    private bool caca, coco, cucu, cece, cici;
+    public void comeca() {
+        definer = FindObjectOfType<GameDefiner>();
         _pack = definer.pack;
         _dificuldade = definer.Dificuldade;
         _quantia = definer.Quantia;
-        _etapa= definer.Etapa;
+        _etapa = definer.Etapa;
+        comecou = false;
 
         DefinePack();
         EscolhePalavras();
@@ -59,66 +62,75 @@ public class TesouroSitemaUm : MonoBehaviour
         ApareceProximaPalavra();
         IniciaTime();
     }
-    void Update(){
-        if(GetComponent<Timer>().timeRemaining <= 0){
-            LoseScreen.SetActive(true);
+    void Update() {
+
+        if (GetComponent<Timer>().timeRemaining <= 0)
+        {
+            if (comecou)
+            {
+                LoseScreen.SetActive(true);
+                comecou = false;
+            }
         }
-        if(composta==true){
-            if(tempoCo<Time.time){
-                if(_pack==0){
-                    if(compostaAtual == Compostospack1[0]){
-                        Mostruario.GetComponent<Image>().sprite= estojo[qual];
-                    }else if(compostaAtual == Compostospack1[1]){
-                        Mostruario.GetComponent<Image>().sprite= tinta[qual];
+        if (GetComponent<Timer>().timeRemaining > 0)
+            
+        StarCounter();
+        if (composta == true) {
+            if (tempoCo < Time.time) {
+                if (_pack == 0) {
+                    if (compostaAtual == Compostospack1[0]) {
+                        Mostruario.GetComponent<Image>().sprite = estojo[qual];
+                    } else if (compostaAtual == Compostospack1[1]) {
+                        Mostruario.GetComponent<Image>().sprite = tinta[qual];
                     }
-                }else if(_pack ==1){
-                    if(compostaAtual == Compostospack2[0]){
-                        Mostruario.GetComponent<Image>().sprite= armario[qual];
-                    }else if(compostaAtual == Compostospack2[1]){
-                        Mostruario.GetComponent<Image>().sprite= lousa[qual];
-                    }else if(compostaAtual == Compostospack2[2]){
-                        Mostruario.GetComponent<Image>().sprite= lixeira[qual];
+                } else if (_pack == 1) {
+                    if (compostaAtual == Compostospack2[0]) {
+                        Mostruario.GetComponent<Image>().sprite = armario[qual];
+                    } else if (compostaAtual == Compostospack2[1]) {
+                        Mostruario.GetComponent<Image>().sprite = lousa[qual];
+                    } else if (compostaAtual == Compostospack2[2]) {
+                        Mostruario.GetComponent<Image>().sprite = lixeira[qual];
                     }
                 }
-                if(qual== 0){
+                if (qual == 0) {
                     qual = 1;
-                }else{
-                    qual =0;
+                } else {
+                    qual = 0;
                 }
-                tempoCo = Time.time +TempoCompos;
+                tempoCo = Time.time + TempoCompos;
             }
         }
     }
 
-    private void DefinePack(){
-        if(caca == false){
+    private void DefinePack() {
+        if (caca == false) {
             int a = Packs[_pack].transform.childCount;
             Packs[_pack].SetActive(true);
             for (int i = 0; i < a; i++)
             {
                 ListaDePalavras.Add(Packs[_pack].transform.GetChild(i).gameObject);
             }
-            if(_pack == 0){
+            if (_pack == 0) {
                 ColocaNaPosi();
             }
             caca = true;
         }
     }
-    private void EscolhePalavras(){
-        if(cece == false){
+    private void EscolhePalavras() {
+        if (cece == false) {
             int a = Quantias[_quantia];
             for (int i = 0; i < a; i++)
             {
                 int b = Random.Range(0, ListaDePalavras.Count);
-                if(b< ListaDePalavras.Count){
+                if (b < ListaDePalavras.Count) {
                     ListaDePalavrasSelecionadas.Add(ListaDePalavras[b]);
-                    if(_pack == 0){
-                        if(b< ItensDoAluno.Count){
+                    if (_pack == 0) {
+                        if (b < ItensDoAluno.Count) {
                             ListaDeitens.Add(ItensDoAluno[b]);
                             ItensDoAluno.Remove(ItensDoAluno[b]);
                         }
-                    }else if(_pack == 1){
-                        if(b< ItensDeSala.Count){
+                    } else if (_pack == 1) {
+                        if (b < ItensDeSala.Count) {
                             ListaDeitens.Add(ItensDeSala[b]);
                             ItensDeSala.Remove(ItensDeSala[b]);
                         }
@@ -129,13 +141,13 @@ public class TesouroSitemaUm : MonoBehaviour
             cece = true;
         }
     }
-    private void EscolheOrdem(){
-        if(cici == false){
+    private void EscolheOrdem() {
+        if (cici == false) {
             for (int i = 0; i < ListaDePalavrasSelecionadas.Count; i++) {
                 GameObject temp = ListaDePalavrasSelecionadas[i];
                 Sprite tempSpri = ListaDeitens[i];
                 int randomIndex = Random.Range(i, ListaDePalavrasSelecionadas.Count);
-                ListaDePalavrasSelecionadas[i] =ListaDePalavrasSelecionadas[randomIndex];
+                ListaDePalavrasSelecionadas[i] = ListaDePalavrasSelecionadas[randomIndex];
                 ListaDeitens[i] = ListaDeitens[randomIndex];
                 ListaDePalavrasSelecionadas[randomIndex] = temp;
                 ListaDeitens[randomIndex] = tempSpri;
@@ -143,13 +155,13 @@ public class TesouroSitemaUm : MonoBehaviour
             cici = true;
         }
     }
-    private void ColocaNaPosi(){
-        if(coco ==false){
+    private void ColocaNaPosi() {
+        if (coco == false) {
             int e = ListaDePalavras.Count;
             for (int i = 0; i < e; i++)
             {
                 int r = Random.Range(0, posicoes.Count);
-                if(ListaDePalavras[i]!=null &&posicoes[r]!=null){
+                if (ListaDePalavras[i] != null && posicoes[r] != null) {
                     ListaDePalavras[i].transform.position = posicoes[r].transform.position;
 
                     posicoes.Remove(posicoes[r]);
@@ -159,68 +171,123 @@ public class TesouroSitemaUm : MonoBehaviour
             coco = true;
         }
     }
-    private void ApareceProximaPalavra(){
-        string a= "";
+    private void ApareceProximaPalavra() {
+        string a = "";
         composta = false;
-        if(_pack == 0){
+        if (_pack == 0) {
             Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
-            if(_etapa == 0){
+            if (_etapa == 0) {
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
-            }else{
+            } else {
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = "";
             }
             foreach (string b in Compostospack1)
-            {   
-                if(b == a){
+            {
+                if (b == a) {
                     composta = true;
-                    qual =0;
-                    compostaAtual= b;
+                    qual = 0;
+                    compostaAtual = b;
                 }
             }
-        }else if(_pack == 1){
+        } else if (_pack == 1) {
             Mostruario.GetComponent<Image>().sprite = ListaDeitens[PalavraAtual];
-            if(_etapa == 0){
+            if (_etapa == 0) {
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = a;
-            }else{
+            } else {
                 a = ListaDeitens[PalavraAtual].name;
                 Palavra.text = "";
             }
             foreach (string b in Compostospack2)
-            {   
-                if(b == a){
+            {
+                if (b == a) {
                     composta = true;
-                    qual =0;
-                    compostaAtual= b;
+                    qual = 0;
+                    compostaAtual = b;
                 }
             }
         }
     }
 
+<<<<<<< Updated upstream
     private void IniciaTime(){
+=======
+    private void IniciaTime() {
+       // GetComponent<Timer>().timeRemaining = Tempos[_dificuldade];
+>>>>>>> Stashed changes
         GetComponent<Timer>().timerIsRunning = true;
+        comecou = true;
     }
 
-    public void Apertou(GameObject d){
+    public void Apertou(GameObject d) {
         Acerto.GetComponent<Animator>().SetTrigger("desativo");
         erro.GetComponent<Animator>().SetTrigger("desativo");
-        if(d.name == ListaDePalavrasSelecionadas[PalavraAtual].name){
+        if (d.name == ListaDePalavrasSelecionadas[PalavraAtual].name) {
             Acerto.transform.position = d.transform.position;
             Acerto.GetComponent<Animator>().SetTrigger("ativo");
-            PalavraAtual++; 
+            PalavraAtual++;
             Acertou.Play();
-            if (PalavraAtual >= ListaDePalavrasSelecionadas.Count){
+            if (PalavraAtual >= ListaDePalavrasSelecionadas.Count) {
+                
+                
+                definer.ganhou();
                 WinScreen.SetActive(true);
-                  
-            }else{
+                
+
+            } else {
                 ApareceProximaPalavra();
             }
-        }else{
+        } else {
             erro.transform.position = d.transform.position;
             erro.GetComponent<Animator>().SetTrigger("ativo");
             Errou.Play();
         }
+    }
+
+    void StarCounter()
+    {
+
+            string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + definer.Dificuldade + ".Pack" + definer.pack + ".Quantia" + definer.Quantia + ".Etapa" + definer.Etapa);
+        
+
+            if (PlayerPrefs.GetInt(premio) == 3)
+            { definer.QuantiaEstrela = 3; }
+            else
+            {
+
+                if (GetComponent<Timer>().timeRemaining > definer.TempoTresEstrelas)
+                {
+                    definer.QuantiaEstrela = 3;
+                
+
+                }
+
+            if (GetComponent<Timer>().timeRemaining < definer.TempoTresEstrelas && GetComponent<Timer>().timeRemaining > definer.TempoDuasEstrelas)
+             {
+               
+                    definer.QuantiaEstrela = 2;
+                    //Debug.Log("to contando 2 estrelas");
+    
+
+            }
+
+                if (GetComponent<Timer>().timeRemaining < definer.TempoDuasEstrelas && GetComponent<Timer>().timeRemaining > definer.TempoUmaEstrela)
+                {
+
+                    definer.QuantiaEstrela = 1;
+                }
+
+                if (GetComponent<Timer>().timeRemaining < definer.TempoUmaEstrela)
+                {
+
+                    definer.QuantiaEstrela = 0;
+                }
+            
+
+             }
+
+       // Debug.Log(definer.QuantiaEstrela);
     }
 }
