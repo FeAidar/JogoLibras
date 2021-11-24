@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
     {
         gameDefiner = FindObjectOfType<GameDefiner>();
 
-        if (tempo ==0 )
+        if (tempo == 0 )
         { tempo = gameDefiner.Tempo; }
 
         timeRemaining = tempo;
