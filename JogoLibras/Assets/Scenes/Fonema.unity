@@ -1628,20 +1628,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101995839911840705, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 396845213824733375, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Name
       value: Sistemas
+      objectReference: {fileID: 0}
+    - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 445795778372859971, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.10891035
       objectReference: {fileID: 0}
     - target: {fileID: 445795779274253577, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 608923649212405376, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: TelaDeVitoria
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 787985413660077352, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 834874500219300646, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: sair
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834874500219300646, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: level
+      value: Hub-Escola
+      objectReference: {fileID: 0}
     - target: {fileID: 917727845302457977, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197781519539652075, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1219968925814234097, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
@@ -1728,6 +1760,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5843022834652146749, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500984274122521946, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 348284765}
+    - target: {fileID: 7500984274122521946, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Carregalevel
+      objectReference: {fileID: 0}
     - target: {fileID: 7937051239755132479, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1736,12 +1780,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8661626830736665696, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: TelaDeVitoria
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8781995766001196814, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+--- !u!114 &348284765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6019215441176175324, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+  m_PrefabInstance: {fileID: 348284764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53a5c97fba91c442816ea6d7f14c00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &363061650
 GameObject:
   m_ObjectHideFlags: 0
