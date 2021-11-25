@@ -247,18 +247,23 @@ public class CartaManege : MonoBehaviour
 
                 }
 
-                if (GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
+                if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoTresEstrelas && GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas)
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
                 }
 
-                if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining != 0)
+                if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
                 }
                 if (GetComponent<Timer>().timeRemaining < 0.05f)
+                {
+
+                    _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 0;
+                }
+                if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 0;
