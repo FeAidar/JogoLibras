@@ -3295,35 +3295,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[0]
-      value: ah acho que perdemos algumas coisas aqui na sala
+      value: "Como eu sou um cabe\xE7a de vento, perdi algumas coisas aqui na sala"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[1]
-      value: "ser\xE1 que voc\xEA poderia me trazer as coisas?"
+      value: "Ser\xE1 que voc\xEA poderia encontrar pra mim?"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[2]
-      value: tem varios itens espalhados pela sala
+      value: Tem varios itens espalhados pela sala
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[3]
-      value: "aqui em baixo vou mostrar qual item que voc\xEA precisa achar"
+      value: "Aqui em baixo vou mostrar qual item que voc\xEA precisa achar"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[4]
-      value: "voc\xEA pode olhar em volta na sala arrastando para o lado"
+      value: "Voc\xEA pode olhar em volta na sala arrastando para o lado"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[5]
-      value: "voc\xEA tambem pode dar zoom , dando 2 toques seguidos"
+      value: "Voc\xEA tambem pode dar zoom , dando 2 toques seguidos"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[6]
-      value: 'se achar o item pedido toque nele '
+      value: 'Se achar o item pedido toque nele '
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: falas.Array.data[7]
-      value: quando todos os itens que precisamos forem achados ganhamos
+      value: "Quando todos os itens que preciso forem achados, voc\xEA ganha!"
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: eventosAntes.Array.size
