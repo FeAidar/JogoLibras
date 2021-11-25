@@ -751,7 +751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475392939
 GameObject:
@@ -1493,7 +1493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417375300846078517, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8448929693456395903, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_RootOrder
@@ -1723,8 +1723,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 292777871}
   m_HandleRect: {fileID: 292777870}
   m_Direction: 0
-  m_Value: 0.00000010217082
-  m_Size: 0.57249856
+  m_Value: 0
+  m_Size: 0.5724985
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2020,6 +2020,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 428551069}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3382916997062344776, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2899,7 +2911,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 475392940}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.3174603
+  m_Size: 0.31746033
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3531,8 +3543,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801727713}
   m_HandleRect: {fileID: 1801727712}
   m_Direction: 0
-  m_Value: 0.000000052166794
-  m_Size: 0.40609133
+  m_Value: 0
+  m_Size: 0.40609136
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
