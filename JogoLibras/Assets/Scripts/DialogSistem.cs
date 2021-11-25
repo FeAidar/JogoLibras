@@ -208,7 +208,7 @@ public class DialogSistem : MonoBehaviour
         Nofim.Invoke();
         if(SceneManager.GetActiveScene().name != "JogoDaMenoria"){
             yield return new WaitForSeconds(1f);
-            countDown.SetActive(false);
+           
         }
     }
 }
