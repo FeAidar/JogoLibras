@@ -1455,6 +1455,7 @@ MonoBehaviour:
   ConfigMinigame: {fileID: 5607208600788354415}
   dici: {fileID: 3804946938446785717}
   texto: {fileID: 696289228109359274}
+  materias: {fileID: 0}
 --- !u!1 &889750367645379239
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,7 +3081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: -283}
+  m_AnchoredPosition: {x: -118.9, y: -273.7}
   m_SizeDelta: {x: 51.46, y: 47.002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8792485398095413300
@@ -9343,7 +9344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: -283}
+  m_AnchoredPosition: {x: -118.9, y: -273.3}
   m_SizeDelta: {x: 51.46, y: 47.002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2707953634369447223

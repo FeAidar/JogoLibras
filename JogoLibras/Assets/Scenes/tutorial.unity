@@ -222,6 +222,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293558706864090265, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833056, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_Name
       value: Falas Tela 2 Mamaco
@@ -290,6 +306,10 @@ PrefabInstance:
       propertyPath: caixa
       value: 
       objectReference: {fileID: 93095259}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: mamaco
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: EmQueFala
       value: 0
@@ -609,22 +629,26 @@ PrefabInstance:
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
+      objectReference: {fileID: 11400000, guid: 6cb57531e19f6714881a5771398b0480, type: 2}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4494805253068932429, guid: 6cb57531e19f6714881a5771398b0480, type: 2}
+    - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
@@ -2750,6 +2774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2077456118884329308, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833056, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_Name
       value: Falas Tela 3 Mamaco pt2
@@ -2813,6 +2841,10 @@ PrefabInstance:
     - target: {fileID: 5286326199532833057, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: mamaco
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: EmQueFala
@@ -3704,6 +3736,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182094202749311350, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293558706864090265, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833056, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_Name
       value: Falas Tela 3 Mamaco
@@ -3767,6 +3815,10 @@ PrefabInstance:
     - target: {fileID: 5286326199532833057, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
+      propertyPath: mamaco
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5286326199532833070, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: EmQueFala
@@ -4059,22 +4111,22 @@ PrefabInstance:
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 01f8cfd0d592c274d9e56280c69edde8, type: 2}
+      objectReference: {fileID: 11400000, guid: 6cb57531e19f6714881a5771398b0480, type: 2}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791850911980189677, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a740f0c3b2642d488b065e776c18964, type: 3}

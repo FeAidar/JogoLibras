@@ -304,6 +304,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 270.06
       objectReference: {fileID: 0}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772422934824400145, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3382916997062344776, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -348,10 +360,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5769199870773552675, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5815140649604819904, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2073442315434175328}
+    - target: {fileID: 6238592504577755250, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238592504577755250, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238592504577755250, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8958170637786272487, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_Name
       value: Mamaco
