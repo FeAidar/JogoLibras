@@ -24,6 +24,8 @@ public class DialogSistem : MonoBehaviour
     [Header("se tiver contagem regressiva coloque aqui o que seria realizado antes de dela")]
     [SerializeField]private UnityEvent NofimAntesDaContagem;
     [SerializeField]private UnityEvent Nofim;
+    [SerializeField]private bool mamaco;
+    [SerializeField]private Animator caixa;
     [HideInInspector]public bool Action = false;
     private bool chama, ActionAntes = true;
     private bool PodeClick= false;
@@ -101,6 +103,11 @@ public class DialogSistem : MonoBehaviour
                 }
                 PodeClick = false;
             }
+        }
+        if(mamaco==true){
+            caixa.SetTrigger("meia");
+        }else{
+            caixa.SetTrigger("cheia");
         }
     }
     private void Update(){
