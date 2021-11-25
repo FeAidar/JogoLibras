@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4023307029655146843
-    second: Tinta Guache_0
+    second: Tinta
   - first:
       213: 8697113941759020093
-    second: Tinta Guache_1
+    second: Tinta 2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -157,7 +157,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tinta Guache_0
+      name: Tinta
       rect:
         serializedVersion: 2
         x: 0
@@ -165,7 +165,7 @@ TextureImporter:
         width: 439
         height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tinta Guache_1
+      name: Tinta 2
       rect:
         serializedVersion: 2
         x: 643
@@ -186,7 +186,7 @@ TextureImporter:
         width: 439
         height: 597
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
