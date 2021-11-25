@@ -59,8 +59,8 @@ public class MateriasSystem : MonoBehaviour
     }
     public void verificaGanhou(){
         if(itensRestantes.Count <= 0 && perdeu == false){
-            telaWin.SetActive(true);
             _Definer.GetComponent<GameDefiner>().ganhou();
+            telaWin.SetActive(true);
             ganhou = true;
         }
     }

@@ -2460,7 +2460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 608923649212405376, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: TelaDeVitoria
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 787985413660077352, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
@@ -11116,7 +11116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417375300846078517, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8448929693456395903, guid: 4160c55b4ac56ee48ad5413eabff4049, type: 3}
       propertyPath: m_RootOrder
