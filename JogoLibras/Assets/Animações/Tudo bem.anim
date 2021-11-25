@@ -56,7 +56,69 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: 0, z: -175.207}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.46666667
+        value: {x: 0, y: 0, z: -135.294}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.0833334
+        value: {x: 0, y: 0, z: -135.294}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.35
+        value: {x: 0, y: 0, z: -175.207}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves:
@@ -76,7 +138,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: Personagem acenando (Teste)/Mao ola
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Oi"
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -84,15 +147,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -101,8 +155,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.1833333
+        time: 0.33333334
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.1833333
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -113,8 +176,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9/bone_10/Mao
-      tudo
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Bem?"
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -122,15 +185,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -139,8 +193,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.1833333
+        time: 0.33333334
         value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.1833333
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -151,8 +214,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9/bone_10/Mao
-      bem
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Tudo"
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -164,28 +227,42 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2192962482
+      path: 547907958
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2899927266
+      path: 3364271484
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3783623520
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1095149397
+      path: 846775022
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1743377001
+      path: 4045414994
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2084294206
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -213,6 +290,26 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Oi"
+    classID: 212
+    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -256,7 +353,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -302,7 +400,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -348,7 +447,149 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0833334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.35
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0833334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.35
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -175.207
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.46666667
+        value: -135.294
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.0833334
+        value: -135.294
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.35
+        value: -175.207
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -366,24 +607,56 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Color.a
-    path: Personagem acenando (Teste)/Mao ola
-    classID: 212
+    attribute: localEulerAnglesRaw.x
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
       - serializedVersion: 3
-        time: 0.33333334
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -392,8 +665,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.1833333
+        time: 0.33333334
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.1833333
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -404,8 +686,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9/bone_10/Mao
-      tudo
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Bem?"
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -413,15 +695,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.33333334
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -430,8 +703,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.1833333
+        time: 0.33333334
         value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.1833333
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -442,8 +724,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9/bone_10/Mao
-      bem
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d/Tudo"
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -454,7 +736,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -464,7 +747,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -474,7 +758,74 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Personagem acenando (Teste)/bone_1/bone_2/bone_3/bone_8/bone_9
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d/b.m\xE3o d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: "PJ FINAL/b.cintura/b.costela/b.pesco\xE7o/b.antebra\xE7o d/b.bra\xE7o
+      d"
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

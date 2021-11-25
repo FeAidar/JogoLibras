@@ -493,10 +493,11 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   mamaco: 0
-  caixa: {fileID: 0}
+  caixa: {fileID: 6325879079083819994}
   Action: 0
   dig: {fileID: 5286326199532833071}
   Contagem: 0
+  countDown: {fileID: 0}
 --- !u!114 &5286326199532833071
 MonoBehaviour:
   m_ObjectHideFlags: 0

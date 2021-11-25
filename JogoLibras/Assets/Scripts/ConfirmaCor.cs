@@ -52,6 +52,7 @@ public class ConfirmaCor : MonoBehaviour
 
         }
 
+        if(Sapato.Count != 0)
         for (int i = 0; i < Sapato.Count; i++)
         {
             Color cor;
