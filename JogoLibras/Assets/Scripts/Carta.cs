@@ -18,13 +18,18 @@ public class Carta : MonoBehaviour
     [SerializeField]private float TempoCompos;
     private float tempoCo;
     private int a;
+    public bool mochila;
 
     private void Start(){
         canvas = GameObject.FindGameObjectWithTag("canvas");
-        lado[0].SetActive(true);
-        lado[1].SetActive(false);
-        lado[2].SetActive(false);
-        lado[3].SetActive(false);
+        if(mochila == false){
+            lado[0].SetActive(true);
+            lado[1].SetActive(false);
+            lado[2].SetActive(false);
+            lado[3].SetActive(false);
+        }else{
+            CoTrue=true;
+        }
     }
 
     public void clica(){
