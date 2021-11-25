@@ -285,6 +285,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &9217162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &195960634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3877,6 +3879,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &446503350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6230,6 +6233,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &1290270203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7117,6 +7121,7 @@ MonoBehaviour:
   PackDePalavras:
   - {fileID: 965915553550985193, guid: 3674f72dbfe01b7429641238253aeccc, type: 3}
   - {fileID: 6449461976899905737, guid: 9eee6271aea453641ad9265a61fa4c47, type: 3}
+  - {fileID: 8682210468855019330, guid: a64d777a35396d5479f89dadc680e1c2, type: 3}
   Grids:
   - {fileID: 678949894}
   - {fileID: 919940656}
@@ -8038,6 +8043,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &1666474854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8306,6 +8312,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &1680609018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8799,6 +8806,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &1806778264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9371,6 +9379,7 @@ MonoBehaviour:
   Composto: 0
   imaCo: []
   TempoCompos: 0
+  mochila: 0
 --- !u!114 &2005405069
 MonoBehaviour:
   m_ObjectHideFlags: 0
