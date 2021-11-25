@@ -28,7 +28,7 @@ public class MateriasSystem : MonoBehaviour
     [SerializeField]private GameObject[] PosicoesItens;
     [SerializeField]private int[] Quantia;
     [SerializeField]private GameObject telaWin, telaLose;
-    
+    public bool podemexer;
     public bool startado;
     private List<GameObject> _MateriasEscolhidas = new List<GameObject>();
     public List<GameObject> itensRestantes = new List<GameObject>();
@@ -45,6 +45,7 @@ public class MateriasSystem : MonoBehaviour
             DefinePosicoes();
             ComecaTimer();
             startado = true;
+            podemexer = true;
         }
     }
     void Update(){

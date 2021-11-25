@@ -16,6 +16,7 @@ public class BackButton : teleport
     private int usos= 3;
     [SerializeField]GameObject dici;
     [SerializeField]TMP_Text texto;
+    [SerializeField]private GameObject materias;
     Scene opa;
     void Start()
     {
@@ -57,11 +58,17 @@ public class BackButton : teleport
     {
         voltatela = true;
         voltamenu = false;
+        if(SceneManager.GetActiveScene().name== "Fonema"){
+            materias.GetComponent<MateriasSystem>().podemexer= true;
+        }
     }
    public void BackVoltaMenu() 
     {
         voltatela = false;
         voltamenu = true;
+        if(SceneManager.GetActiveScene().name== "Fonema"){
+            materias.GetComponent<MateriasSystem>().podemexer= false;
+        }
     }
     public void NaoFunciona()
     {
