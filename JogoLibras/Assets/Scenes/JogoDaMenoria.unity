@@ -5101,6 +5101,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5003564343956636858, guid: 33bb8cad742a4a344b0ae422c7cc837f, type: 3}
+    - target: {fileID: 101995839911840705, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101995839911840705, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 274047726319085122, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -82.6
@@ -5341,6 +5349,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 281.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8661626830736665696, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 1489104160}
     - target: {fileID: 8781995766001196814, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_IsActive
       value: 0

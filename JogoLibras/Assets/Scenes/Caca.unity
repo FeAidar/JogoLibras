@@ -1177,6 +1177,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101995839911840705, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101995839911840705, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 396845213824733375, guid: 7380ad03b51beb1488c708e92eae894a, type: 3}
       propertyPath: m_Name
       value: Sistemas (1)

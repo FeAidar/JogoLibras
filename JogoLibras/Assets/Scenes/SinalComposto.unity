@@ -1723,8 +1723,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 292777871}
   m_HandleRect: {fileID: 292777870}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.5724985
+  m_Value: 0.00000010217082
+  m_Size: 0.57249856
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2012,6 +2012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Telas
       objectReference: {fileID: 0}
+    - target: {fileID: 1492112156425813970, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 2003834592}
     - target: {fileID: 1596847417004344442, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2092,6 +2096,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7273910961053074738, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 2003834592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ae70b9c7fda0548950ca08ae226e08, type: 3}
 --- !u!1 &1161002159 stripped
@@ -3461,6 +3469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+--- !u!82 &2003834592 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1259376660229937425, guid: ec6fe315cbc7e9043bcf2c06645f16ba, type: 3}
+  m_PrefabInstance: {fileID: 2003834591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061191026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,7 +3556,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801727713}
   m_HandleRect: {fileID: 1801727712}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.0000000521668
   m_Size: 0.40609136
   m_NumberOfSteps: 0
   m_OnValueChanged:
