@@ -84,9 +84,7 @@ public class CartaManege : MonoBehaviour
         else StarCounter();
     }
     private void Comecatempo(){
-        this.GetComponent<Timer>().timeRemaining = tempos[_dificuldade];
-        this.GetComponent<Timer>().tempo = tempos[_dificuldade];
-        this.GetComponent<Timer>().timerIsRunning= true;
+               this.GetComponent<Timer>().timerIsRunning= true;
     }
 
 
@@ -244,6 +242,7 @@ public class CartaManege : MonoBehaviour
                 if (GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoTresEstrelas)
                 {
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 3;
+                    Debug.Log("3 estrelas");
 
                 }
 
@@ -251,18 +250,16 @@ public class CartaManege : MonoBehaviour
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
+                    Debug.Log("2 estrelas");
                 }
 
                 if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
+                    Debug.Log("1 estrela");
                 }
-                if (GetComponent<Timer>().timeRemaining < 0.05f)
-                {
-
-                    _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 0;
-                }
+               
                 if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
                 {
 
