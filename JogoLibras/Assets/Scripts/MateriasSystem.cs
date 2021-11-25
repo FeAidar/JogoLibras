@@ -34,6 +34,7 @@ public class MateriasSystem : MonoBehaviour
     private List<GameObject> _PosicoesMat = new List<GameObject>();
     private List<GameObject> _PosicoesIte = new List<GameObject>();
     private bool ganhou, perdeu;
+    private bool caca, cece, cici, coco,cucu;
 
     public void comeca(){
         if(startado == false){
@@ -60,62 +61,77 @@ public class MateriasSystem : MonoBehaviour
         }
     }
     void ComecaTimer(){
-        tim = GetComponent<Timer>();
-        tim.timerIsRunning = true;
+        if(cucu == false){
+            tim = GetComponent<Timer>();
+            tim.timerIsRunning = true;
+            cucu = true;
+        }
     }
 
     void GameDef(){
-        _Definer = GameObject.FindGameObjectWithTag("GameController");
-        _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
-        _difi = _Definer.GetComponent<GameDefiner>().Dificuldade;
+        if(caca == false){
+            _Definer = GameObject.FindGameObjectWithTag("GameController");
+            _quantia = _Definer.GetComponent<GameDefiner>().Quantia;
+            _difi = _Definer.GetComponent<GameDefiner>().Dificuldade;
+            caca = true;
+        }
     }
 
     void DefineMaterias(){
-        int a = Quantia[_quantia];
-        for (int i = 0; i < a; i++)
-        {
-            int b = Random.Range(0, Materias.Count);
-            _MateriasEscolhidas.Add(Materias[b]);
-            Materias.Remove(Materias[b]);
-        }
-        foreach (GameObject b in _MateriasEscolhidas)
-        {
-            int c = b.transform.GetChild(0).transform.childCount;
-            for (int i = 0; i < c; i++)
+        if(cece== false){
+            int a = Quantia[_quantia];
+            for (int i = 0; i < a; i++)
             {
-                itensRestantes.Add(b.transform.GetChild(0).transform.GetChild(i).gameObject);
+                int b = Random.Range(0, Materias.Count-i);
+                _MateriasEscolhidas.Add(Materias[b]);
+                Materias.Remove(Materias[b]);
             }
-        }
-        foreach(GameObject r in Materias){
-            r.SetActive(false);
+            foreach (GameObject b in _MateriasEscolhidas)
+            {
+                int c = b.transform.GetChild(0).transform.childCount;
+                for (int i = 0; i < c; i++)
+                {
+                    itensRestantes.Add(b.transform.GetChild(0).transform.GetChild(i).gameObject);
+                }
+            }
+            foreach(GameObject r in Materias){
+                r.SetActive(false);
+            }
+            cece = true;
         }
     }
     
     void PegaPosicoes(){
-        int a = PosicoesMaterias[_quantia].transform.childCount;
-        for (int i = 0; i < a; i++)
-        {
-            _PosicoesMat.Add(PosicoesMaterias[_quantia].transform.GetChild(i).gameObject);
-        }
-        int b = PosicoesItens[_quantia].transform.childCount;
-        for (int i = 0; i < b; i++)
-        {
-            _PosicoesIte.Add(PosicoesItens[_quantia].transform.GetChild(i).gameObject);
+        if(cici == false){
+            int a = PosicoesMaterias[_quantia].transform.childCount;
+            for (int i = 0; i < a; i++)
+            {
+                _PosicoesMat.Add(PosicoesMaterias[_quantia].transform.GetChild(i).gameObject);
+            }
+            int b = PosicoesItens[_quantia].transform.childCount;
+            for (int i = 0; i < b; i++)
+            {
+                _PosicoesIte.Add(PosicoesItens[_quantia].transform.GetChild(i).gameObject);
+            }
+            cici = true;
         }
     }
 
     void DefinePosicoes(){
-        foreach (GameObject a in _MateriasEscolhidas)
-        {
-            int c = Random.Range(0,_PosicoesMat.Count);
-            a.transform.position = _PosicoesMat[c].transform.position;
-            _PosicoesMat.Remove(_PosicoesMat[c]);
-        }
-        foreach (GameObject e in itensRestantes)
-        {
-            int f = Random.Range(0,_PosicoesIte.Count);
-            e.GetComponent<ObjetoMaterial>().posicao = _PosicoesIte[f];
-            _PosicoesIte.Remove(_PosicoesIte[f]);
-        }
+        if(coco == false){
+            foreach (GameObject a in _MateriasEscolhidas)
+            {
+                int c = Random.Range(0,_PosicoesMat.Count);
+                a.transform.position = _PosicoesMat[c].transform.position;
+                _PosicoesMat.Remove(_PosicoesMat[c]);
+            }
+            foreach (GameObject e in itensRestantes)
+            {
+                int f = Random.Range(0,_PosicoesIte.Count);
+                e.GetComponent<ObjetoMaterial>().posicao = _PosicoesIte[f];
+                _PosicoesIte.Remove(_PosicoesIte[f]);
+            }
+            coco = true;
+        }   
     }
 }

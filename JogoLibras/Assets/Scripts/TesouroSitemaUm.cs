@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TesouroSitemaUm : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class TesouroSitemaUm : MonoBehaviour
     [SerializeField] private int[] Quantias;
     // [SerializeField] private int[] Tempos;
     [SerializeField] private GameObject Mostruario;
-    [SerializeField] private Text Palavra;
+    [SerializeField] private TMP_Text Palavra;
     [SerializeField] private GameObject WinScreen;
     [SerializeField] private GameObject LoseScreen;
     [SerializeField] private GameObject Acerto, erro;
