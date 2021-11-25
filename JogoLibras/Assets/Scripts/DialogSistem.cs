@@ -37,6 +37,8 @@ public class DialogSistem : MonoBehaviour
     private GameObject definer;
     public DialogoEscrito dig ;
     [SerializeField]private bool Contagem;
+    [SerializeField]private GameObject countDown;
+    [SerializeField]private transicao blur;
     private bool jafoi;
     private void Start(){
         if(jafoi==false){
@@ -198,7 +200,17 @@ public class DialogSistem : MonoBehaviour
 
     IEnumerator regressiva(){
         NofimAntesDaContagem.Invoke();
-        yield return new WaitForSeconds(3f);
+        countDown.SetActive(true);
+        if(precisa== true){
+            yield return new WaitForSeconds(1f);
+        }else{
+            yield return new WaitForSeconds(3f);
+        }
         Nofim.Invoke();
+        blur.finaliza();
+        if(SceneManager.GetActiveScene().name != "JogoDaMenoria"){
+            yield return new WaitForSeconds(1f);
+            countDown.SetActive(false);
+        }
     }
 }
