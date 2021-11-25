@@ -183,6 +183,13 @@ public class DialogSistem : MonoBehaviour
             }
         }
     }
+    void LateUpdate(){
+        if(mamaco==true){
+            caixa.SetTrigger("meia");
+        }else{
+            caixa.SetTrigger("cheia");
+        }
+    }
     IEnumerator tempoespera(){
         yield return new WaitForSeconds(0.1f);
         PodeClick = true;
