@@ -61,6 +61,7 @@ public class ConfirmaCor : MonoBehaviour
 
         }
 
+        Debug.Log("foi");
     }
 
 }
