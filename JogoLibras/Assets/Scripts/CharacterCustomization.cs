@@ -31,6 +31,7 @@ public class CharacterCustomization : MonoBehaviour
         for (int i = 0; i < ParteDoCorpo.Count; i++)
         {
             ParteDoCorpo[i].color = cor;
+            ConfirmaCor();
         }
     }
 
@@ -40,6 +41,7 @@ public class CharacterCustomization : MonoBehaviour
         if (coratual < 0)
         {
             coratual = Cores.Count - 1;
+            ConfirmaCor();
         }
 
         
@@ -58,4 +60,6 @@ public class CharacterCustomization : MonoBehaviour
         PlayerPrefs.SetString(gameObject.name, Cores[coratual]);
         Debug.Log(PlayerPrefs.GetString(gameObject.name, Cores[coratual]));
     }
+
+
 }
