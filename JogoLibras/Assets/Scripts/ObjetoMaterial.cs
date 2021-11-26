@@ -9,6 +9,8 @@ public class ObjetoMaterial : MonoBehaviour
     public GameObject posicao;
     public bool clicado;
     private bool posicionado, posivel= true;
+    public AudioSource Acertou;
+    public AudioSource Errou;
     void Start(){
         sistema = GameObject.FindGameObjectWithTag("Sistema").GetComponent<MateriasSystem>();
     }
@@ -37,11 +39,13 @@ public class ObjetoMaterial : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject == materia){
             posicionado = true;
+            Acertou.Play();
         }
     }
     void OnTriggerExit2D(Collider2D other){
         if(other.gameObject == materia){
             posicionado = false;
+            Errou.Play();
         }
     }
 }
