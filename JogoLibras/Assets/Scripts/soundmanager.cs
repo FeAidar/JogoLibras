@@ -20,7 +20,7 @@ public class soundmanager : MonoBehaviour
 
             {
                 muted = 1;
-                Debug.Log("Mutadas");
+                //Debug.Log("Mutadas");
                 AudioListener.pause = true;
             }
 

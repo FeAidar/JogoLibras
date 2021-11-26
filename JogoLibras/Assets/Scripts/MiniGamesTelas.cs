@@ -63,7 +63,7 @@ public class MiniGamesTelas : MonoBehaviour
     {
         
         string premio = (SceneManager.GetActiveScene().name + ".Dificuldade" + controller.Dificuldade + ".Pack" + controller.pack + ".Quantia" + controller.Quantia + ".Etapa" + controller.Etapa);
-        Debug.Log(PlayerPrefs.GetInt(premio));
+        //Debug.Log(PlayerPrefs.GetInt(premio));
 
         if (PlayerPrefs.GetInt(premio) == 1)
             {

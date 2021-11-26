@@ -256,7 +256,7 @@ public class AlfabetoManejo : MonoBehaviour
     {
 
         ArrayList A = new ArrayList ( GameObject.FindGameObjectsWithTag("Alfabeto"));
-        Debug.Log(A.Count);
+        //Debug.Log(A.Count);
 
         foreach (GameObject s in A)
         {
@@ -294,15 +294,15 @@ public class AlfabetoManejo : MonoBehaviour
         _Pack = 0;
         yield return new WaitForSeconds(0.1f);
        SelecionaPalavra();
-        Debug.Log(palavraSelecionada);
+        //Debug.Log(palavraSelecionada);
             yield return new WaitForSeconds(0.1f);
         quantidadeLetras = LetrasCertas.Count;
         
         yield return new WaitForSeconds(0.1f);
         EspacosAdd();
         NomedaAlana.SetActive(true);
-        Debug.Log(quantas + " letras atuais");
-        Debug.Log(quantidadeLetras + " letras totais");
+        //Debug.Log(quantas + " letras atuais");
+        //Debug.Log(quantidadeLetras + " letras totais");
         telavitoria = telavitoria2;
 
     }

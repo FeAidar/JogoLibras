@@ -25,7 +25,7 @@ public class EndTime : MonoBehaviour
             _controller.RecomecaJogo();
         _controller.RestartListadeItens();
         _timer.perdeu = false;
-        Debug.Log("apertei");
+        //Debug.Log("apertei");
         this.GetComponent<EndTime>().enabled = false;
 
     }

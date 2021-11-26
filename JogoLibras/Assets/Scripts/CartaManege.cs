@@ -129,12 +129,12 @@ public class CartaManege : MonoBehaviour
     private void selecionacartas(int a){
         for (int i = 0; i < a; i++)
         {
-            Debug.Log("bbbbb");
+            //Debug.Log("bbbbb");
             GameObject b = Instantiate(CartasSelecionadasDoPack[i],transform.position, Quaternion.identity);
             CartasSelecionadas.Add(CartasSelecionadasDoPack[i]);
             CartasSelecionadas.Add(b);
             if(_Etapa == 1){
-                Debug.Log("aaaaaaaaa");
+                //Debug.Log("aaaaaaaaa");
                 b.GetComponent<Carta>().essa = true;
             }else if(_Etapa == 2){
                 b.GetComponent<Carta>().essa = true;
@@ -242,7 +242,7 @@ public class CartaManege : MonoBehaviour
                 if (GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoTresEstrelas)
                 {
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 3;
-                    Debug.Log("3 estrelas");
+                    //Debug.Log("3 estrelas");
 
                 }
 
@@ -250,14 +250,14 @@ public class CartaManege : MonoBehaviour
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 2;
-                    Debug.Log("2 estrelas");
+                    //Debug.Log("2 estrelas");
                 }
 
                 if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoDuasEstrelas && GetComponent<Timer>().timeRemaining > _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)
                 {
 
                     _Definer.GetComponent<GameDefiner>().QuantiaEstrela = 1;
-                    Debug.Log("1 estrela");
+                    //Debug.Log("1 estrela");
                 }
                
                 if (GetComponent<Timer>().timeRemaining < _Definer.GetComponent<GameDefiner>().TempoUmaEstrela)

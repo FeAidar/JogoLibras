@@ -15,7 +15,7 @@ public class MovimentoDeCamera : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             StartingPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if(timer >= Time.time){
-                Debug.Log("b");
+                //Debug.Log("b");
                 if(zoom){
                     Camera.main.orthographicSize = 5f;
                     zoom = false;
@@ -34,7 +34,7 @@ public class MovimentoDeCamera : MonoBehaviour
                     zoom = true;
                 }
             }else{
-                Debug.Log("a");
+                //Debug.Log("a");
                 timer = Settimer + Time.time;
             }
         }

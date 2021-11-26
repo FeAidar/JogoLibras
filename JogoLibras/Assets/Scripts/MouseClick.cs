@@ -8,7 +8,7 @@ public class MouseClick : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0)){
-            Debug.Log("click");
+            //Debug.Log("click");
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if(hit.collider != null)
             {

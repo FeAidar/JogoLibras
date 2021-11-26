@@ -102,7 +102,7 @@ public class Timer : MonoBehaviour
 
     IEnumerator GetStarsPositions()
     {
-        Debug.Log("Chamou");
+        //Debug.Log("Chamou");
        if (gameDefiner.PerdeEstrelas == true)
         {
             slider.value = gameDefiner.Tempo - gameDefiner.TempoTresEstrelas;

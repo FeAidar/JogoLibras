@@ -25,7 +25,7 @@ public class MVerificaDificuldade : MonoBehaviour
             {
                 Dificuldade[0].SetActive(true);
                 Dificuldade[1].SetActive(false);
-                Debug.Log("Facil");
+                //Debug.Log("Facil");
 
             }else if (controller.Dificuldade == 2)
             {
@@ -36,12 +36,12 @@ public class MVerificaDificuldade : MonoBehaviour
                 }else{
                     Dificuldade[0].SetActive(false);
                 }
-                Debug.Log("Medio");
+                //Debug.Log("Medio");
             }else if (controller.Dificuldade == 3)
             {
                 Dificuldade[1].SetActive(true);
                 Dificuldade[0].SetActive(false);
-                Debug.Log("Dificil");
+                //Debug.Log("Dificil");
             }
 
         }

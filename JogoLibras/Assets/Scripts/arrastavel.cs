@@ -170,7 +170,7 @@ public class arrastavel : MonoBehaviour
                 {
                   //  check = false;
                     _movementDestination = LastPosition;
-                    Debug.Log("ERRADO");
+                    //Debug.Log("ERRADO");
                     Som();
                 }
             }

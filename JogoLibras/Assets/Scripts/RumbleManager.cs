@@ -20,7 +20,7 @@ public class RumbleManager : MonoBehaviour
 
             {
                 muted = 1;
-                Debug.Log("Sem vibra");
+                //Debug.Log("Sem vibra");
                 
             }
 

@@ -33,7 +33,7 @@ public class Carta : MonoBehaviour
     }
 
     public void clica(){
-        Debug.Log("banana");
+        //Debug.Log("banana");
         if(virado == true && par == false){
             canvas.GetComponent<CartaManege>().CartaDesselecionada(this.gameObject);
         }else if(par == false){

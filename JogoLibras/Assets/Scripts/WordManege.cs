@@ -107,10 +107,10 @@ public class WordManege : MonoBehaviour
                 if(b.transform.GetChild(1).name== SinaisCompostoConfirmado[0].GetComponent<ComposteWord>().Composicao[i].name){
                     SinaisSimplesParaATela.Add(b);
                     SinaisSimplesComfirmado.Add(b);
-                    Debug.Log("ue");
+                    //Debug.Log("ue");
                     
                 }else{
-                    Debug.Log("hmm");
+                    //Debug.Log("hmm");
                 }
             }
         }

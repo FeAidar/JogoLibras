@@ -11,7 +11,7 @@ public class ObjetoDoAluno : MonoBehaviour
     }
 
     public void click(){
-        Debug.Log("caca");
+        //Debug.Log("caca");
         sistema.GetComponent<TesouroSitemaUm>().Apertou(this.gameObject);
     }
 }

@@ -30,7 +30,7 @@ public class teleport : MonoBehaviour
 
     protected IEnumerator Carrega(string nivel)
     {
-        Debug.Log(Som);
+        //Debug.Log(Som);
         Vibracao.vibra();
 
         if(_transicao != null){
@@ -70,7 +70,7 @@ public class teleport : MonoBehaviour
                 Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
             }
         }else{
-            Debug.Log(_transicao);
+            //Debug.Log(_transicao);
             Application.Quit();
         }
 

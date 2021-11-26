@@ -26,7 +26,7 @@ public class CharacterCustomization : MonoBehaviour
        
         ColorUtility.TryParseHtmlString(Cores[coratual], out cor);
 
-        Debug.Log(cor);
+        //Debug.Log(cor);
 
         for (int i = 0; i < ParteDoCorpo.Count; i++)
         {
@@ -51,14 +51,14 @@ public class CharacterCustomization : MonoBehaviour
         {
             ParteDoCorpo[i].color = cor;
         }
-        Debug.Log(cor);
+        //Debug.Log(cor);
     }
 
 
     public void ConfirmaCor()
     {
         PlayerPrefs.SetString(gameObject.name, Cores[coratual]);
-        Debug.Log(PlayerPrefs.GetString(gameObject.name, Cores[coratual]));
+        //Debug.Log(PlayerPrefs.GetString(gameObject.name, Cores[coratual]));
     }
 
 

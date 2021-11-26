@@ -13,7 +13,7 @@ public class SoundCheck : MonoBehaviour
 
             {
 
-                Debug.Log("Mutado");
+                //Debug.Log("Mutado");
                 AudioListener.pause = true;
             }
             else

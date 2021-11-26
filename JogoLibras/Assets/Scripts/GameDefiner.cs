@@ -89,7 +89,7 @@ public class GameDefiner : MonoBehaviour
 
         }
 
-        Debug.Log(premio + ": " + PlayerPrefs.GetInt(premio));
+        //Debug.Log(premio + ": " + PlayerPrefs.GetInt(premio));
     }
 
     public void Apagatudo()

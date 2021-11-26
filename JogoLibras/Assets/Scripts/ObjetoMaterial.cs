@@ -17,7 +17,7 @@ public class ObjetoMaterial : MonoBehaviour
 
     void Update(){
         if(sistema.startado == true && sistema.podemexer==true){
-            Debug.Log("porra");
+            //Debug.Log("porra");
                 if(posivel == true){
                     if(clicado == true ){
                         Vector3 a = Camera.main.ScreenToWorldPoint(Input.mousePosition);

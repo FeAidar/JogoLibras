@@ -15,7 +15,7 @@ public class SelecionaSimbolo : MonoBehaviour
         definer = GameObject.FindGameObjectWithTag("GameController");
         if(definer.GetComponent<GameDefiner>().Etapa >= 2){
             GetComponent<Image>().sprite = imgs[1];
-            Debug.Log("foi");
+            //Debug.Log("foi");
         }else{
             GetComponent<Image>().sprite = imgs[0];
         }

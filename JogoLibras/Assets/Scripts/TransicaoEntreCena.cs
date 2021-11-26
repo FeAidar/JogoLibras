@@ -16,7 +16,7 @@ public class TransicaoEntreCena : MonoBehaviour
     {
         t = GameObject.FindGameObjectWithTag("Transicao");
         Transicao = t.GetComponent<transicao>();
-        Debug.Log(t);
+        //Debug.Log(t);
 
         if (t.GetComponent<CanvasGroup>().alpha == (0))
             Transicao.inicia();
